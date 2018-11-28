@@ -109,9 +109,7 @@ $(document).ready(function(){
         $('.experience .content .hidden').each( function(i){
 
             var bottom_of_object = $(this).offset().top + $(this).outerHeight()*2;
-            console.log("Window = "+bottom_of_window);
-            console.log("Object = "+bottom_of_object);
-  
+
             /* If the object is completely visible in the window, fadeIn it */
           
             if( bottom_of_window > bottom_of_object ){
@@ -152,8 +150,10 @@ $(document).ready(function(){
         }
 
         $('.img-portfolio').each(function(){
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight()*5;
+            var bottom_of_object = dev.offset().top + dev.outerHeight(true)/2;
                       
+            console.log("Bottom object = "+bottom_of_object);
+            console.log("Bottom window = "+bottom_of_window);
             if(bottom_of_window > bottom_of_object){
   
                 $(this).animate({
