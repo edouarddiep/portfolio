@@ -5,15 +5,10 @@
  * @author Edouard Diep
  */
 
- // action when refreshing html page
-$(window).on('beforeunload', function(){
-    $(window).scrollTop(0);
-  });
-
 $(document).ready(function(){
 
      // action when refreshing html page
-    $(window).scrollTop(0);
+    $(this).scrollTop(0);
     
     // main variables
     var dev = $('.development-wrapper');
@@ -35,50 +30,51 @@ $(document).ready(function(){
       },800);
 
     // welcome loading animation
-    $('.about .content .div-welcome-about').delay(800).animate({
+    $('.about .content .welcome-wrapper').delay(800).animate({
         'opacity':'1',
         'top': '45%'
       },800);
 
-
-    $('.div-welcome-about').click(function(){
+    $('#navabout').click(function(){
         welcome.style.left = "-80%";
         welcome.style.top = "45%";
         welcome.style.opacity = 0;
         welcome.style.transition = "all 2s ease";
-        descr.style.left = "35%";
-        descr.style.top = "55%";
-        descr.style.transition = "all 1.5s ease";
-        descr.style.cursor = "pointer";
-        descr.style.opacity = 1;
-        aboutText.style.opacity = 0;
-        aboutText.style.opacity = 0;
-        aboutText.style.transition = "all 1s ease";
-        if($('#navabout').hasClass('navbar-a')){
-            aboutText.style.opacity = 1;
-            aboutText.style.transition = "all 2s ease";
-            $('#navabout').removeClass('navbar-a');
-        } else {
-            aboutText.style.opacity = "0";
-            $('#navabout').addClass('navbar-a');
-        }
+        objectif.style.left = "15%";
+        objectif.style.top = "35%";
+        objectif.style.transition = "all 1.5s ease";
+        objectif.style.cursor = "pointer";
+        objectif.style.opacity = 1;
+        aboutText.style.opacity = 1;
+        aboutText.style.transition = "all 2s ease";       
     });
 
-    $('.div-description-about').click(function(){
+    $('.welcome-wrapper').click(function(){
+        welcome.style.left = "-80%";
+        welcome.style.top = "45%";
+        welcome.style.opacity = 0;
+        welcome.style.transition = "all 2s ease";
+        objectif.style.left = "15%";
+        objectif.style.top = "35%";
+        objectif.style.transition = "all 1.5s ease";
+        objectif.style.cursor = "pointer";
+        objectif.style.opacity = 1;
+        aboutText.style.opacity = 1;
+        aboutText.style.transition = "all 2s ease";
+    });
+
+    $('.description-wrapper').click(function(){
         welcome.style.left = "25%";
         welcome.style.top = "45%";
         welcome.style.transition = "all 1.5s ease";
         welcome.style.opacity = 1;
-        descr.style.left = "-80%";
-        descr.style.top = "45%";
-        descr.style.transition = "all 2s ease";
-        descr.style.cursor = "pointer";
-        descr.style.opacity = 0;
-        if(!$('#navabout').hasClass('navbar-a')){
-            aboutText.style.opacity = 0;
-            aboutText.style.transition = "all 1s ease";
-            $('#navabout').addClass('navbar-a');
-        }
+        objectif.style.left = "-80%";
+        objectif.style.top = "35%";
+        objectif.style.transition = "all 2s ease";
+        objectif.style.cursor = "pointer";
+        objectif.style.opacity = 0;
+        aboutText.style.opacity = 0;
+        aboutText.style.transition = "all 1s ease";
     });
 
     /****** SCROLLING ANIMATION WITH CLICK ON NAVBAR ******/
