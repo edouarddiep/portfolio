@@ -155,7 +155,7 @@ $(document).ready(function(){
   
                 $(this).animate({
                   'opacity':'1',
-                  'zoom': '1.2'
+                  'zoom': '1.5'
                 },1000);
               }
         });
