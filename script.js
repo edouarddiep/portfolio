@@ -16,18 +16,19 @@ $(document).ready(function(){
 
     // logo loading animation
     $('.navbar .logo').delay(100).animate({
-        'top':'5px',
-        'left':'2px',
+        'top':'0.3vw',
+        'left':'0.3vw',
         'opacity':'0.9',
         'zoom':'3'
-      },1500);
+    },1500);
 
     // ul loading animation
     $('.navbar ul').delay(300).animate({
         'opacity':'1',
         'top': '0',
         'left':'0'
-      },800);
+    },800);
+
 
     // welcome loading animation
     $('.about .content .welcome-wrapper').delay(800).animate({

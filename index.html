@@ -8,6 +8,8 @@
     <head>
             <title>Portfolio</title>
             <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width">
+            <link rel="icon" href="./images/logo2.png">
             <link rel="stylesheet" type="text/css" href="./styles.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,7 +17,7 @@
     <body>
         <script src="./script.js"></script>
         <!-- BARRE NAVIGATION -->
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <img class="logo" src="./images/logo2.png" height="80px" width="80px">
             <ul>
                 <li><a class="navbar-a" id="navabout" href="#section-about" title="A propos de moi">A propos</a></li>
@@ -71,6 +73,13 @@
                      <p>Durant ces années d'études, j'ai acquis des connaissances avancées en termes de programmation Web (Front-End) et programmation applicative (Back-End). J'ai également été impliqué dans divers projets d'études usant de la méthodologie agile (SCRUM et DAD) et j'ai validé des compétences en termes de gestion de projets, administration de serveurs (WS 2016, Ubuntu 16.04), réseaux télécomm (Cisco CCENT) et base de données (Oracle, MySQL)</p>
                    </div>
                 </li>
+                <li>
+                    <div class="experience-content hidden">
+                      <h2>Brevet de sous-officier (Sergent) </h2>
+                      <div class="experience-time">Juil. 2014 - Mars 2015 | Armée Suisse</div>
+                      <p>J'ai fait mon école de recrue, mon école de sous-officier ainsi que mon paiement de galons dans la caserne de Bière où j'ai pu acquérir une expérience en tant que chef de groupe et instructeur MG64 12.7mm.</p>
+                    </div>
+                 </li>
                 <li>
                    <div class="experience-content hidden">
                      <h2>Maturité Professionnelle Commerciale</h2>
@@ -178,12 +187,12 @@
                     <div class="portfolio-wrapper">
                         <h2 class="development-title">Centres d'intérêts</h2>
                         <div class="grid-portfolio">
-                            <div class="item1"><a title="Cisco CCENT Certificate" target="_blank" href="http://ptgmedia.pearsoncmg.com/images/9781587205804/samplepages/9781587205804.pdf"><img  class="img-portfolio" src="./images/logo-cisco-ccent.png" height="120px" width="120px"></a></div>
-                            <div class="item2"><a title="JQuery - Write less do more" target="_blank" href="http://jlguillaume.free.fr/www/documents/teaching/harmweb1516/Jquery.pdf"><img class="img-portfolio" src="./images/jquery.jpg" height="120px" width="120px"></a></div>
-                            <div class="item3"><a title="Sous-officier de l'armée suisse" target="_blank" href="https://fr.wikipedia.org/wiki/Sergent#Suisse"><img class="img-portfolio" src="./images/sergent.png" height="120px" width="100px"></a></div>
-                            <div class="item4"><a title="CrossFit coaching level 1 certificate" target="_blank" href="http://library.crossfit.com/free/pdf/CFJ_English_Level1_TrainingGuide.pdf"><img class="img-portfolio" src="./images/CrossFit.png" height="120px" width="120px"></a></div>
-                            <div class="item5"><a title="Sony Vegas Pro 15 - Logiciel de montage vidéo" target="_blank" href="https://images-na.ssl-images-amazon.com/images/I/E1lllY2i6QS.pdf"><img class="img-portfolio" src="./images/Vegas_Pro_15.0.png" height="120px" width="120px"></a></div>
-                            <div class="item6"><a title="Spartan Race - World Best Obstacle Race" target="_blank" href="https://assets.ctfassets.net/1bk7n9wtl2gh/35AO2AcN2oS8WaQmyQUMUG/95268a64d709c09628ce133215f28583/Spartan_Race_Training_Guide_Final.pdf"><img class="img-portfolio" src="./images/Spartan race.jpg" height="120px" width="120px"></a></div>
+                            <div class="item1"><a title="Cisco CCENT Certificate" target="_blank" href="http://ptgmedia.pearsoncmg.com/images/9781587205804/samplepages/9781587205804.pdf"><img  class="img-portfolio" src="./images/logo-cisco-ccent.png" height="60vw" width="60vw"></a></div>
+                            <div class="item2"><a title="JQuery - Write less do more" target="_blank" href="http://jlguillaume.free.fr/www/documents/teaching/harmweb1516/Jquery.pdf"><img class="img-portfolio" src="./images/jquery.jpg" height="60vw" width="80vw"></a></div>
+                            <div class="item3"><a title="Sous-officier de l'armée suisse" target="_blank" href="https://fr.wikipedia.org/wiki/Sergent#Suisse"><img class="img-portfolio" src="./images/sergent.png" height="80vw" width="60vw"></a></div>
+                            <div class="item4"><a title="CrossFit coaching level 1 certificate" target="_blank" href="http://library.crossfit.com/free/pdf/CFJ_English_Level1_TrainingGuide.pdf"><img class="img-portfolio" src="./images/CrossFit.png" height="60vw" width="60vw"></a></div>
+                            <div class="item5"><a title="Sony Vegas Pro 15 - Logiciel de montage vidéo" target="_blank" href="https://images-na.ssl-images-amazon.com/images/I/E1lllY2i6QS.pdf"><img class="img-portfolio" src="./images/Vegas_Pro_15.0.png" height="60vw" width="60vw"></a></div>
+                            <div class="item6"><a title="Spartan Race - World Best Obstacle Race" target="_blank" href="https://assets.ctfassets.net/1bk7n9wtl2gh/35AO2AcN2oS8WaQmyQUMUG/95268a64d709c09628ce133215f28583/Spartan_Race_Training_Guide_Final.pdf"><img class="img-portfolio" src="./images/Spartan race.jpg" height="60vw" width="60vw"></a></div>
                         </div>
                     </div>
                 </div>
@@ -197,8 +206,8 @@
                     <li><a title="Instagram" target="_blank" href="https://www.instagram.com/edouarddiep/" class="instagram"><i class="fa fa-instagram"></i></a></li>
                     <li><a title="Facebook" target="_blank" href="https://www.facebook.com/profile.php?id=100009209167037" class="facebook"><i class="fa fa-facebook"></i></a></li>
                 </ul>
-                <div class="sign">
-                    <p>Coded by Edouard Diep</p>
+                <div class="signature">
+                    <p>Coded by E. Diep</p>
                 </div>
             </div>
         </section>
