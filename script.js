@@ -12,6 +12,7 @@ $(document).ready(function(){
     
     // main variables
     var dev = $('.development-wrapper');
+    var width = $(window).width();
     var lineProgressVisible = false;
 
     // logo loading animation
@@ -33,49 +34,80 @@ $(document).ready(function(){
     // welcome loading animation
     $('.about .content .welcome-wrapper').delay(800).animate({
         'opacity':'1',
-        'top': '45%'
+        'top': '25%'
       },800);
 
     $('#navabout').click(function(){
-        welcome.style.left = "-80%";
-        welcome.style.top = "45%";
-        welcome.style.opacity = 0;
-        welcome.style.transition = "all 2s ease";
-        objectif.style.left = "15%";
-        objectif.style.top = "35%";
-        objectif.style.transition = "all 1.5s ease";
-        objectif.style.cursor = "pointer";
-        objectif.style.opacity = 1;
-        aboutText.style.opacity = 1;
-        aboutText.style.transition = "all 2s ease";       
+        if(width >= 768){ // PC & Tablets animation
+            welcome.style.left = "-80%";
+            welcome.style.opacity = 0;
+            welcome.style.transition = "all 2s ease";
+            objectif.style.left = "15%";
+            objectif.style.transition = "all 1.5s ease";
+            objectif.style.cursor = "pointer";
+            objectif.style.opacity = 1;
+            aboutText.style.opacity = 1;
+            aboutText.style.transition = "all 2s ease";   
+        } else { // Mobile animation
+            welcome.style.top = "-80%";
+            welcome.style.opacity = 0;
+            welcome.style.transition = "all 2s ease";
+            objectif.style.top = "3vw";
+            objectif.style.cursor = "pointer";
+            objectif.style.opacity = 1;
+            objectif.style.transition = "all 1s ease";
+            aboutText.style.opacity = 1;
+            aboutText.style.transition = "all 3s ease"
+        }
     });
 
     $('.welcome-wrapper').click(function(){
-        welcome.style.left = "-80%";
-        welcome.style.top = "45%";
-        welcome.style.opacity = 0;
-        welcome.style.transition = "all 2s ease";
-        objectif.style.left = "15%";
-        objectif.style.top = "35%";
-        objectif.style.transition = "all 1.5s ease";
-        objectif.style.cursor = "pointer";
-        objectif.style.opacity = 1;
-        aboutText.style.opacity = 1;
-        aboutText.style.transition = "all 2s ease";
+        if(width >= 768){ // PC & Tablets animation
+            welcome.style.left = "-80%";
+            welcome.style.opacity = 0;
+            welcome.style.transition = "all 2s ease";
+            objectif.style.left = "15%";
+            objectif.style.transition = "all 1.5s ease";
+            objectif.style.cursor = "pointer";
+            objectif.style.opacity = 1;
+            aboutText.style.opacity = 1;
+            aboutText.style.transition = "all 2s ease";
+        } else { // Mobile animation
+            welcome.style.top = "-80%";
+            welcome.style.opacity = 0;
+            welcome.style.transition = "all 2s ease";
+            objectif.style.top = "3vw";
+            objectif.style.cursor = "pointer";
+            objectif.style.opacity = 1;
+            objectif.style.transition = "all 1s ease";
+            aboutText.style.opacity = 1;
+            aboutText.style.transition = "all 3s ease"
+        }
     });
 
     $('.description-wrapper').click(function(){
-        welcome.style.left = "25%";
-        welcome.style.top = "45%";
-        welcome.style.transition = "all 1.5s ease";
-        welcome.style.opacity = 1;
-        objectif.style.left = "-80%";
-        objectif.style.top = "35%";
-        objectif.style.transition = "all 2s ease";
-        objectif.style.cursor = "pointer";
-        objectif.style.opacity = 0;
-        aboutText.style.opacity = 0;
-        aboutText.style.transition = "all 1s ease";
+        if(width >= 768){ // PC & Tablets animation
+            welcome.style.left = "25%";
+            welcome.style.opacity = 1;
+            welcome.style.transition = "all 1.5s ease";
+            objectif.style.left = "-80%";
+            objectif.style.cursor = "pointer";
+            objectif.style.opacity = 0;
+            objectif.style.transition = "all 2s ease";
+            aboutText.style.opacity = 0;
+            aboutText.style.transition = "all 1s ease";
+        } else { // Mobile animation
+            welcome.style.top = "35%";
+            welcome.style.opacity = 1;
+            welcome.style.transition = "all 1.5s ease";
+            objectif.style.top = "-300%";
+            objectif.style.cursor = "pointer";
+            objectif.style.opacity = 0;
+            objectif.style.transition = "all 1s ease";
+            aboutText.style.opacity = 0;
+            aboutText.style.transition = "all 2s ease";
+        }
+
     });
 
     /****** SCROLLING ANIMATION WITH CLICK ON NAVBAR ******/
@@ -91,23 +123,28 @@ $(document).ready(function(){
         //stop default link behaviour
         e.preventDefault();
 
-        //do the scrolling
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top - $target.outerHeight()/6
-        }, 1200, 'swing');
+        if(width >= 768){
+            //do the scrolling
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - $target.outerHeight()/6
+            }, 1200, 'swing');
+        } else {
+            // do nothing
+        }
     });
 
     $(window).scroll(function(){
-
+        
         var bottom_of_window = $(this).scrollTop() + $(this).height()/2.5;
 
         // SECTION EXPERIENCE
 
         $('.experience .content .hidden').each( function(i){
 
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight()*2;
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight()*2.2;
 
             /* If the object is completely visible in the window, fadeIn it */
+            
           
             if( bottom_of_window > bottom_of_object ){
               $(this).animate({
@@ -119,10 +156,16 @@ $(document).ready(function(){
   
         // SECTION SKILLS IT
 
-        var middle_dev_scroll = dev.offset().top + dev.outerHeight(true)/2;
+        var middle_dev_scroll = 0;
+
+        if(width >= 768){
+            middle_dev_scroll = dev.offset().top + dev.outerHeight(true)*2;
+        } else {
+            middle_dev_scroll = dev.offset().top + dev.outerHeight(true)*3;
+        }
+
 
         if((bottom_of_window > middle_dev_scroll) && lineProgressVisible == false){
-
             // Managing bars line load
             $('.skills-bar-container li').each( function(){
                 var $barContainer = $(this).find('.bar-container');
@@ -147,17 +190,28 @@ $(document).ready(function(){
         }
 
         $('.img-portfolio').each(function(){
-            var bottom_of_object = dev.offset().top + dev.outerHeight(true)/2;
-                      
-            console.log("Bottom object = "+bottom_of_object);
-            console.log("Bottom window = "+bottom_of_window);
+
+            var bottom_of_object = 0;
+            if(width >= 768){
+                bottom_of_object = dev.offset().top + dev.outerHeight(true)*2.5;
+            } else {
+                bottom_of_object = dev.offset().top + dev.outerHeight(true)*4.2;
+            }
+
+
             if(bottom_of_window > bottom_of_object){
-  
-                $(this).animate({
-                  'opacity':'1',
-                  'zoom': '1.5'
-                },1000);
-              }
+                if(width > 1024){
+                    $(this).animate({
+                        'opacity':'1',
+                        'zoom': '2.2'
+                      },1000);
+                } else {
+                    $(this).animate({
+                        'opacity':'1',
+                        'zoom': '1.35'
+                      },1000);
+                }
+            }
         });
     });
 });

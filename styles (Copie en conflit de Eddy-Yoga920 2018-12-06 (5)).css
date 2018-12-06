@@ -142,7 +142,7 @@ body {
     padding: 50px 0; }
     .about .content .welcome-wrapper {
       position: relative;
-      top: 35%;
+      top: 55%;
       left: 25%;
       width: -webkit-fit-content;
       width: -moz-fit-content;
@@ -278,7 +278,7 @@ body {
           height: -moz-fit-content;
           height: fit-content;
           display: inline-block;
-          left: 40%;
+          left: 30%;
           top: 0; }
           .about .content .description-wrapper .aboutText p {
             font-style: italic;
@@ -290,30 +290,29 @@ body {
             font-size: 3.5vw;
             font-style: normal; }
         .about .content .description-wrapper .objectif-wrapper {
-          display: block;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
           position: relative;
-          top: -250%;
+          top: -150%;
           left: 0;
-          width: 100%;
-          opacity: 0; }
+          width: 100%; }
           .about .content .description-wrapper .objectif-wrapper .profil {
-            left: 10%;
+            margin-right: 3vw;
             position: relative;
-            height: 30vw;
-            width: 17vw;
-            opacity: 0.5;
-            margin-bottom: 30vw;
+            height: 18vw;
+            width: 10vw;
+            opacity: 5vw;
             -webkit-filter: grayscale(1);
             filter: grayscale(1); }
           .about .content .description-wrapper .objectif-wrapper p {
             color: #002440;
-            font-size: 3vw;
+            font-size: 2vw;
             font-style: italic;
             font-weight: bold;
-            opacity: 0.8;
-            padding: 4vw; }
+            opacity: 0.8; }
             .about .content .description-wrapper .objectif-wrapper p:hover {
-              font-size: 2.9vw;
+              font-size: 1.7vw;
               opacity: 1;
               -webkit-transition: all 400ms ease;
               -o-transition: all 400ms ease;
@@ -328,7 +327,7 @@ body {
   .experience .content {
     text-align: center; }
     .experience .content h1 {
-      font-size: 1.6em;
+      font-size: 2em;
       color: #fff;
       letter-spacing: 1px; }
     .experience .content ul {
@@ -369,12 +368,12 @@ body {
           -moz-border-radius: 0 5px 5px;
           border-radius: 0 5px 5px; }
           .experience .content ul li .experience-content h2 {
-            font-size: 1.3em;
+            font-size: 1.5em;
             color: #002440;
             padding-bottom: 10px; }
           .experience .content ul li .experience-content .experience-time {
             color: #777;
-            font-size: 0.8em;
+            font-size: 1.1em;
             padding-bottom: 10px; }
           .experience .content ul li .experience-content p {
             color: #1a1a1a;
@@ -568,61 +567,59 @@ body {
   height: 100%;
   width: 100%;
   text-align: center; }
-  .contact .content {
-    padding-top: 10vw; }
-    .contact .content .socialIcons {
-      list-style-type: none;
+  .contact .content .socialIcons {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%; }
+    .contact .content .socialIcons li {
       display: inline-block;
-      position: relative;
-      text-align: center;
-      width: 100%; }
-      .contact .content .socialIcons li {
+      margin: auto 4vw;
+      font-size: 4vw; }
+      .contact .content .socialIcons li a {
+        text-align: center;
         display: inline-block;
-        margin: auto 4vw;
-        font-size: 4vw; }
-        .contact .content .socialIcons li a {
-          text-align: center;
-          display: inline-block;
-          line-height: 100px;
-          color: #83a1d8;
-          -webkit-transition: all 500ms ease;
-          -o-transition: all 500ms ease;
-          transition: all 500ms ease;
-          -webkit-transform-origin: left;
-          -ms-transform-origin: left;
-          transform-origin: left;
-          -webkit-transform: rotateY(-15deg);
-          transform: rotateY(-15deg);
-          text-shadow: 5px 0px 1px #222222; }
-        .contact .content .socialIcons li a.linkedin:hover {
-          color: #007bb5;
-          -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          text-shadow: 0px 0px 1px #222222; }
-        .contact .content .socialIcons li a.googlePlus:hover {
-          color: #db4437;
-          -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          text-shadow: 0px 0px 1px #222222; }
-        .contact .content .socialIcons li a.instagram:hover {
-          color: #e4405f;
-          -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          text-shadow: 0px 0px 1px #222222; }
-        .contact .content .socialIcons li a.facebook:hover {
-          color: #3b5998;
-          -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          text-shadow: 0px 0px 1px #222222; }
-    .contact .content .signature {
-      position: relative;
-      top: 20vw;
-      text-align: center; }
-      .contact .content .signature p {
-        font-style: italic;
-        font-weight: bold;
-        color: lightblue;
-        letter-spacing: 2px; }
+        line-height: 100px;
+        color: #83a1d8;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+        transform-origin: left;
+        -webkit-transform: rotateY(-15deg);
+        transform: rotateY(-15deg);
+        text-shadow: 5px 0px 1px #222222; }
+      .contact .content .socialIcons li a.linkedin:hover {
+        color: #007bb5;
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        text-shadow: 0px 0px 1px #222222; }
+      .contact .content .socialIcons li a.googlePlus:hover {
+        color: #db4437;
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        text-shadow: 0px 0px 1px #222222; }
+      .contact .content .socialIcons li a.instagram:hover {
+        color: #e4405f;
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        text-shadow: 0px 0px 1px #222222; }
+      .contact .content .socialIcons li a.facebook:hover {
+        color: #3b5998;
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        text-shadow: 0px 0px 1px #222222; }
+  .contact .content .signature {
+    position: relative;
+    top: 20vw;
+    text-align: center; }
+    .contact .content .signature p {
+      font-style: italic;
+      font-weight: bold;
+      color: lightblue;
+      letter-spacing: 2px; }
 
 @media screen and (max-width: 768px) {
   .contact .content .socialIcons {
@@ -667,7 +664,7 @@ body {
         text-shadow: 0; }
   .contact .content .signature {
     position: relative;
-    top: 90vw;
+    top: 20vw;
     text-align: center; }
     .contact .content .signature p {
       font-style: italic;
