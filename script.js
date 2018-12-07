@@ -20,11 +20,7 @@ $(document).ready(function(){
         'top':'0.3vw',
         'left':'0.3vw',
         'opacity':'0.9',
-        'zoom':'3',
-        'transform': 'scale(3)',
-        'transform-origin': 'top left',
-        '-moz-transform': 'scale(3)',
-        '-moz-transform-origin': 'top left'
+        'zoom':'3'
     },1500);
 
     // ul loading animation
