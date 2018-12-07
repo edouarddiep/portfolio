@@ -52,7 +52,7 @@ $(document).ready(function(){
             welcome.style.top = "-80%";
             welcome.style.opacity = 0;
             welcome.style.transition = "all 2s ease";
-            objectif.style.top = "3vw";
+            objectif.style.top = "0";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
             objectif.style.transition = "all 1s ease";
@@ -76,7 +76,7 @@ $(document).ready(function(){
             welcome.style.top = "-80%";
             welcome.style.opacity = 0;
             welcome.style.transition = "all 2s ease";
-            objectif.style.top = "5%";
+            objectif.style.top = "0";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
             objectif.style.transition = "all 1s ease";
@@ -105,7 +105,7 @@ $(document).ready(function(){
             objectif.style.opacity = 0;
             objectif.style.transition = "all 1s ease";
             aboutText.style.opacity = 0;
-            aboutText.style.transition = "all 2s ease";
+            aboutText.style.transition = "all 1.2s ease";
         }
 
     });
@@ -113,23 +113,27 @@ $(document).ready(function(){
     /****** SCROLLING ANIMATION WITH CLICK ON NAVBAR ******/
 
     //store internal links in a variable
-    if(width >= 768){
-        var $clickedNavLinks = $('a[href^="#"]');
-        //smooth scrolling on clicking navigation link
-        $clickedNavLinks.on('click', function(e) {
-            //find the links and the clicked link
-            var target = this.hash,
-                    $target = $(target),
-                    $navLinks = $('.navbar a');
-            //stop default link behaviour
-            e.preventDefault();
+    var $clickedNavLinks = $('a[href^="#"]');
+    //smooth scrolling on clicking navigation link
+    $clickedNavLinks.on('tap click', function(e) {
+        //find the links and the clicked link
+        var target = this.hash,
+                $target = $(target),
+                $navLinks = $('.navbar a');
+        //stop default link behaviour
+        e.preventDefault();
+        var diff = 0;
+        if(width >= 768){
+            diff = $target.outerHeight()/6;
+        } else {
+            diff = 0;
+        }
 
-                //do the scrolling
-                $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top - $target.outerHeight()/6
-                }, 1200, 'swing');
-        });
-    }
+            //do the scrolling
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - diff
+            }, 1200, 'swing');
+    });
 
     $(window).scroll(function(){
         
