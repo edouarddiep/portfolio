@@ -79,7 +79,7 @@ $(document).ready(function(){
             objectif.style.top = "0";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
-            objectif.style.transition = "all 1s ease";
+            objectif.style.transition = "all 1.5s ease";
             aboutText.style.opacity = 1;
             aboutText.style.transition = "all 3s ease"
         }
@@ -100,10 +100,10 @@ $(document).ready(function(){
             welcome.style.top = "35%";
             welcome.style.opacity = 1;
             welcome.style.transition = "all 1.5s ease";
-            objectif.style.top = "-300%";
+            objectif.style.top = "-80%";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 0;
-            objectif.style.transition = "all 1s ease";
+            objectif.style.transition = "all 1.5s ease";
             aboutText.style.opacity = 0;
             aboutText.style.transition = "all 1.2s ease";
         }
@@ -115,25 +115,41 @@ $(document).ready(function(){
     //store internal links in a variable
     var $clickedNavLinks = $('a[href^="#"]');
     //smooth scrolling on clicking navigation link
-    $clickedNavLinks.on('tap click', function(e) {
-        //find the links and the clicked link
-        var target = this.hash,
-                $target = $(target),
-                $navLinks = $('.navbar a');
-        //stop default link behaviour
-        e.preventDefault();
-        var diff = 0;
-        if(width >= 768){
-            diff = $target.outerHeight()/6;
-        } else {
-            diff = 0;
-        }
-
+    if(width >= 768){
+        $clickedNavLinks.on('click', function(e) {
+            //find the links and the clicked link
+            var target = this.hash,
+                    $target = $(target),
+                    $navLinks = $('.navbar a');
+            //stop default link behaviour
+            e.preventDefault();
             //do the scrolling
             $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - diff
+                'scrollTop': $target.offset().top - $target.outerHeight()/6
             }, 1200, 'swing');
-    });
+        });
+    } else {
+        $clickedNavLinks.on('touchstart mouseenter focus', function(e) {
+            //find the links and the clicked link
+            var target = this.hash,
+                    $target = $(target),
+                    $navLinks = $('.navbar a');
+            //stop default link behaviour
+            if(e.type == 'touchstart'){
+                e.stopImmediatePropagation();
+                e.preventDefault();
+            }
+            //do the scrolling
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 1200, 'swing');
+        });
+    }
+
+
+    function doScroll(){
+        
+    }
 
     $(window).scroll(function(){
         
