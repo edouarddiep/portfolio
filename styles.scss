@@ -15,8 +15,7 @@ $title-color: #002440;
 $dark : #2f2f2f;
 $linkedin-top: #007bb5;
 $google-top: #db4437;
-$instagram-top: #e4405f;
-$facebook-top: #3b5998;
+$phone-top: #3b5998;
 
 $lightBlue: hsl(219, 52%, 68%);
 $progressbar-bg: #ececec;
@@ -94,7 +93,6 @@ body {
             border:2px solid $lightBlue;
             border-radius:10px;
             background-color:$progressbar-bg;
-            font-size: 1.15vw;
             color: black;
             transition: all 0.5s ease;
         }
@@ -106,7 +104,7 @@ body {
             content: '';
             display: block;
             width: 0;
-            height: 2px;
+            height: 4px;
             background: $turquoise;
             transition: width .3s;
         }
@@ -253,7 +251,7 @@ body {
                     font-style: italic;
                     color:$title-color;
                     font-size: 0.8vw;
-                    letter-spacing: 3px;
+                    letter-spacing: 1px;
                 }
                 h1{
                     position: relative;
@@ -284,6 +282,8 @@ body {
                     font-style: italic;
                     font-weight: bold;
                     opacity: 0.8;
+                    width:60%;
+                    text-align:justify;
                     &:hover {
                         font-size: 1.7vw;
                         opacity: 1;
@@ -359,32 +359,38 @@ body {
                 } 
     
                 .objectif-wrapper {
-                    display: block;
+                    display: inline-flex;
                     position: relative;
                     top: -100%;
                     left: 0;
                     width:100%;
+                    height:100%;
                     opacity:0;
                     .profil {
-                        margin-bottom:3vw;
                         left:10%;
                         position: relative;
-                        height: 31vw;
-                        width: 17vw;
+                        height: 32vw;
+                        width: 18vw;
                         opacity: 0.5;
+                        display:block;
                         filter: grayscale(1);
                     }
                     p{
                         color: $title-color;
                         font-size: 3vw;
                         font-style: italic;
-                        font-weight: bold;
+                        font-weight: normal;
+                        text-align:justify;
+                        position: relative;
                         opacity: 0.8;
-                        padding:4vw;
+                        width:75%;
+                        top:30%;
+                        left:-10%;
+                        display:block;
                         &:hover {
                             font-size: 2.9vw;
                             opacity: 1;
-                            transition: all 400ms ease;
+                            transition: all 300ms ease;
                         }
                     }
                 }
@@ -686,13 +692,13 @@ body {
                             h3{
                                 display: inline-block;
                                 font-weight: bold;
-                                font-size: 2.7vw;
+                                font-size: 2.2vw;
                             }
                         
                             .percent{
                                 position: absolute;
                                 right: 20px;
-                                font-size: 2vw;
+                                font-size: 1.8vw;
                                 font-style: italic;
                                 font-weight: bold;
                             }
@@ -723,6 +729,8 @@ body {
                 padding-left:10px;
                 
                 .grid-portfolio{
+                    text-align: center;
+                    vertical-align: middle;
                     display: grid;
                     padding:15px 0;
                     grid-template-columns: 1fr 1fr 1fr;
@@ -795,17 +803,17 @@ body {
                         0px 0px 1px darken($dark, 5%);
                     }
                 }
-                a.instagram{
+                a.email{
                     &:hover{
-                        color: $instagram-top;
+                        color: $google-top;
                         transform:rotateY(0deg);
                         text-shadow:
                         0px 0px 1px darken($dark, 5%); 
                     }
                 }
-                a.facebook{
+                a.phone{
                     &:hover{
-                        color:$facebook-top;
+                        color:$phone-top;
                         transform: rotateY(0deg);
                         text-shadow:
                         0px 0px 1px darken($dark, 5%);
@@ -863,15 +871,15 @@ body {
                             text-shadow:0;
                         }
                     }
-                    a.instagram{
-                        color: $instagram-top;
+                    a.email{
+                        color: $lightBlue;
                         &:hover{
                             transform:rotateY(0deg);
                             text-shadow:0;
                         }
                     }
-                    a.facebook{
-                        color:$facebook-top;
+                    a.phone{
+                        color:$phone-top;
                         &:hover{
                             transform: rotateY(0deg);
                             text-shadow:0;

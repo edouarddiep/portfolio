@@ -64,7 +64,6 @@ body {
     border: 2px solid #83a1d8;
     border-radius: 10px;
     background-color: #ececec;
-    font-size: 1.15vw;
     color: black;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -75,7 +74,7 @@ body {
     content: '';
     display: block;
     width: 0;
-    height: 2px;
+    height: 4px;
     background: #80BCBB;
     -webkit-transition: width .3s;
     -o-transition: width .3s;
@@ -202,7 +201,7 @@ body {
           font-style: italic;
           color: #002440;
           font-size: 0.8vw;
-          letter-spacing: 3px; }
+          letter-spacing: 1px; }
         .about .content .description-wrapper .aboutText h1 {
           position: relative;
           font-size: 1.5vw;
@@ -230,7 +229,9 @@ body {
           font-size: 1.6vw;
           font-style: italic;
           font-weight: bold;
-          opacity: 0.8; }
+          opacity: 0.8;
+          width: 60%;
+          text-align: justify; }
           .about .content .description-wrapper .objectif-wrapper p:hover {
             font-size: 1.7vw;
             opacity: 1;
@@ -302,34 +303,42 @@ body {
             font-size: 3.5vw;
             font-style: normal; }
         .about .content .description-wrapper .objectif-wrapper {
-          display: block;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
           position: relative;
           top: -100%;
           left: 0;
           width: 100%;
+          height: 100%;
           opacity: 0; }
           .about .content .description-wrapper .objectif-wrapper .profil {
-            margin-bottom: 3vw;
             left: 10%;
             position: relative;
-            height: 31vw;
-            width: 17vw;
+            height: 32vw;
+            width: 18vw;
             opacity: 0.5;
+            display: block;
             -webkit-filter: grayscale(1);
             filter: grayscale(1); }
           .about .content .description-wrapper .objectif-wrapper p {
             color: #002440;
             font-size: 3vw;
             font-style: italic;
-            font-weight: bold;
+            font-weight: normal;
+            text-align: justify;
+            position: relative;
             opacity: 0.8;
-            padding: 4vw; }
+            width: 75%;
+            top: 30%;
+            left: -10%;
+            display: block; }
             .about .content .description-wrapper .objectif-wrapper p:hover {
               font-size: 2.9vw;
               opacity: 1;
-              -webkit-transition: all 400ms ease;
-              -o-transition: all 400ms ease;
-              transition: all 400ms ease; } }
+              -webkit-transition: all 300ms ease;
+              -o-transition: all 300ms ease;
+              transition: all 300ms ease; } }
 
 /*##### SECTION EXPERIENCE #####*/
 .experience {
@@ -537,11 +546,11 @@ body {
               .skills .content .development-wrapper .skills-bar-container li .progressbar-title h3 {
                 display: inline-block;
                 font-weight: bold;
-                font-size: 2.7vw; }
+                font-size: 2.2vw; }
               .skills .content .development-wrapper .skills-bar-container li .progressbar-title .percent {
                 position: absolute;
                 right: 20px;
-                font-size: 2vw;
+                font-size: 1.8vw;
                 font-style: italic;
                 font-weight: bold; }
             .skills .content .development-wrapper .skills-bar-container li .bar-container {
@@ -562,6 +571,8 @@ body {
         float: left;
         padding-left: 10px; }
         .skills .content .portfolio-wrapper .grid-portfolio {
+          text-align: center;
+          vertical-align: middle;
           display: grid;
           padding: 15px 0;
           grid-template-columns: 1fr 1fr 1fr;
@@ -616,12 +627,12 @@ body {
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
           text-shadow: 0px 0px 1px #222222; }
-        .contact .content .socialIcons li a.instagram:hover {
-          color: #e4405f;
+        .contact .content .socialIcons li a.email:hover {
+          color: #db4437;
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
           text-shadow: 0px 0px 1px #222222; }
-        .contact .content .socialIcons li a.facebook:hover {
+        .contact .content .socialIcons li a.phone:hover {
           color: #3b5998;
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
@@ -669,15 +680,15 @@ body {
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
           text-shadow: 0; }
-      .contact .content .socialIcons li a.instagram {
-        color: #e4405f; }
-        .contact .content .socialIcons li a.instagram:hover {
+      .contact .content .socialIcons li a.email {
+        color: #83a1d8; }
+        .contact .content .socialIcons li a.email:hover {
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
           text-shadow: 0; }
-      .contact .content .socialIcons li a.facebook {
+      .contact .content .socialIcons li a.phone {
         color: #3b5998; }
-        .contact .content .socialIcons li a.facebook:hover {
+        .contact .content .socialIcons li a.phone:hover {
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
           text-shadow: 0; }

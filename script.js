@@ -20,7 +20,11 @@ $(document).ready(function(){
         'top':'0.3vw',
         'left':'0.3vw',
         'opacity':'0.9',
-        'zoom':'3'
+        'zoom':'3',
+        'transform': 'scale(3)',
+        'transform-origin': 'top left',
+        '-moz-transform': 'scale(3)',
+        '-moz-transform-origin': 'top left'
     },1500);
 
     // ul loading animation
@@ -42,7 +46,7 @@ $(document).ready(function(){
             welcome.style.left = "-80%";
             welcome.style.opacity = 0;
             welcome.style.transition = "all 2s ease";
-            objectif.style.left = "15%";
+            objectif.style.left = "25%";
             objectif.style.transition = "all 1.5s ease";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
@@ -52,7 +56,7 @@ $(document).ready(function(){
             welcome.style.top = "-80%";
             welcome.style.opacity = 0;
             welcome.style.transition = "all 2s ease";
-            objectif.style.top = "0";
+            objectif.style.top = "10px";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
             objectif.style.transition = "all 1s ease";
@@ -66,7 +70,7 @@ $(document).ready(function(){
             welcome.style.left = "-80%";
             welcome.style.opacity = 0;
             welcome.style.transition = "all 2s ease";
-            objectif.style.left = "15%";
+            objectif.style.left = "25%";
             objectif.style.transition = "all 1.5s ease";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
@@ -76,7 +80,7 @@ $(document).ready(function(){
             welcome.style.top = "-80%";
             welcome.style.opacity = 0;
             welcome.style.transition = "all 2s ease";
-            objectif.style.top = "0";
+            objectif.style.top = "10px";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
             objectif.style.transition = "all 1.5s ease";
@@ -146,10 +150,6 @@ $(document).ready(function(){
         });
     }
 
-    function doScroll(){
-        
-    }
-
     $(window).scroll(function(){
         
         var bottom_of_window = $(this).scrollTop() + $(this).height()/2.5;
@@ -207,13 +207,15 @@ $(document).ready(function(){
                 if(width > 1024){
                     $(this).animate({
                         'opacity':'1',
-                        'zoom': '2.2'
-                      },1000);
+                        'zoom': '2.2',
+                        '-moz-transform':'scale(2.2)'
+                    },1000);
                 } else {
                     $(this).animate({
                         'opacity':'1',
-                        'zoom': '1.2'
-                      },1000);
+                        'zoom': '1.3',
+                        '-moz-transform':'scale(1.3)'
+                    },1000);
                 }
             }
         });
