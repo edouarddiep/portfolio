@@ -307,14 +307,14 @@ body {
           top: -100%;
           left: 0;
           width: 100%;
-          opacity: 0; }
+          opacity: 0;
+          padding-bottom: 5vw; }
           .about .content .description-wrapper .objectif-wrapper .profil {
             left: 10%;
             position: relative;
             height: 30vw;
             width: 17vw;
             opacity: 0.5;
-            margin-bottom: 30vw;
             -webkit-filter: grayscale(1);
             filter: grayscale(1); }
           .about .content .description-wrapper .objectif-wrapper p {

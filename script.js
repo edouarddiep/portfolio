@@ -76,7 +76,7 @@ $(document).ready(function(){
             welcome.style.top = "-80%";
             welcome.style.opacity = 0;
             welcome.style.transition = "all 2s ease";
-            objectif.style.top = "-25%";
+            objectif.style.top = "5%";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
             objectif.style.transition = "all 1.5s ease";
@@ -145,7 +145,6 @@ $(document).ready(function(){
             }, 1200, 'swing');
         });
     }
-
 
     function doScroll(){
         
