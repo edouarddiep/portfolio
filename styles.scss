@@ -124,7 +124,7 @@ body {
             padding:0;
             padding-top: 2.5vw;
             padding-bottom: 2.5vw;
-            letter-spacing: 5vw;
+            letter-spacing: 3vw;
             left:0;
             width:100%;
             height:100%;
@@ -203,18 +203,20 @@ body {
             position: relative;
             top: 35%;
             left: 25%;
-            width: fit-content;
+            width: 30%;
             height: fit-content;
             border: solid 2px rgb(34, 2, 2);
             padding: 2vw;
             transition: all 400ms ease;
             opacity:0;
             z-index: 90;
-            &:hover {
-                background-color: $about-hover-color;
-                border-radius: 10px;
-                cursor: pointer;
-                color:$white;
+            background-color: $about-hover-color;
+            border-radius: 10px;
+            cursor: pointer;
+            color:$white;
+            &:hover{
+                border: solid 4px $white;
+                transition: all 0.5s ease;
             }
             h1 {
                 font-size: 3vw;

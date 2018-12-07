@@ -76,7 +76,7 @@ $(document).ready(function(){
             welcome.style.top = "-80%";
             welcome.style.opacity = 0;
             welcome.style.transition = "all 2s ease";
-            objectif.style.top = "3vw";
+            objectif.style.top = "5%";
             objectif.style.cursor = "pointer";
             objectif.style.opacity = 1;
             objectif.style.transition = "all 1s ease";
@@ -113,25 +113,23 @@ $(document).ready(function(){
     /****** SCROLLING ANIMATION WITH CLICK ON NAVBAR ******/
 
     //store internal links in a variable
-    var $clickedNavLinks = $('a[href^="#"]');
-    //smooth scrolling on clicking navigation link
-    $clickedNavLinks.on('click', function(e) {
-        //find the links and the clicked link
-        var target = this.hash,
-                $target = $(target),
-                $navLinks = $('.navbar a');
-        //stop default link behaviour
-        e.preventDefault();
+    if(width >= 768){
+        var $clickedNavLinks = $('a[href^="#"]');
+        //smooth scrolling on clicking navigation link
+        $clickedNavLinks.on('click', function(e) {
+            //find the links and the clicked link
+            var target = this.hash,
+                    $target = $(target),
+                    $navLinks = $('.navbar a');
+            //stop default link behaviour
+            e.preventDefault();
 
-        if(width >= 768){
-            //do the scrolling
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - $target.outerHeight()/6
-            }, 1200, 'swing');
-        } else {
-            // do nothing
-        }
-    });
+                //do the scrolling
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - $target.outerHeight()/6
+                }, 1200, 'swing');
+        });
+    }
 
     $(window).scroll(function(){
         
@@ -146,7 +144,7 @@ $(document).ready(function(){
             /* If the object is completely visible in the window, fadeIn it */
             
           
-            if( bottom_of_window > bottom_of_object ){
+            if( bottom_of_window > bottom_of_object){
               $(this).animate({
                 'opacity':'1',
                 'margin-left': '0',
@@ -156,14 +154,7 @@ $(document).ready(function(){
   
         // SECTION SKILLS IT
 
-        var middle_dev_scroll = 0;
-
-        if(width >= 768){
-            middle_dev_scroll = dev.offset().top + dev.outerHeight(true)*2;
-        } else {
-            middle_dev_scroll = dev.offset().top + dev.outerHeight(true)*3;
-        }
-
+        var middle_dev_scroll = dev.offset().top + dev.outerHeight(true)*2;
 
         if((bottom_of_window > middle_dev_scroll) && lineProgressVisible == false){
             // Managing bars line load
@@ -191,14 +182,8 @@ $(document).ready(function(){
 
         $('.img-portfolio').each(function(){
 
-            var bottom_of_object = 0;
-            if(width >= 768){
-                bottom_of_object = dev.offset().top + dev.outerHeight(true)*2.5;
-            } else {
-                bottom_of_object = dev.offset().top + dev.outerHeight(true)*4.2;
-            }
-
-
+            var bottom_of_object = dev.offset().top + dev.outerHeight(true)*2.5;
+ 
             if(bottom_of_window > bottom_of_object){
                 if(width > 1024){
                     $(this).animate({
@@ -208,7 +193,7 @@ $(document).ready(function(){
                 } else {
                     $(this).animate({
                         'opacity':'1',
-                        'zoom': '1.35'
+                        'zoom': '1.2'
                       },1000);
                 }
             }
