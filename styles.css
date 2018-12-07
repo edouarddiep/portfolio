@@ -307,12 +307,12 @@ body {
           top: -100%;
           left: 0;
           width: 100%;
-          opacity: 0;
-          padding-bottom: 5vw; }
+          opacity: 0; }
           .about .content .description-wrapper .objectif-wrapper .profil {
+            margin-bottom: 3vw;
             left: 10%;
             position: relative;
-            height: 30vw;
+            height: 31vw;
             width: 17vw;
             opacity: 0.5;
             -webkit-filter: grayscale(1);
