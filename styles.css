@@ -260,10 +260,10 @@ body {
         opacity: 0;
         z-index: 90; }
         .about .content .welcome-wrapper h1 {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           position: relative; }
         .about .content .welcome-wrapper p {
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           position: relative;
           width: 100%;
           padding: 0; }
@@ -637,7 +637,7 @@ body {
     .contact .content .socialIcons li {
       display: inline-block;
       margin: auto 6vw;
-      font-size: 6vw; }
+      font-size: 10vw; }
       .contact .content .socialIcons li a {
         text-align: center;
         display: inline-block;
@@ -649,26 +649,30 @@ body {
         -webkit-transform: rotateY(0);
         transform: rotateY(0);
         text-shadow: none; }
-      .contact .content .socialIcons li a.linkedin:hover {
-        color: #007bb5;
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
-        text-shadow: 0; }
-      .contact .content .socialIcons li a.googlePlus:hover {
-        color: #db4437;
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
-        text-shadow: 0; }
-      .contact .content .socialIcons li a.instagram:hover {
-        color: #e4405f;
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
-        text-shadow: 0; }
-      .contact .content .socialIcons li a.facebook:hover {
-        color: #3b5998;
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
-        text-shadow: 0; }
+      .contact .content .socialIcons li a.linkedin {
+        color: #007bb5; }
+        .contact .content .socialIcons li a.linkedin:hover {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+          text-shadow: 0; }
+      .contact .content .socialIcons li a.googlePlus {
+        color: #db4437; }
+        .contact .content .socialIcons li a.googlePlus:hover {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+          text-shadow: 0; }
+      .contact .content .socialIcons li a.instagram {
+        color: #e4405f; }
+        .contact .content .socialIcons li a.instagram:hover {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+          text-shadow: 0; }
+      .contact .content .socialIcons li a.facebook {
+        color: #3b5998; }
+        .contact .content .socialIcons li a.facebook:hover {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+          text-shadow: 0; }
   .contact .content .signature {
     position: relative;
     top: 90vw;
