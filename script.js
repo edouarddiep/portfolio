@@ -10,17 +10,52 @@ $(document).ready(function(){
      // action when refreshing html page
     $(this).scrollTop(0);
     
+  // typing animation
+  (function($) {
+    $.fn.delay(3000).writeText = function(content) {
+        var contentArray = content.split(""),
+            current = 0,
+            elem = this;
+        setInterval(function() {
+            if(current < contentArray.length) {
+                elem.text(elem.text() + contentArray[current++]);
+            }
+        }, 80);
+    };
+    
+  })(jQuery);
+
+
+  // input text for typing animation 
+  $("#titleHolder").writeText("Hello ! I am Edouard");
+
+
+  // input text for typing animation 
+  setTimeout(function(){
+    $("#pHolder").delay(200).writeText("A Full Stack developer");
+  }, 1500);
+
+
     // main variables
     var dev = $('.development-wrapper');
     var width = $(window).width();
     var lineProgressVisible = false;
+
 
     // logo loading animation
     $('.navbar .logo').delay(100).animate({
         'top':'0.3vw',
         'left':'0.3vw',
         'opacity':'0.9',
-        'zoom':'3'
+        'zoom':'3',
+        'transform'                : 'scale(3)',
+        'transform-origin'         : '0 0',
+        '-moz-transform-origin'    : '0 0',         /*Firefox*/
+        '-ms-transform-origin'     : '0 0',         /*IE*/
+        '-webkit-transform-origin' : '0 0',         /*Opera/Safari*/
+        '-moz-transform'           : 'scale(3)', /*Firefox*/
+        '-ms-transform'            : 'scale(3)', /*IE*/
+        '-webkit-transform'        : 'scale(3)'  /*Opera/Safari*/
     },1500);
 
     // ul loading animation
@@ -32,83 +67,10 @@ $(document).ready(function(){
 
 
     // welcome loading animation
-    $('.about .content .welcome-wrapper').delay(800).animate({
-        'opacity':'1',
-        'top': '25%'
-      },800);
-
-    $('#navabout').click(function(){
-        if(width >= 768){ // PC & Tablets animation
-            welcome.style.left = "-80%";
-            welcome.style.opacity = 0;
-            welcome.style.transition = "all 2s ease";
-            objectif.style.left = "25%";
-            objectif.style.transition = "all 1.5s ease";
-            objectif.style.cursor = "pointer";
-            objectif.style.opacity = 1;
-            aboutText.style.opacity = 1;
-            aboutText.style.transition = "all 2s ease";   
-        } else { // Mobile animation
-            welcome.style.top = "-80%";
-            welcome.style.opacity = 0;
-            welcome.style.transition = "all 2s ease";
-            objectif.style.top = "10px";
-            objectif.style.cursor = "pointer";
-            objectif.style.opacity = 1;
-            objectif.style.transition = "all 1s ease";
-            aboutText.style.opacity = 1;
-            aboutText.style.transition = "all 3s ease"
-        }
-    });
-
-    $('.welcome-wrapper').click(function(){
-        if(width >= 768){ // PC & Tablets animation
-            welcome.style.left = "-80%";
-            welcome.style.opacity = 0;
-            welcome.style.transition = "all 2s ease";
-            objectif.style.left = "25%";
-            objectif.style.transition = "all 1.5s ease";
-            objectif.style.cursor = "pointer";
-            objectif.style.opacity = 1;
-            aboutText.style.opacity = 1;
-            aboutText.style.transition = "all 2s ease";
-        } else { // Mobile animation
-            welcome.style.top = "-80%";
-            welcome.style.opacity = 0;
-            welcome.style.transition = "all 2s ease";
-            objectif.style.top = "10px";
-            objectif.style.cursor = "pointer";
-            objectif.style.opacity = 1;
-            objectif.style.transition = "all 1.5s ease";
-            aboutText.style.opacity = 1;
-            aboutText.style.transition = "all 3s ease"
-        }
-    });
-
-    $('.description-wrapper').click(function(){
-        if(width >= 768){ // PC & Tablets animation
-            welcome.style.left = "25%";
-            welcome.style.opacity = 1;
-            welcome.style.transition = "all 1.5s ease";
-            objectif.style.left = "-80%";
-            objectif.style.cursor = "pointer";
-            objectif.style.opacity = 0;
-            objectif.style.transition = "all 2s ease";
-            aboutText.style.opacity = 0;
-            aboutText.style.transition = "all 1s ease";
-        } else { // Mobile animation
-            welcome.style.top = "35%";
-            welcome.style.opacity = 1;
-            welcome.style.transition = "all 1.5s ease";
-            objectif.style.top = "-80%";
-            objectif.style.cursor = "pointer";
-            objectif.style.opacity = 0;
-            objectif.style.transition = "all 1.5s ease";
-            aboutText.style.opacity = 0;
-            aboutText.style.transition = "all 1.2s ease";
-        }
-
-    });
+    $('.mainPage .content .welcome-wrapper').animate({
+        'opacity':'1'
+    },500);
+   
 
     /****** SCROLLING ANIMATION WITH CLICK ON NAVBAR ******/
 
@@ -146,15 +108,18 @@ $(document).ready(function(){
         });
     }
 
-    $(window).scroll(function(){
-        
-        var bottom_of_window = $(this).scrollTop() + $(this).height()/2.5;
+    $('body').scroll(function(){
+       
+        var bottom_of_window = $(this).scrollTop() + $(this).outerHeight()/2.5;
 
         // SECTION EXPERIENCE
 
         $('.experience .content .hidden').each( function(i){
 
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight()*2.2;
+            var bottom_of_object = $(this).offset().top - $(this).outerHeight();
+
+            console.log("BOTTOM OF WINDOW = "+bottom_of_window);
+            console.log("BOTTOM OF EXPERIENCE = "+bottom_of_object);
 
             /* If the object is completely visible in the window, fadeIn it */
             
@@ -169,7 +134,9 @@ $(document).ready(function(){
   
         // SECTION SKILLS IT
 
-        var middle_dev_scroll = dev.offset().top + dev.outerHeight(true)*2;
+        var middle_dev_scroll = dev.offset().top - dev.outerHeight()/2.5;
+        console.log("BOTTOM OF SKILLS = "+middle_dev_scroll);
+
 
         if((bottom_of_window > middle_dev_scroll) && lineProgressVisible == false){
             // Managing bars line load
@@ -180,7 +147,7 @@ $(document).ready(function(){
                 var percent = $(this).find('.percent');
                 var width = 0;
         
-                var id = setInterval(frame, 25);
+                var id = setInterval(frame, 30);
         
                 function frame() {
                   if (width >= dataPercent) {
@@ -196,10 +163,8 @@ $(document).ready(function(){
         }
 
         $('.img-portfolio').each(function(){
-
-            var bottom_of_object = dev.offset().top + dev.outerHeight(true)*2.5;
  
-            if(bottom_of_window > bottom_of_object){
+            if(bottom_of_window > middle_dev_scroll){
                 if(width > 1024){
                     $(this).animate({
                         'opacity':'1',

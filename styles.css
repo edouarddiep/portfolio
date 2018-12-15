@@ -17,8 +17,10 @@
   box-sizing: border-box;
   font-family: montserrat; }
 
-body {
-  overflow-x: hidden; }
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%; }
 
 /*##### NAV BAR #####*/
 .navbar {
@@ -52,7 +54,26 @@ body {
         text-transform: uppercase;
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
-        transition: all 0.5s ease; }
+        transition: all 0.5s ease;
+        outline: none;
+        border: none;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: transparent;
+        position: relative;
+        border: 2px solid #83a1d8;
+        border-radius: 10px; }
+        .navbar ul li a .insider {
+          background-color: #83a1d8;
+          width: 100%;
+          height: 20px;
+          position: absolute;
+          left: -155px;
+          transform: rotateZ(45deg);
+          -webkit-transform: rotateZ(45deg);
+          -moz-transform: rotateZ(45deg);
+          -o-transform: rotateZ(45deg);
+          -ms-transform: rotateZ(45deg); }
   .navbar .logo {
     opacity: 0;
     position: absolute;
@@ -61,13 +82,15 @@ body {
     left: 5vw;
     top: 0.5vw; }
   .navbar .navbar-a:hover {
-    border: 2px solid #83a1d8;
-    border-radius: 10px;
-    background-color: #ececec;
     color: black;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+    .navbar .navbar-a:hover .insider {
+      -webkit-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+      left: 135px; }
   .navbar .navbar-a:hover::after {
     width: 100%; }
   .navbar .navbar-a:after {
@@ -75,7 +98,7 @@ body {
     display: block;
     width: 0;
     height: 4px;
-    background: #80BCBB;
+    background: #007bb5;
     -webkit-transition: width .3s;
     -o-transition: width .3s;
     transition: width .3s; }
@@ -127,64 +150,175 @@ body {
         -o-transition: width .3s;
         transition: width .3s; } }
 
-/*##### SECTION A PROPOS #####*/
-.about {
-  height: 100vw;
+/*##### SECTION ACCUEIL #####*/
+.mainPage {
+  height: 100%;
   width: 100%;
-  z-index: 90;
-  padding: 50px 0;
-  display: table;
-  background: -webkit-linear-gradient(#80BCBB 10%, #f8f8f8 75%);
-  background-image: -moz-linear-gradient(#80BCBB 10%, #f8f8f8 75%);
-  background-image: -o-linear-gradient(#80BCBB 10%, #f8f8f8 75%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #80BCBB), color-stop(75%, #f8f8f8));
-  background-image: -webkit-linear-gradient(#80BCBB 10%, #f8f8f8 75%);
-  background-image: linear-gradient(#80BCBB 10%, #f8f8f8 75%);
-  background-image: -ms-linear-gradient(#80BCBB 10%, #f8f8f8 75%); }
-  .about .content {
-    width: 100%;
-    height: 100%;
-    padding: 50px 0; }
-    .about .content .welcome-wrapper {
-      position: relative;
-      top: 35%;
-      left: 25%;
+  background: url("./images/skill_it_bg.jpeg") no-repeat;
+  background-size: 100%;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  padding-top: 9vw; }
+  .mainPage .content {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    top: 30%; }
+    .mainPage .content .welcome-wrapper {
+      max-width: -webkit-fit-content;
+      max-width: -moz-fit-content;
+      max-width: fit-content;
       width: -webkit-fit-content;
       width: -moz-fit-content;
       width: fit-content;
       height: -webkit-fit-content;
       height: -moz-fit-content;
       height: fit-content;
-      border: solid 2px #220202;
-      padding: 2vw;
       -webkit-transition: all 400ms ease;
       -o-transition: all 400ms ease;
       transition: all 400ms ease;
       opacity: 0;
-      z-index: 90;
-      background-color: #3F69AA;
-      border-radius: 10px;
-      cursor: pointer;
-      color: #f8f8f8; }
-      .about .content .welcome-wrapper:hover {
-        border: solid 4px #f8f8f8;
-        -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease; }
-      .about .content .welcome-wrapper h1 {
+      color: #f8f8f8;
+      z-index: 90; }
+      .mainPage .content .welcome-wrapper h1 {
         font-size: 3vw;
         position: relative;
         padding: 5px 0; }
-      .about .content .welcome-wrapper p {
+      .mainPage .content .welcome-wrapper p {
         font-size: 2vw;
         position: relative;
         width: 100%;
         padding: 5px 0; }
+
+@media screen and (max-width: 768px) {
+  .mainPage {
+    height: 100%;
+    width: 100%;
+    background: url("./images/skill_it_bg.jpeg") no-repeat;
+    background-size: 100%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 9vw; }
+    .mainPage .content {
+      text-align: center;
+      display: inline-block;
+      position: relative;
+      top: 15%; }
+      .mainPage .content .welcome-wrapper {
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        -webkit-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        transition: all 400ms ease;
+        opacity: 0;
+        color: #f8f8f8;
+        z-index: 90; }
+        .mainPage .content .welcome-wrapper h1 {
+          font-size: 3vw;
+          position: relative;
+          padding: 2px 0; }
+        .mainPage .content .welcome-wrapper p {
+          font-size: 2vw;
+          position: relative;
+          width: 100%;
+          padding: 5px 0; } }
+
+/*##### SECTION A PROPOS #####*/
+.about {
+  width: 100%;
+  height: 100%; }
+  .about .content .description-wrapper {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 100%;
+    height: 20vw;
+    top: 25%; }
+    .about .content .description-wrapper .aboutText {
+      position: relative;
+      opacity: 0;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      display: inline-block; }
+      .about .content .description-wrapper .aboutText p {
+        font-style: italic;
+        font-size: 0.8vw;
+        letter-spacing: 1px;
+        color: #002440; }
+      .about .content .description-wrapper .aboutText h1 {
+        position: relative;
+        font-size: 1.5vw;
+        font-style: normal;
+        color: #002440; }
+    .about .content .description-wrapper .objectif-wrapper {
+      display: inline-block;
+      position: relative;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; }
+      .about .content .description-wrapper .objectif-wrapper .profil {
+        float: left;
+        margin-right: 3vw;
+        position: relative;
+        height: 11vw;
+        width: 6vw;
+        opacity: 0.5;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1); }
+      .about .content .description-wrapper .objectif-wrapper p {
+        float: left;
+        color: #002440;
+        font-size: 1.6vw;
+        font-style: italic;
+        font-weight: bold;
+        opacity: 0.8;
+        width: 60%;
+        text-align: justify; }
+  .about .bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom; }
+  .about .fa-chevron-down {
+    text-align: center;
+    color: #FF6363 !important;
+    bottom: 10px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: 1.2s ease; }
+  .about .fa-3x {
+    font-size: 3em; }
+
+@media screen and (max-width: 768px) {
+  .about {
+    width: 100%;
+    height: 25%; }
     .about .content .description-wrapper {
       position: relative;
-      display: inline-block;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
       width: 100%;
-      height: 30vw; }
+      top: 10%; }
       .about .content .description-wrapper .aboutText {
         position: relative;
         opacity: 0;
@@ -194,23 +328,20 @@ body {
         height: -webkit-fit-content;
         height: -moz-fit-content;
         height: fit-content;
-        display: inline-block;
-        left: 5vw;
-        top: 10vw; }
+        display: block; }
         .about .content .description-wrapper .aboutText p {
           font-style: italic;
-          color: #002440;
           font-size: 0.8vw;
-          letter-spacing: 1px; }
+          letter-spacing: 1px;
+          color: #002440; }
         .about .content .description-wrapper .aboutText h1 {
           position: relative;
           font-size: 1.5vw;
-          font-style: normal; }
+          font-style: normal;
+          color: #002440; }
       .about .content .description-wrapper .objectif-wrapper {
-        display: inline-block;
+        display: block;
         position: relative;
-        top: 35%;
-        left: -100%;
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content; }
@@ -231,121 +362,7 @@ body {
           font-weight: bold;
           opacity: 0.8;
           width: 60%;
-          text-align: justify; }
-          .about .content .description-wrapper .objectif-wrapper p:hover {
-            font-size: 1.7vw;
-            opacity: 1;
-            -webkit-transition: all 400ms ease;
-            -o-transition: all 400ms ease;
-            transition: all 400ms ease; }
-
-@media screen and (max-width: 768px) {
-  .about {
-    height: 100%;
-    width: 100%;
-    z-index: 90;
-    padding: 50px 0;
-    display: block;
-    background: -webkit-linear-gradient(#83a1d8 20%, #f8f8f8 70%);
-    background-image: -moz-linear-gradient(#83a1d8 20%, #f8f8f8 70%);
-    background-image: -o-linear-gradient(#83a1d8 20%, #f8f8f8 70%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #83a1d8), color-stop(70%, #f8f8f8));
-    background-image: -webkit-linear-gradient(#83a1d8 20%, #f8f8f8 70%);
-    background-image: linear-gradient(#83a1d8 20%, #f8f8f8 70%);
-    background-image: -ms-linear-gradient(#83a1d8 20%, #f8f8f8 70%); }
-    .about .content {
-      width: 100%;
-      height: 100%;
-      padding: 0; }
-      .about .content .welcome-wrapper {
-        position: relative;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
-        height: fit-content;
-        top: 35%;
-        left: 3vw;
-        padding: 3vw 1.2vw;
-        -webkit-transition: all 400ms ease;
-        -o-transition: all 400ms ease;
-        transition: all 400ms ease;
-        opacity: 0;
-        z-index: 90; }
-        .about .content .welcome-wrapper h1 {
-          font-size: 1.4rem;
-          position: relative; }
-        .about .content .welcome-wrapper p {
-          font-size: 0.8rem;
-          position: relative;
-          width: 100%;
-          padding: 0; }
-      .about .content .description-wrapper {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
-        height: fit-content; }
-        .about .content .description-wrapper .aboutText {
-          position: relative;
-          opacity: 0;
-          width: -webkit-fit-content;
-          width: -moz-fit-content;
-          width: fit-content;
-          height: -webkit-fit-content;
-          height: -moz-fit-content;
-          height: fit-content;
-          display: inline-block;
-          left: 40%;
-          top: 0; }
-          .about .content .description-wrapper .aboutText p {
-            font-style: italic;
-            color: #002440;
-            font-size: 2.8vw;
-            letter-spacing: 1px; }
-          .about .content .description-wrapper .aboutText h1 {
-            position: relative;
-            font-size: 3.5vw;
-            font-style: normal; }
-        .about .content .description-wrapper .objectif-wrapper {
-          display: -webkit-inline-box;
-          display: -ms-inline-flexbox;
-          display: inline-flex;
-          position: relative;
-          top: -100%;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0; }
-          .about .content .description-wrapper .objectif-wrapper .profil {
-            left: 10%;
-            position: relative;
-            height: 32vw;
-            width: 18vw;
-            opacity: 0.5;
-            display: block;
-            -webkit-filter: grayscale(1);
-            filter: grayscale(1); }
-          .about .content .description-wrapper .objectif-wrapper p {
-            color: #002440;
-            font-size: 3vw;
-            font-style: italic;
-            font-weight: bold;
-            text-align: justify;
-            position: relative;
-            opacity: 0.8;
-            width: 75%;
-            top: 30%;
-            left: -10%;
-            display: block; }
-            .about .content .description-wrapper .objectif-wrapper p:hover {
-              font-size: 2.9vw;
-              opacity: 1;
-              -webkit-transition: all 300ms ease;
-              -o-transition: all 300ms ease;
-              transition: all 300ms ease; } }
+          text-align: justify; } }
 
 /*##### SECTION EXPERIENCE #####*/
 .experience {
@@ -595,11 +612,19 @@ body {
 
 /*##### SECTION CONTACT #####*/
 .contact {
-  height: 100%;
-  width: 100%;
-  text-align: center; }
+  height: 100vw;
+  width: 100vw;
+  text-align: center;
+  background-color: #007bb5; }
   .contact .content {
     padding-top: 10vw; }
+    .contact .content .contact-title {
+      font-size: 3vw;
+      text-align: center;
+      color: #002440;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      letter-spacing: 1px; }
     .contact .content .socialIcons {
       list-style-type: none;
       display: inline-block;
@@ -655,57 +680,62 @@ body {
         letter-spacing: 2px; }
 
 @media screen and (max-width: 768px) {
-  .contact .content .socialIcons {
-    list-style-type: none;
-    display: inline-block;
-    position: relative;
-    text-align: center; }
-    .contact .content .socialIcons li {
+  .contact .content {
+    top: 50vw;
+    position: relative; }
+    .contact .content .contact-title {
+      font-size: 6vw;
+      text-align: center;
+      color: #002440;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      letter-spacing: 1px; }
+    .contact .content .socialIcons {
+      list-style-type: none;
       display: inline-block;
-      margin: auto 6vw;
-      font-size: 10vw; }
-      .contact .content .socialIcons li a {
-        text-align: center;
+      position: relative; }
+      .contact .content .socialIcons li {
         display: inline-block;
-        line-height: 100px;
-        color: #83a1d8;
-        -webkit-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-        -webkit-transform: rotateY(0);
-        transform: rotateY(0);
-        text-shadow: none; }
-      .contact .content .socialIcons li a.linkedin {
-        color: #007bb5; }
-        .contact .content .socialIcons li a.linkedin:hover {
-          -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          text-shadow: 0; }
-      .contact .content .socialIcons li a.googlePlus {
-        color: #db4437; }
-        .contact .content .socialIcons li a.googlePlus:hover {
-          -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          text-shadow: 0; }
-      .contact .content .socialIcons li a.email {
-        color: #83a1d8; }
-        .contact .content .socialIcons li a.email:hover {
-          -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          text-shadow: 0; }
-      .contact .content .socialIcons li a.phone {
-        color: #3b5998; }
-        .contact .content .socialIcons li a.phone:hover {
-          -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          text-shadow: 0; }
-  .contact .content .signature {
-    position: relative;
-    top: 90vw;
-    text-align: center; }
-    .contact .content .signature p {
-      font-style: italic;
-      font-weight: bold;
-      font-size: 3vw;
-      color: lightblue;
-      letter-spacing: 2px; } }
+        font-size: 8vw; }
+        .contact .content .socialIcons li a {
+          display: inline-block;
+          -webkit-transition: all 500ms ease;
+          -o-transition: all 500ms ease;
+          transition: all 500ms ease;
+          -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+          text-shadow: none; }
+        .contact .content .socialIcons li a.linkedin {
+          color: #007bb5; }
+          .contact .content .socialIcons li a.linkedin:hover {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            text-shadow: 0; }
+        .contact .content .socialIcons li a.googlePlus {
+          color: #db4437; }
+          .contact .content .socialIcons li a.googlePlus:hover {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            text-shadow: 0; }
+        .contact .content .socialIcons li a.email {
+          color: #83a1d8; }
+          .contact .content .socialIcons li a.email:hover {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            text-shadow: 0; }
+        .contact .content .socialIcons li a.phone {
+          color: #3b5998; }
+          .contact .content .socialIcons li a.phone:hover {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            text-shadow: 0; }
+    .contact .content .signature {
+      position: relative;
+      top: 90vw;
+      text-align: center; }
+      .contact .content .signature p {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 3vw;
+        color: lightblue;
+        letter-spacing: 2px; } }

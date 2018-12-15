@@ -4,6 +4,7 @@
     *
     * @author : Edouard Diep
 -->
+<!DOCTYPE html>
 <html>
     <head>
             <title>Portfolio</title>
@@ -13,6 +14,9 @@
             <link rel="stylesheet" type="text/css" href="./styles.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/wow.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
     </head>
     <body>
         <script src="./script.js"></script>
@@ -20,19 +24,24 @@
         <nav class="navbar" id="navbar">
             <img class="logo" src="./images/logo2.png" height="80px" width="80px">
             <ul>
-                <li><a class="navbar-a" id="navabout" href="#section-about" title="A propos de moi">A propos</a></li>
-                <li><a class="navbar-a" href="#section-experience" title="Formation et diplômes">Experience</a></li>
-                <li><a class="navbar-a" href="#section-skills" title="Compétences informatiques">Skills</a></li>
-                <li><a class="navbar-a" href="#section-contact" title="Réseaux sociaux">Contact</a></li>
+                <li><a class="navbar-a" id="navabout" href="#section-about" title="A propos de moi"><div class="insider"></div>A propos</a></li>
+                <li><a class="navbar-a" href="#section-experience" title="Formation et diplômes"><div class="insider"></div>Experience</a></li>
+                <li><a class="navbar-a" href="#section-skills" title="Compétences informatiques"><div class="insider"></div>Skills</a></li>
+                <li><a class="navbar-a" href="#section-contact" title="Réseaux sociaux"><div class="insider"></div>Contact</a></li>
             </ul>
         </nav>
-         <!-- SECTION A PROPOS -->
+         <!-- SECTION ACCUEIL -->
+         <section class="mainPage">
+            <div class="content">
+                <div class="welcome-wrapper" id="welcome">
+                    <h1 id="titleHolder"></h1>
+                    <p id="pHolder"></p>
+                </div>
+            </div>
+         </section>
+        <!-- SECTION A PROPOS -->
         <section class="about" id="section-about">
             <div class="content">
-                <div class="welcome-wrapper" id="welcome" title="Pour en savoir plus">
-                    <h1>Hello ! Je suis Edouard</h1>
-                    <p>Un développeur full stack.</p>
-                </div>
                 <div class="description-wrapper" id="descr">
                     <div class="aboutText" id="aboutText" title="Coordonnées">
                         <h1>Edouard DIEP</h1>
@@ -51,8 +60,8 @@
                     <div class="objectif-wrapper" id="objectif" title="Objectif">
                         <img class="profil" src="./images/profil2.png">
                         <p>
-                            "Bonjour je suis Edouard, un étudiant en dernière année de bachelor en filière Informatique de Gestion à la HEG-Genève. Je suis passionné des nouvelles technologies informatiques depuis mon plus jeune âge
-                            et aimerais m'orienter vers un job évolutif comme par exemple le développement Web ou mobile afin de mettre en pratique mes connaissances scolaires fraichement acquises pour ainsi gagner davantage d'expérience professionnelle."
+                            "Bonjour je suis Edouard, un étudiant en dernière année de bachelor en filière Informatique de Gestion à la HEG-Genève. Passionné des nouvelles technologies informatiques depuis mon plus jeune âge
+                            , j'aimerais m'orienter vers un job évolutif comme par exemple le développement Web ou mobile afin de mettre en pratique mes connaissances scolaires fraichement acquises pour ainsi gagner davantage d'expérience professionnelle."
                         </p>
                     </div>
                 </div>
@@ -67,16 +76,18 @@
                    <div class="experience-content hidden">
                      <h2>Bachelor d'Informaticien de Gestion<br/>(en cours)</h2>
                      <div class="experience-time">Sept. 2015 - Juin 2019 | HEG Genève</div>
-                     <p>Durant ces années d'études, j'ai acquis des connaissances avancées en termes de programmation Web (Front-End) et programmation applicative (Back-End). J'ai également été impliqué dans divers projets d'études usant de la méthodologie agile (SCRUM et DAD) et j'ai validé des compétences en termes de gestion de projets, administration de serveurs (WS 2016, Ubuntu 16.04), réseaux télécomm (Cisco CCENT) et base de données (Oracle, MySQL)</p>
+                     <p>Ces années d'études m'ont offert la possibilité d'avoir des connaissances avancées en termes de programmation Web (Front-End) et programmation applicative (Back-End).
+                         J'ai également été impliqué dans divers projets d'études usant de la méthodologie agile (SCRUM et DAD) ce qui m'a permis d'améliorer mes compétences en termes de gestion de projets,
+                         administration de serveurs (WS 2016, Ubuntu 16.04), réseaux télécomm. (Cisco CCENT) et bases de données (Oracle, MySQL, PostGreSQL)</p>
                    </div>
                 </li>
                 <li>
                     <div class="experience-content hidden">
                       <h2>Brevet de sous-officier (Sergent) </h2>
                       <div class="experience-time">Juil. 2014 - Mars 2015 | Armée Suisse</div>
-                      <p>J'ai fait mon école de recrue, mon école de sous-officier ainsi que mon paiement de galons dans la caserne de Bière où j'ai pu acquérir une expérience en tant que chef de groupe et instructeur MG64 12.7mm.</p>
+                      <p>Ecole de recrue, école de sous-officier ainsi que paiement de galons dans la caserne militaire de Bière où j'ai pu acquérir une expérience dans le commandement de troupe en tant que chef de groupe et instructeur MG64 12.7mm.</p>
                     </div>
-                 </li>
+                </li>
                 <li>
                    <div class="experience-content hidden">
                      <h2>Maturité Professionnelle Commerciale</h2>
@@ -87,98 +98,91 @@
                 <li>
                    <div class="experience-content hidden">
                      <h2>CFC d'Employé de Commerce - Profil E</h2>
-                     <div class="experience-time">Sept. 2011 - Juin 2012 | Ecole Schulz</div>
-                     <p>Ce CFC m'a permis d'élargir mes compétences théoriques en comptabilité de gestion et j'ai acquis un niveau B2 en anglais et un B1 en italien. J'ai également eu un stage en entreprise chez OLEXCO SA où j'ai pu mettre en pratique mes connaissances scolaires acquises.</p>
+                     <div class="experience-time">Sept. 2009 - Juin 2012 | Ecole Schulz</div>
+                     <p>Ce CFC m'a permis d'élargir mes compétences en comptabilité générale et d'acquérir un niveau B2 en anglais et un B1 en italien. J'ai également effectué un stage d'un an en entreprise, chez OLEXCO SA, qui m'a permis de mettre en pratique mes connaissances scolaires acquises.</p>
                    </div>
-                </li>
-                <li>
-                    <div class="experience-content hidden">
-                        <h2>Diplôme supérieur de Commerce</h2>
-                        <div class="experience-time">Sept. 2009 - Juin 2011 | Ecole Schulz</div>
-                        <p>Ce diplôme supérieur de commerce était principalement orienté sur des cours de comptabilité et d'économie d'entreprise ainsi qu'une maîtrise des outils Microsoft Office de base <br/> (Word, Excel, Powerpoint et Outlook)</p>
-                    </div>
                 </li>
               </ul>
             </div>
           </section>
-        <!-- SECTION SKILLS -->
-        <section class="skills" id="section-skills">
-            <div class="content">
-                <div class="development-wrapper">
-                    <h2 class="development-title">Compétences informatiques</h2>
-                    <ul class="skills-bar-container">
-                    <li>
-                        <div class="progressbar-title">
-                        <h3>HTML5</h3>
-                        <span class="percent" id="html-pourcent"></span>
-                        </div>
-                        <div class="bar-container" data-percent="100">
-                        <span class="progressbar" id="progress-html"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="progressbar-title">
-                        <h3>CSS 4 / SASS</h3>
-                        <span class="percent" id="css-pourcent"></span>
-                        </div>
-                        <div class="bar-container" data-percent="90">
-                        <span class="progressbar" id="progress-css"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="progressbar-title">
-                        <h3>JavaScript / jQuery / AJAX</h3>
-                        <span class="percent" id="javascript-pourcent"></span>
-                        </div>
-                        <div class="bar-container" data-percent="85">
-                        <span class="progressbar" id="progress-javascript"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="progressbar-title">
-                        <h3>Python 3.7 / PHP 7.0.X</h3>
-                        <span class="percent" id="angular-pourcent"></span>
-                        </div>
-                        <div class="bar-container" data-percent="75">
-                        <span class="progressbar" id="progress-python"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="progressbar-title">
-                        <h3>Java 8 / JavaEE 7</h3>
-                        <span class="percent" id="php-pourcent"></span>
-                        </div>
-                        <div class="bar-container" data-percent="90">
-                        <span class="progressbar" id="progress-java"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="progressbar-title">
-                        <h3>Oracle 12.2 / MySQL / PL/SQL 11</h3>
-                        <span class="percent" id="php-pourcent"></span>
-                        </div>
-                        <div class="bar-container" data-percent="80">
-                        <span class="progressbar" id="progress-sql"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="progressbar-title">
-                        <h3>Windows Server 2016 - Ubuntu Server 16.04</h3>
-                        <span class="percent" id="angular-pourcent"></span>
-                        </div>
-                        <div class="bar-container" data-percent="70">
-                        <span class="progressbar" id="progress-wslinux"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="progressbar-title">
-                        <h3>Cisco - CCNA 1/2/3/4</h3>
-                        <span class="percent" id="angular-pourcent"></span>
-                        </div>
-                            <div class="bar-container" data-percent="75">
-                            <span class="progressbar" id="progress-cisco"></span>
-                            </div>
-                        </li>
+            <!-- SECTION SKILLS -->
+            <section class="skills" id="section-skills">
+                <div class="content">
+                    <div class="development-wrapper">
+                        <h2 class="development-title">Compétences informatiques</h2>
+                        <ul class="skills-bar-container">
+                            <li>
+                                <div class="progressbar-title">
+                                <h3>HTML5</h3>
+                                <span class="percent" id="html-pourcent"></span>
+                                </div>
+                                <div class="bar-container" data-percent="100">
+                                <span class="progressbar" id="progress-html"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progressbar-title">
+                                <h3>CSS 4 / SASS</h3>
+                                <span class="percent" id="css-pourcent"></span>
+                                </div>
+                                <div class="bar-container" data-percent="90">
+                                <span class="progressbar" id="progress-css"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progressbar-title">
+                                <h3>JavaScript / jQuery / AJAX</h3>
+                                <span class="percent" id="javascript-pourcent"></span>
+                                </div>
+                                <div class="bar-container" data-percent="85">
+                                <span class="progressbar" id="progress-javascript"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progressbar-title">
+                                <h3>Python 3.7 / PHP 7.0.X</h3>
+                                <span class="percent" id="angular-pourcent"></span>
+                                </div>
+                                <div class="bar-container" data-percent="75">
+                                <span class="progressbar" id="progress-python"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progressbar-title">
+                                <h3>Java 8 / JavaEE 7</h3>
+                                <span class="percent" id="php-pourcent"></span>
+                                </div>
+                                <div class="bar-container" data-percent="90">
+                                <span class="progressbar" id="progress-java"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progressbar-title">
+                                <h3>Oracle 12.2 / MySQL / PL/SQL 11</h3>
+                                <span class="percent" id="php-pourcent"></span>
+                                </div>
+                                <div class="bar-container" data-percent="80">
+                                <span class="progressbar" id="progress-sql"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progressbar-title">
+                                <h3>Windows Server 2016 - Ubuntu Server 16.04</h3>
+                                <span class="percent" id="angular-pourcent"></span>
+                                </div>
+                                <div class="bar-container" data-percent="70">
+                                <span class="progressbar" id="progress-wslinux"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="progressbar-title">
+                                <h3>Cisco - CCNA 1/2/3/4</h3>
+                                <span class="percent" id="angular-pourcent"></span>
+                                </div>
+                                <div class="bar-container" data-percent="75">
+                                <span class="progressbar" id="progress-cisco"></span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="portfolio-wrapper">
@@ -197,6 +201,7 @@
             <!-- SECTION CONTACT -->
         <section class="contact" id="section-contact" >
             <div class="content">
+                <h2 class="contact-title">Me contacter</h2>
                 <ul class="socialIcons">
                     <li><a title="Linkedin" target="_blank" href="https://www.linkedin.com/in/edouard-diep-545241108/" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
                     <li><a title="Google plus" target="_blank" href="https://plus.google.com/u/0/113853116808148423876" class="googlePlus"><i class="fa fa-google-plus"></i></a></li>
