@@ -166,7 +166,7 @@ html, body {
                 padding:0;
                 padding-top: 3.5vw;
                 padding-bottom: 2.5vw;
-                letter-spacing: 4vw;
+                letter-spacing: 2.5vw;
                 left:0;
                 width:100%;
                 height:100%;
@@ -1015,12 +1015,12 @@ box-shadow: inset 0px 11px 20px -15px $title-color, inset 0px -11px 20px -15px $
                 display: grid;
                 padding:15px 0;
                 grid-template-columns: 1fr 1fr 1fr;
-                grid-gap: 20px;
+                grid-gap: 0;
             }
 
             .grid-portfolio > div{
                 text-align: center;
-                padding: 15px 0;
+                padding: 5px 0;
                 font-size: 30px;
 
                 .img-portfolio{

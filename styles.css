@@ -118,7 +118,7 @@ html, body {
       padding: 0;
       padding-top: 3.5vw;
       padding-bottom: 2.5vw;
-      letter-spacing: 4vw;
+      letter-spacing: 2.5vw;
       left: 0;
       width: 100%;
       height: 100%;
@@ -809,10 +809,10 @@ html, body {
         padding: 15px 0;
         -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 20px; }
+        grid-gap: 0; }
       .skills .portfolio-wrapper .grid-portfolio > div {
         text-align: center;
-        padding: 15px 0;
+        padding: 5px 0;
         font-size: 30px; }
         .skills .portfolio-wrapper .grid-portfolio > div .img-portfolio {
           display: inline-block;
