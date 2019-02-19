@@ -166,12 +166,11 @@ html, body {
                 padding:0;
                 padding-top: 3.5vw;
                 padding-bottom: 2.5vw;
-                letter-spacing: 7vw;
+                letter-spacing: 4vw;
                 left:0;
                 width:100%;
                 height:100%;
                 text-align: center;
-                zoom:1.05;
                 li {
                     margin:0;
                     display: inline-block;
@@ -896,7 +895,6 @@ box-shadow: inset 0px 11px 20px -15px $title-color, inset 0px -11px 20px -15px $
             font-size: 2vw;
             text-align: center;
             color:$title-color;
-            margin-bottom: 50px;
             letter-spacing: 1px;
         }
         
@@ -1009,7 +1007,6 @@ box-shadow: inset 0px 11px 20px -15px $title-color, inset 0px -11px 20px -15px $
                 text-align: center;
                 color:$title-color;
                 margin-top:50px;
-                margin-bottom: 50px;
                 letter-spacing: 1px;
             }
             .grid-portfolio{
@@ -1053,8 +1050,6 @@ background-color:$experience-content-bg-color;
         font-size: 2.5em;
         text-align: center;
         color:$title-color;
-        margin-top:50px;
-        margin-bottom: 50px;
         letter-spacing: 1px;
     }
     .socialIcons{
@@ -1143,8 +1138,6 @@ background-color:$experience-content-bg-color;
                 font-size: 6vw;
                 text-align: center;
                 color:$title-color;
-                margin-top:50px;
-                margin-bottom: 50px;
                 letter-spacing: 1px;
             }
             .socialIcons{

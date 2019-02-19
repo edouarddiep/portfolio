@@ -74,7 +74,7 @@ setTimeout(function(){
         'opacity':'1',
         'top': '0',
         'left':'0',
-        'zoom':'0.98'
+        'letter-spacing':'7vw'
     },1000);
 
 
