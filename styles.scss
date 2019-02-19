@@ -57,7 +57,7 @@ html, body {
     height:100%;
     width:100%;
     -webkit-overflow-scrolling: touch;    
-    //scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /*##### NAV BAR #####*/
@@ -392,6 +392,7 @@ html, body {
                     overflow: hidden;
                     text-align-last: center;
                     margin:auto;
+                    margin-bottom: 20px;
                     .profil {
                         position: relative;
                         height: 694px;
@@ -399,7 +400,8 @@ html, body {
                         opacity: 1;
                         left:-336px;
                         top:-35px;
-                        filter:grayscale(0.2)
+                        filter:grayscale(0.2);
+
                     }
                 }
                 p{
@@ -408,8 +410,12 @@ html, body {
                     width:60%;
                     text-align:justify;
                     margin:auto;
-                    padding-top:25px;
-                    text-shadow: -2.5px 0 $title-color, 0 2.5px $title-color, 2.5px 0 $title-color, 0 -2.5px $title-color;
+                    background-color:$title-color;
+                    border-radius: 15px;
+                    border: 1.8px solid $white;
+                    padding:25px;
+                    opacity: 1;
+                    color:$lightBlue;
                 }
             }
         }
@@ -824,22 +830,25 @@ html, body {
         }
 
         .experience-content{
-        background: $experience-content-bg-color; 
-        position: relative;
-        top: 11px;
-        left: 48px;
-        width: calc(100vw - 100px);
-        padding: 20px;
-        text-align: center;
-        -webkit-border-radius: 0 5px 5px;
-        -moz-border-radius: 0 5px 5px;
-        border-radius: 0 5px 5px;
+            background: $experience-content-bg-color; 
+            position: relative;
+            top: 11px;
+            left: 48px;
+            width: calc(100vw - 100px);
+            padding: 20px;
+            -webkit-border-radius: 0 5px 5px;
+            -moz-border-radius: 0 5px 5px;
+            border-radius: 0 5px 5px;
 
-        h2{
-            font-size: 1.3em;
-            color: $title-color;
-            padding-bottom: 10px;
-        }
+            h2{
+                text-align: center;
+                font-size: 1.3em;
+                color: $title-color;
+                padding-bottom: 10px;
+            }
+            p{
+                text-align: justify;
+            }
 
         .experience-time{
             color: #777;
@@ -872,12 +881,21 @@ html, body {
 @media screen and (min-width: 820px) {
     .experience{
         .content{
+            h1{
+                font-size:2vw;
+            }
             ul{
                 li{
                     margin: 0 auto;
                     
                     .experience-content{
                         width: 35vw;
+                        h2{
+                            font-size:1.8em;
+                        }
+                        p{
+                            font-size:1.1em;
+                        }
                     }
                     
                     &:nth-child(odd) .experience-content {

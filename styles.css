@@ -21,7 +21,8 @@ html, body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth; }
 
 /*##### NAV BAR #####*/
 .section-navbar {
@@ -317,7 +318,8 @@ html, body {
           width: 350px;
           overflow: hidden;
           text-align-last: center;
-          margin: auto; }
+          margin: auto;
+          margin-bottom: 20px; }
           .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper .profil {
             position: relative;
             height: 694px;
@@ -333,8 +335,12 @@ html, body {
           width: 60%;
           text-align: justify;
           margin: auto;
-          padding-top: 25px;
-          text-shadow: -2.5px 0 #002440, 0 2.5px #002440, 2.5px 0 #002440, 0 -2.5px #002440; }
+          background-color: #002440;
+          border-radius: 15px;
+          border: 1.8px solid #f8f8f8;
+          padding: 25px;
+          opacity: 1;
+          color: #83a1d8; }
     .mainPage .content h1 {
       font-size: 3vw;
       position: relative;
@@ -677,14 +683,16 @@ html, body {
           left: 48px;
           width: calc(100vw - 100px);
           padding: 20px;
-          text-align: center;
           -webkit-border-radius: 0 5px 5px;
           -moz-border-radius: 0 5px 5px;
           border-radius: 0 5px 5px; }
           .experience .content ul li .experience-content h2 {
+            text-align: center;
             font-size: 1.3em;
             color: #002440;
             padding-bottom: 10px; }
+          .experience .content ul li .experience-content p {
+            text-align: justify; }
           .experience .content ul li .experience-content .experience-time {
             color: #777;
             font-size: 0.8em;
@@ -702,10 +710,16 @@ html, body {
             height: 5px; }
 
 @media screen and (min-width: 820px) {
+  .experience .content h1 {
+    font-size: 2vw; }
   .experience .content ul li {
     margin: 0 auto; }
     .experience .content ul li .experience-content {
       width: 35vw; }
+      .experience .content ul li .experience-content h2 {
+        font-size: 1.8em; }
+      .experience .content ul li .experience-content p {
+        font-size: 1.1em; }
     .experience .content ul li:nth-child(odd) .experience-content {
       left: 63px; }
     .experience .content ul li:nth-child(odd) .experience-content:before {

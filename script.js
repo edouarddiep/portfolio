@@ -34,7 +34,7 @@ $.fn.delay(1000).writeText = function(content) {
 
 
 // input text for typing animation 
-if(n<18){
+if(6 <= n && n <= 18){
     $("#first-part-writer").writeText("Bonjour !");
 } else {
     $("#first-part-writer").writeText("Bonsoir !");
@@ -137,6 +137,8 @@ setTimeout(function(){
     var item = $($(this).attr("href"));
     if (item.length) { return item; }
     });
+
+    /*
     // Bind click handler to menu items
     // so we can get a fancy scroll animation
 
@@ -159,7 +161,7 @@ setTimeout(function(){
             e.preventDefault();
         });
     }
-
+*/
 
     // Bind to scroll
 
@@ -237,7 +239,14 @@ setTimeout(function(){
     $('.img-portfolio').each(function(){
 
             if(bottom_of_window > middle_dev_scroll){
-                if(width > 1024){
+                if(width > 2200){
+                    $(this).animate({
+                        'opacity':'1',
+                        'zoom': '2.8',
+                        '-moz-transform':'scale(2.8)'
+                    },1000);          
+                }
+                else if(width > 1024){
                     $(this).animate({
                         'opacity':'1',
                         'zoom': '2.2',
