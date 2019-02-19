@@ -333,7 +333,10 @@ html, body {
         display: inline-block;
         position: relative;
         margin: auto;
-        top:450px;
+        @media screen and (min-width:1440px){
+            top:250px;
+        }
+        top:250px;
         text-shadow: -1.5px 0 $title-color, 0 1.5px $title-color, 1.5px 0 $title-color, 0 -1.5px $title-color;
         // Div correspondant au message d'entrée lors du chargement de la page 
         .last-part-writer {

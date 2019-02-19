@@ -260,8 +260,11 @@ html, body {
     display: inline-block;
     position: relative;
     margin: auto;
-    top: 450px;
+    top: 250px;
     text-shadow: -1.5px 0 #002440, 0 1.5px #002440, 1.5px 0 #002440, 0 -1.5px #002440; }
+    @media screen and (min-width: 1440px) {
+      .mainPage .content {
+        top: 250px; } }
     .mainPage .content .last-part-writer {
       font-size: 2vw;
       position: relative;
