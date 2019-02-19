@@ -68,10 +68,12 @@ html, body {
         -webkit-box-shadow: inset 0px 11px 20px -15px lightslategray, inset 0px -11px 20px -15px lightslategray;
         box-shadow: inset 0px 11px 20px -15px lightslategray, inset 0px -11px 20px -15px lightslategray; }
         .section-navbar .navbar ul li a:hover {
-          border: 2px solid #db4437;
+          border: 2px solid #002440;
           -webkit-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
-          transition: all 0.5s ease; }
+          transition: all 0.5s ease;
+          background-color: #83a1d8;
+          color: #f8f8f8; }
         .section-navbar .navbar ul li a:hover::after {
           width: 100%; }
         .section-navbar .navbar ul li a:after {
@@ -79,7 +81,7 @@ html, body {
           display: block;
           width: 0;
           height: 2px;
-          background: #83a1d8;
+          background: #f5f5f5;
           -webkit-transition: width .3s;
           -o-transition: width .3s;
           transition: width .3s; }
@@ -644,6 +646,9 @@ html, body {
   padding: 50px 0;
   width: 100%;
   overflow-x: hidden; }
+  @media screen and (min-width: 1950px) {
+    .experience {
+      padding-top: 250px; } }
   .experience .content {
     text-align: center; }
     .experience .content h1 {
@@ -748,6 +753,9 @@ html, body {
   padding-top: 150px;
   -webkit-box-shadow: inset 0px 11px 20px -15px #002440, inset 0px -11px 20px -15px #002440;
   box-shadow: inset 0px 11px 20px -15px #002440, inset 0px -11px 20px -15px #002440; }
+  @media screen and (min-width: 1950px) {
+    .skills {
+      padding-top: 250px; } }
   .skills .development-wrapper {
     width: 50%;
     float: left;

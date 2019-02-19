@@ -104,8 +104,10 @@ html, body {
                     border-radius:10px;
                     box-shadow: inset 0px 11px 20px -15px lightslategray, inset 0px -11px 20px -15px lightslategray;
                     &:hover{
-                        border:2px solid $google-top;
+                        border:2px solid $experience-bg-color;
                         transition: all 0.5s ease;
+                        background-color: $lightBlue;
+                        color:$white;
                     }
                     &:hover::after {
                         width: 100%;
@@ -116,7 +118,7 @@ html, body {
                         display: block;
                         width: 0;
                         height: 2px;
-                        background: $lightBlue;
+                        background: $experience-content-bg-color;
                         transition: width .3s;
                     }
                     &::before{
@@ -786,6 +788,9 @@ html, body {
     padding: 50px 0;
     width: 100%;
     overflow-x: hidden;
+    @media screen and (min-width:1950px) {
+        padding-top:250px;
+    }
     
 .content{
     text-align: center;
@@ -938,6 +943,9 @@ width:100%;
 height:90%;
 padding-top:150px;
 box-shadow: inset 0px 11px 20px -15px $title-color, inset 0px -11px 20px -15px $title-color;
+@media screen and (min-width:1950px) {
+    padding-top:250px;
+}
 
     .development-wrapper{
         width:50%;

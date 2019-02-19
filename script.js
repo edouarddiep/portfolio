@@ -138,20 +138,10 @@ setTimeout(function(){
     if (item.length) { return item; }
     });
 
-    /*
     // Bind click handler to menu items
     // so we can get a fancy scroll animation
 
-    if(width >= 812){
-        menuItems.on('click', function(e){
-            var href = $(this).attr("href"),
-                offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-            $('html, body').stop().animate({ 
-                scrollTop: offsetTop
-            }, 850);
-            e.preventDefault();
-        });
-    } else {
+    if(width <= 812){
         menuItems.on('touchstart mouseenter focus', function (e){
             var href = $(this).attr("href"),
                 offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
@@ -161,8 +151,6 @@ setTimeout(function(){
             e.preventDefault();
         });
     }
-*/
-
     // Bind to scroll
 
     $('body').scroll(function(){
