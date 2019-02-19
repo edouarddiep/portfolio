@@ -21,90 +21,74 @@
     <body>
         <script src="./script.js"></script>
         <!-- BARRE NAVIGATION -->
-        <nav class="navbar" id="navbar">
-            <img class="logo" src="./images/logo2.png" height="80px" width="80px">
-            <ul>
-                <li><a class="navbar-a" id="navabout" href="#section-about" title="A propos de moi"><div class="insider"></div>A propos</a></li>
-                <li><a class="navbar-a" href="#section-experience" title="Formation et diplômes"><div class="insider"></div>Experience</a></li>
-                <li><a class="navbar-a" href="#section-skills" title="Compétences informatiques"><div class="insider"></div>Skills</a></li>
-                <li><a class="navbar-a" href="#section-contact" title="Réseaux sociaux"><div class="insider"></div>Contact</a></li>
-            </ul>
-        </nav>
-         <!-- SECTION ACCUEIL -->
-         <section class="mainPage">
+        <section class="section-navbar">
+            <nav class="navbar" id="navbar">
+                <img class="logo" src="./images/logo2.png" height="80px" width="80px">
+                <ul >
+                    <li><a class="navbar-a" id="navabout" href="#section-main" title="A propos de moi"><div class="insider"></div>A propos</a></li>
+                    <li><a class="navbar-a" href="#section-experience" title="Formation et diplômes"><div class="insider"></div>Experience</a></li>
+                    <li><a class="navbar-a" href="#section-skills" title="Compétences informatiques"><div class="insider"></div>Skills</a></li>
+                    <li><a class="navbar-a" href="#section-contact" title="Réseaux sociaux"><div class="insider"></div>Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!-- SECTION ACCUEIL -->
+        <section class="mainPage" id="section-main">
             <div class="content">
-                <div class="welcome-wrapper" id="welcome">
-                    <h1 id="titleHolder"></h1>
-                    <p id="pHolder"></p>
-                </div>
-            </div>
-         </section>
-        <!-- SECTION A PROPOS -->
-        <section class="about" id="section-about">
-            <div class="content">
+                <h1 id="first-part-writer" class="welcome-text"></h1>
+                <h1 id="sec-part-writer" class="welcome-text"></h1>
+                <p id="last-part-writer" class="last-part-writer" class="welcome-text"></p>
                 <div class="description-wrapper" id="descr">
-                    <div class="aboutText" id="aboutText" title="Coordonnées">
-                        <h1>Edouard DIEP</h1>
-                        <p>
-                            Rue des Barques 4<br/>
-                            1207 Genève<br/>
-                            +41 79 695 95 00<br/>
-                            edouard.diep@gmail.com<br/>
-                            né à Genève<br/>
-                            le 28 avril 1994<br/>
-                            Suisse<br/>
-                            Célibataire<br/>
-                            Permis de conduire : A, A1, B
-                        </p>
-                    </div>
                     <div class="objectif-wrapper" id="objectif" title="Objectif">
-                        <img class="profil" src="./images/profil2.png">
+                        <div class="profil-wrapper">
+                            <img class="profil" src="./images/profil2_png.png">
+                        </div>
                         <p>
-                            "Bonjour je suis Edouard, un étudiant en dernière année de bachelor en filière Informatique de Gestion à la HEG-Genève. Passionné des nouvelles technologies informatiques depuis mon plus jeune âge
-                            , j'aimerais m'orienter vers un job évolutif comme par exemple le développement Web ou mobile afin de mettre en pratique mes connaissances scolaires fraichement acquises pour ainsi gagner davantage d'expérience professionnelle."
+                            "Etudiant en dernière année de bachelor en filière Informatique de Gestion à la HEG-Genève. Passionné des nouvelles technologies informatiques depuis mon plus jeune âge,
+                            j'aimerais m'orienter vers un domaine évolutif comme le développement Web, applicatif ou mobile afin de mettre en pratique mes connaissances scolaires fraichement acquises pour ainsi gagner davantage d'expérience professionnelle."
                         </p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- SECTION EXPERIENCE-->
-        <section class="experience" id="section-experience">
-            <div class="content">
-              <h1>Formation & diplômes</h1>
-              <ul>
-                <li>
-                   <div class="experience-content hidden">
-                     <h2>Bachelor d'Informaticien de Gestion<br/>(en cours)</h2>
-                     <div class="experience-time">Sept. 2015 - Juin 2019 | HEG Genève</div>
-                     <p>Ces années d'études m'ont offert la possibilité d'avoir des connaissances avancées en termes de programmation Web (Front-End) et programmation applicative (Back-End).
-                         J'ai également été impliqué dans divers projets d'études usant de la méthodologie agile (SCRUM et DAD) ce qui m'a permis d'améliorer mes compétences en termes de gestion de projets,
-                         administration de serveurs (WS 2016, Ubuntu 16.04), réseaux télécomm. (Cisco CCENT) et bases de données (Oracle, MySQL, PostGreSQL)</p>
-                   </div>
-                </li>
-                <li>
+            <section class="experience" id="section-experience">
+                <div class="content">
+                <h1>Formation & diplômes</h1>
+                <ul>
+                    <li>
                     <div class="experience-content hidden">
-                      <h2>Brevet de sous-officier (Sergent) </h2>
-                      <div class="experience-time">Juil. 2014 - Mars 2015 | Armée Suisse</div>
-                      <p>Ecole de recrue, école de sous-officier ainsi que paiement de galons dans la caserne militaire de Bière où j'ai pu acquérir une expérience dans le commandement de troupe en tant que chef de groupe et instructeur MG64 12.7mm.</p>
+                        <h2>Bachelor d'Informaticien de Gestion<br/>(en cours)</h2>
+                        <div class="experience-time">Sept. 2015 - Juin 2019 | HEG Genève</div>
+                        <p>Ces années d'études m'ont offert la possibilité d'avoir des connaissances avancées en termes de programmation Web (Front-End) et programmation applicative (Back-End).
+                            J'ai également été impliqué dans divers projets d'études usant de la méthodologie agile (SCRUM et DAD) ce qui m'a permis d'améliorer mes compétences en termes de gestion de projets,
+                            administration de serveurs (WS 2016, Ubuntu 16.04), réseaux télécomm. (Cisco CCENT) et bases de données (Oracle, MySQL, PostGreSQL)</p>
                     </div>
-                </li>
-                <li>
-                   <div class="experience-content hidden">
-                     <h2>Maturité Professionnelle Commerciale</h2>
-                     <div class="experience-time">Sept. 2013 - Juin 2014 | CEC Nicolas-Bouvier</div>
-                     <p>Cette année de maturité professionnelle post-CFC m'a permis de valider un niveau B2 en italien, de perfectionner mon anglais commercial et d'acquérir de solides connaissances sur la comptabilité analytique d'entreprise ainsi qu'en mathématiques statistiques.</p>
-                   </div>
-                </li>
-                <li>
-                   <div class="experience-content hidden">
-                     <h2>CFC d'Employé de Commerce - Profil E</h2>
-                     <div class="experience-time">Sept. 2009 - Juin 2012 | Ecole Schulz</div>
-                     <p>Ce CFC m'a permis d'élargir mes compétences en comptabilité générale et d'acquérir un niveau B2 en anglais et un B1 en italien. J'ai également effectué un stage d'un an en entreprise, chez OLEXCO SA, qui m'a permis de mettre en pratique mes connaissances scolaires acquises.</p>
-                   </div>
-                </li>
-              </ul>
-            </div>
-          </section>
+                    </li>
+                    <li>
+                        <div class="experience-content hidden">
+                        <h2>Brevet de sous-officier (Sergent) </h2>
+                        <div class="experience-time">Juil. 2014 - Mars 2015 | Armée Suisse</div>
+                        <p>Ecole de recrue, école de sous-officier ainsi que paiement de galons dans la caserne militaire de Bière où j'ai pu acquérir une expérience dans le commandement de troupe en tant que chef de groupe et instructeur MG64 12.7mm.</p>
+                        </div>
+                    </li>
+                    <li>
+                    <div class="experience-content hidden">
+                        <h2>Maturité Professionnelle Commerciale</h2>
+                        <div class="experience-time">Sept. 2013 - Juin 2014 | CEC Nicolas-Bouvier</div>
+                        <p>Cette année de maturité professionnelle post-CFC m'a permis de valider un niveau B2 en italien, de perfectionner mon anglais commercial et d'acquérir de solides connaissances sur la comptabilité analytique d'entreprise ainsi qu'en mathématiques statistiques.</p>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="experience-content hidden">
+                        <h2>CFC d'Employé de Commerce - Profil E</h2>
+                        <div class="experience-time">Sept. 2009 - Juin 2012 | Ecole Schulz</div>
+                        <p>Ce CFC m'a permis d'élargir mes compétences en comptabilité générale et d'acquérir un niveau B2 en anglais et un B1 en italien. J'ai également effectué un stage d'un an en entreprise, chez OLEXCO SA, qui m'a permis de mettre en pratique mes connaissances scolaires acquises.</p>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+            </section>
             <!-- SECTION SKILLS -->
             <section class="skills" id="section-skills">
                 <div class="content">
@@ -149,7 +133,7 @@
                             </li>
                             <li>
                                 <div class="progressbar-title">
-                                <h3>Java 8 / JavaEE 7</h3>
+                                <h3>Java 8 / JavaEE 7 / Vaadin 10</h3>
                                 <span class="percent" id="php-pourcent"></span>
                                 </div>
                                 <div class="bar-container" data-percent="90">
@@ -167,7 +151,7 @@
                             </li>
                             <li>
                                 <div class="progressbar-title">
-                                <h3>Windows Server 2016 - Ubuntu Server 16.04</h3>
+                                <h3>Windows Server 2016 - Ubuntu 16.04</h3>
                                 <span class="percent" id="angular-pourcent"></span>
                                 </div>
                                 <div class="bar-container" data-percent="70">
@@ -199,19 +183,19 @@
                 </div>
             </section>
             <!-- SECTION CONTACT -->
-        <section class="contact" id="section-contact" >
-            <div class="content">
-                <h2 class="contact-title">Me contacter</h2>
-                <ul class="socialIcons">
-                    <li><a title="Linkedin" target="_blank" href="https://www.linkedin.com/in/edouard-diep-545241108/" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a title="Google plus" target="_blank" href="https://plus.google.com/u/0/113853116808148423876" class="googlePlus"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a title="Email" target="_blank" href="mailto:edouard.diep@gmail.com" class="email"><i class="fa fa-envelope"></i></a></li>
-                    <li><a title="Téléphone" target="_blank" href="tel:+41796959500" class="phone"><i class="fa fa-phone"></i></a></li>
-                </ul>
-                <div class="signature">
-                    <p>Coded by E. Diep</p>
+            <section class="contact" id="section-contact" >
+                <div class="content">
+                    <h2 class="contact-title">Me contacter</h2>
+                    <ul class="socialIcons">
+                        <li><a title="Linkedin" target="_blank" href="https://www.linkedin.com/in/edouard-diep-545241108/" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a title="Google plus" target="_blank" href="https://plus.google.com/u/0/113853116808148423876" class="googlePlus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a title="Email" target="_blank" href="mailto:edouard.diep@gmail.com" class="email"><i class="fa fa-envelope"></i></a></li>
+                        <li><a title="Téléphone" target="_blank" href="tel:+41796959500" class="phone"><i class="fa fa-phone"></i></a></li>
+                    </ul>
                 </div>
+            </section>
+            <div class="signature">
+                <p>© E. Diep</p>
             </div>
-        </section>
     </body>
 </html>
