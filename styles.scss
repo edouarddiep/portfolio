@@ -324,7 +324,7 @@ html, body {
     background-size: cover;
     background-attachment: fixed;
     @media screen and (max-width:812px) {
-        background-attachment: scroll;
+        background-attachment: local;
         background-position-x: 15%;
     }
     text-align: center;

@@ -259,7 +259,7 @@ html, body {
   box-shadow: inset 0px 11px 20px -15px #002440, inset 0px -11px 20px -15px #002440; }
   @media screen and (max-width: 812px) {
     .mainPage {
-      background-attachment: scroll;
+      background-attachment: local;
       background-position-x: 15%; } }
   .mainPage .content {
     text-align: center;
