@@ -342,7 +342,7 @@ html, body {
         @media screen and (min-width:1440px){
             top:250px;
         }
-        top:250px;
+        top:100px;
         text-shadow: -1.5px 0 $title-color, 0 1.5px $title-color, 1.5px 0 $title-color, 0 -1.5px $title-color;
         // Div correspondant au message d'entrée lors du chargement de la page 
         .last-part-writer {
@@ -398,7 +398,7 @@ html, body {
                     overflow: hidden;
                     text-align-last: center;
                     margin:auto;
-                    margin-bottom: 50px;
+                    margin-bottom: 20px;
                     margin-top:15px;
                     .profil {
                         position: relative;
@@ -420,9 +420,9 @@ html, body {
                     background-color:$title-color;
                     border-radius: 15px;
                     border: 1.8px solid $white;
-                    padding:25px;
+                    padding:15px;
                     opacity: 1;
-                    color:$lightBlue;
+                    color:$white;
                 }
             }
         }
@@ -697,8 +697,7 @@ html, body {
 @media screen and (min-width:791px) and (max-width:812px){
     .mainPage{
         .content{
-            padding-top:20px;
-            top:75px;
+            top:50px;
             h1 {
                 font-size: 30px;
                 position: relative;
@@ -760,7 +759,7 @@ html, body {
 
                     p{
                         position: relative;
-                        font-size: 1.9vw;
+                        font-size: 0.8em;
                         font-style: italic;
                         font-weight: 100;
                         opacity: 0.9;
@@ -777,6 +776,231 @@ html, body {
         }
     } 
 }
+
+/*##### SECTION SKILLS IT #####*/
+
+// PC Adaptation
+.skills {
+    position: relative;
+    display: table;
+    width:100%;
+    height:90%;
+    padding-top:150px;
+    box-shadow: inset 0px 11px 20px -15px $title-color, inset 0px -11px 20px -15px $title-color;
+    @media screen and (min-width:1950px) {
+        padding-top:250px;
+    }
+    
+        .development-wrapper{
+            width:50%;
+            float:left;
+            border-right: 8px groove $lightBlue;
+    
+            .development-title{
+                font-size: 2em;
+                text-align: center;
+                color:$title-color;
+                margin-bottom: 50px;
+                letter-spacing: 1px;
+            }
+        
+    
+            .skills-bar-container{
+                position: relative;
+                width: 95%;
+                list-style-type:none;
+                padding-left:50px;
+            
+                li{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    
+                    .progressbar-title{
+                    color: $title-color;
+                    margin-bottom: 15px;
+                    margin-top:15px;
+    
+                        h3{
+                            display: inline-block;
+                            font-weight: 100;
+                            font-size: 1.3vw;
+                        }
+                    
+                        .percent{
+                            position: absolute;
+                            right: 20px;
+                            font-size: 1.1vw;
+                            font-style: italic;
+                            font-weight: bold;
+                        }
+                    }
+                    
+                    .bar-container{
+                    background: $progressbar-bg;
+                    position: relative;
+                    width: 100%;
+                    height: 10px;
+                    border-radius: 100px;
+    
+                        .progressbar{
+                            background:darkred;
+                            border-radius: 100px;
+                            position:absolute;
+                            width:0%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .portfolio-wrapper{
+    
+            height:100%;
+            width:50%;
+            float:left;
+    
+            .development-title{
+                font-size: 2em;
+                text-align: center;
+                color:$title-color;
+                letter-spacing: 1px;
+            }
+            
+            .grid-portfolio{
+                display: grid;
+                padding:15px 0;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+            }
+    
+            .grid-portfolio > div{
+                text-align: center;
+                padding: 15px 0;
+                font-size: 30px;
+    
+                .img-portfolio{
+                    display: inline-block;
+                    margin: 0 auto;
+                    border:2px solid $turquoise; 
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    opacity: 0.2;
+    
+                }
+            }
+        }
+    }
+    
+    // MOBILE RESPONSIVE ADAPTATION : SKILLS-IT
+    @media screen and (max-width:820px){
+        .skills {
+            z-index: 95;
+            display: block;
+            width:100%;
+            height:60em;
+            margin: auto;
+            padding-top:10px;
+            .development-wrapper{
+                width:100%;
+                float:left;      
+                border:none;
+    
+                .development-title{
+                    font-size: 1.2em;
+                    text-align: center;
+                    color:$title-color;
+                    padding-top:50px;
+                    //margin-bottom: 50px;
+                    letter-spacing: 1px;
+                }
+    
+                .skills-bar-container{
+                    position: relative;
+                    width: 95%;
+                    list-style-type:none;
+                    padding-left:25px;
+                
+                    li{
+                        width: 100%;
+                        margin-bottom: 20px;
+                        
+                        .progressbar-title{
+                        color: $title-color;
+                        margin-bottom: 5px;
+                        display:inline-flex;
+    
+                            h3{
+                                display: inline-block;
+                                font-weight: bold;
+                                font-size: 0.65em;
+                            }
+                        
+                            .percent{
+                                position: absolute;
+                                right: 20px;
+                                font-size: 0.6em;
+                                font-style: italic;
+                                font-weight: bold;
+                            }
+                        }
+                        
+                        .bar-container{
+                        background: $progressbar-bg;
+                        position: relative;
+                        width: 100%;
+                        height: 10px;
+                        border-radius: 100px;
+    
+                            .progressbar{
+                                background:darkred;
+                                border-radius: 100px;
+                                position:absolute;
+                                width:0%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .portfolio-wrapper{
+                height:100%;
+                width:100%;
+                float:left;
+    
+                .development-title{
+                    font-size: 1.2em;
+                    text-align: center;
+                    color:$title-color;
+                    margin-top:50px;
+                    letter-spacing: 1px;
+                }
+                .grid-portfolio{
+                    text-align: center;
+                    vertical-align: middle;
+                    display: grid;
+                    padding:15px 0;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 0;
+                }
+    
+                .grid-portfolio > div{
+                    text-align: center;
+                    padding: 5px 0;
+                    font-size: 30px;
+    
+                    .img-portfolio{
+                        display: inline-block;
+                        margin: 0 auto;
+                        opacity: 0.2;
+    
+                    }
+                }
+            }
+        }
+    }
 
 /*##### SECTION EXPERIENCE #####*/
 
@@ -885,7 +1109,7 @@ html, body {
     .experience{
         .content{
             h1{
-                font-size:2vw;
+                font-size:2em;
             }
             ul{
                 li{
@@ -931,230 +1155,7 @@ html, body {
     }
 }
 
-/*##### SECTION SKILLS IT #####*/
 
-// PC Adaptation
-.skills {
-position: relative;
-display: table;
-width:100%;
-height:90%;
-padding-top:150px;
-box-shadow: inset 0px 11px 20px -15px $title-color, inset 0px -11px 20px -15px $title-color;
-@media screen and (min-width:1950px) {
-    padding-top:250px;
-}
-
-    .development-wrapper{
-        width:50%;
-        float:left;
-        border-right: 8px groove $lightBlue;
-
-        .development-title{
-            font-size: 2vw;
-            text-align: center;
-            color:$title-color;
-            margin-bottom: 50px;
-            letter-spacing: 1px;
-        }
-    
-
-        .skills-bar-container{
-            position: relative;
-            width: 95%;
-            list-style-type:none;
-            padding-left:50px;
-        
-            li{
-                width: 100%;
-                margin-bottom: 20px;
-                
-                .progressbar-title{
-                color: $title-color;
-                margin-bottom: 15px;
-                margin-top:15px;
-
-                    h3{
-                        display: inline-block;
-                        font-weight: 100;
-                        font-size: 1.3vw;
-                    }
-                
-                    .percent{
-                        position: absolute;
-                        right: 20px;
-                        font-size: 1.1vw;
-                        font-style: italic;
-                        font-weight: bold;
-                    }
-                }
-                
-                .bar-container{
-                background: $progressbar-bg;
-                position: relative;
-                width: 100%;
-                height: 10px;
-                border-radius: 100px;
-
-                    .progressbar{
-                        background:darkred;
-                        border-radius: 100px;
-                        position:absolute;
-                        width:0%;
-                        height: 100%;
-                    }
-                }
-            }
-        }
-    }
-    .portfolio-wrapper{
-
-        height:100%;
-        width:50%;
-        float:left;
-
-        .development-title{
-            font-size: 2vw;
-            text-align: center;
-            color:$title-color;
-            letter-spacing: 1px;
-        }
-        
-        .grid-portfolio{
-            display: grid;
-            padding:15px 0;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 20px;
-        }
-
-        .grid-portfolio > div{
-            text-align: center;
-            padding: 15px 0;
-            font-size: 30px;
-
-            .img-portfolio{
-                display: inline-block;
-                margin: 0 auto;
-                border:2px solid $turquoise; 
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
-                opacity: 0.2;
-
-            }
-        }
-    }
-}
-
-// MOBILE RESPONSIVE ADAPTATION : SKILLS-IT
-@media screen and (max-width:820px){
-    .skills {
-        z-index: 95;
-        display: block;
-        width:100%;
-        height:60em;
-        margin: auto;
-        padding-top:10px;
-        .development-wrapper{
-            width:100%;
-            float:left;      
-            border:none;
-
-            .development-title{
-                font-size: 1.2em;
-                text-align: center;
-                color:$title-color;
-                padding-top:50px;
-                //margin-bottom: 50px;
-                letter-spacing: 1px;
-            }
-
-            .skills-bar-container{
-                position: relative;
-                width: 95%;
-                list-style-type:none;
-                padding-left:25px;
-            
-                li{
-                    width: 100%;
-                    margin-bottom: 20px;
-                    
-                    .progressbar-title{
-                    color: $title-color;
-                    margin-bottom: 5px;
-                    display:inline-flex;
-
-                        h3{
-                            display: inline-block;
-                            font-weight: bold;
-                            font-size: 0.65em;
-                        }
-                    
-                        .percent{
-                            position: absolute;
-                            right: 20px;
-                            font-size: 0.6em;
-                            font-style: italic;
-                            font-weight: bold;
-                        }
-                    }
-                    
-                    .bar-container{
-                    background: $progressbar-bg;
-                    position: relative;
-                    width: 100%;
-                    height: 10px;
-                    border-radius: 100px;
-
-                        .progressbar{
-                            background:darkred;
-                            border-radius: 100px;
-                            position:absolute;
-                            width:0%;
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
-        .portfolio-wrapper{
-            height:100%;
-            width:100%;
-            float:left;
-
-            .development-title{
-                font-size: 1.2em;
-                text-align: center;
-                color:$title-color;
-                margin-top:50px;
-                letter-spacing: 1px;
-            }
-            .grid-portfolio{
-                text-align: center;
-                vertical-align: middle;
-                display: grid;
-                padding:15px 0;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-gap: 0;
-            }
-
-            .grid-portfolio > div{
-                text-align: center;
-                padding: 5px 0;
-                font-size: 30px;
-
-                .img-portfolio{
-                    display: inline-block;
-                    margin: 0 auto;
-                    opacity: 0.2;
-
-                }
-            }
-        }
-    }
-}
 
 /*##### SECTION CONTACT #####*/
 
