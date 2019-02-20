@@ -83,7 +83,7 @@ setTimeout(function(){
     // objectif wrapper animation
     $('.mainPage .content .description-wrapper .objectif-wrapper').delay(3500).animate({
         'opacity':'1',
-        'padding-top':'10px'
+        'padding-top':'15px'
     },1500);
 
     /****** SCROLLING ANIMATION WITH CLICK ON NAVBAR ******/
@@ -151,6 +151,7 @@ setTimeout(function(){
             e.preventDefault();
         });
     }
+
     // Bind to scroll
 
     $('body').scroll(function(){

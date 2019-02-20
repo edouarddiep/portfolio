@@ -321,7 +321,8 @@ html, body {
           overflow: hidden;
           text-align-last: center;
           margin: auto;
-          margin-bottom: 20px; }
+          margin-bottom: 50px;
+          margin-top: 15px; }
           .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper .profil {
             position: relative;
             height: 694px;
