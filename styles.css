@@ -257,6 +257,10 @@ html, body {
   color: #f8f8f8;
   -webkit-box-shadow: inset 0px 11px 20px -15px #002440, inset 0px -11px 20px -15px #002440;
   box-shadow: inset 0px 11px 20px -15px #002440, inset 0px -11px 20px -15px #002440; }
+  @media screen and (max-width: 812px) {
+    .mainPage {
+      background-attachment: scroll;
+      background-position-x: 15%; } }
   .mainPage .content {
     text-align: center;
     vertical-align: middle;
