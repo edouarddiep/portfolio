@@ -11,10 +11,12 @@ $mainfont : montserrat;
 $white: #f8f8f8;
 
 $title-color: #002440;
+$shadow-color: rgba(0, 0, 0, 0.45);
 
 $dark : #2f2f2f;
 $linkedin-top: #007bb5;
-$google-top: #db4437;
+$github-top: #211F1F;
+$email-top: #db4437;
 $phone-top: #3b5998;
 
 $lightBlue: hsl(219, 52%, 68%);
@@ -343,7 +345,7 @@ html, body {
             top:250px;
         }
         top:100px;
-        text-shadow: -1.5px 0 $title-color, 0 1.5px $title-color, 1.5px 0 $title-color, 0 -1.5px $title-color;
+        text-shadow: 2px 0 0 $title-color, -2px 0 0 $title-color, 0 2px 0 $title-color, 0 -2px 0 $title-color, 1px 1px $title-color, -1px -1px 0 $title-color, 1px -1px 0 $title-color, -1px 1px 0 $title-color;
         // Div correspondant au message d'entrée lors du chargement de la page 
         .last-part-writer {
             font-size: 2vw;
@@ -412,7 +414,7 @@ html, body {
                     }
                 }
                 p{
-                    font-size: 1.6vw;
+                    font-size: 1.4vw;
                     font-style: italic;
                     width:60%;
                     text-align:justify;
@@ -438,6 +440,7 @@ html, body {
 // RESPONSIVE MOBILE ADAPTATION : MAIN PAGE
 @media screen and (max-width:430px){
     .mainPage{
+        height:120%;
         .content{
             padding-top:20px;
             top:75px;
@@ -491,7 +494,6 @@ html, body {
                     .profil-wrapper{
                         height:150px;
                         width:150px;
-                        margin-bottom: 10px;
                         .profil {
                             opacity: 1;
                             height: 315px;
@@ -503,11 +505,11 @@ html, body {
 
                     p{
                         position: relative;
-                        font-size: 3.8vw;
+                        font-size: 3.7vw;
                         font-style: italic;
                         font-weight: 100;
                         opacity: 0.9;
-                        width: 350px;
+                        width: 340px;
                         margin:auto;
                         text-align:justify;
                         background-color:$title-color;
@@ -522,7 +524,7 @@ html, body {
 }
 
 // RESPONSIVE TABLET ADAPTATION : MAIN PAGE
-@media screen and (min-width:431px) and (max-width:600px){
+@media screen and (min-width:431px) and (max-width:638px){
     .mainPage{
         .content{
             padding-top:20px;
@@ -589,97 +591,11 @@ html, body {
 
                     p{
                         position: relative;
-                        font-size: 3.5vw;
+                        font-size: 3.2vw;
                         font-style: italic;
                         font-weight: 100;
                         opacity: 0.9;
-                        width: 480px;
-                        margin:auto;
-                        text-align:justify;
-                        background-color:$title-color;
-                        border-radius: 5px;
-                        border: 1px solid $white;
-                        padding:20px;
-                    }
-                }
-            }
-        }
-    } 
-}
-
-// RESPONSIVE HORIZONTALE ADAPTATION : MAIN PAGE
-@media screen and (min-width:601px) and (max-width:790px){
-    .mainPage{
-        .content{
-            padding-top:20px;
-            top:75px;
-            h1 {
-                font-size: 30px;
-                position: relative;
-                padding: 2px 0;
-            }
-            // Div correspondant au message d'entrée lors du chargement de la page 
-            .last-part-writer {
-                width: fit-content;
-                height: fit-content;
-                text-align: center;
-                font-size: 20px;
-                position: relative;
-                width: 100%;
-                padding: 3px 0;
-                font-style: italic;
-                background-color:$title-color;
-                border-radius: 5px;
-                margin-right:15px;
-            }
-            // Div Correspondant à l'objectif 
-            .description-wrapper {
-                margin:auto;
-                display: inline;
-                text-align: center;
-                top:10%;
-                .aboutText {
-                    display:inline-block;
-                    text-align: center;
-                    p{
-                        font-style: italic;
-                        font-size: 0.8vw;
-                        letter-spacing: 1px;
-                    }
-                    h1{
-                        position: relative;
-                        font-size:1.5vw;
-                        font-style: normal;
-                    }
-                } 
-
-                .objectif-wrapper {
-                    margin:auto;
-                    position: relative;
-                    display:block;
-                    text-align: center;
-                    padding-top:40px;
-                    opacity: 0;
-                    .profil-wrapper{
-                        height:150px;
-                        width:150px;
-                        margin-bottom: 20px;
-                        .profil {
-                            opacity: 1;
-                            height: 345px;
-                            width: 475px;
-                            left:-169px;
-                            top:-20px;
-                        }
-                    }
-
-                    p{
-                        position: relative;
-                        font-size: 3.5vw;
-                        font-style: italic;
-                        font-weight: 100;
-                        opacity: 0.9;
-                        width: 480px;
+                        width: 450px;
                         margin:auto;
                         text-align:justify;
                         background-color:$title-color;
@@ -694,8 +610,9 @@ html, body {
 }
 
 // RESPONSIVE HORIZONTALE IPHONE X ADAPTATION : MAIN PAGE
-@media screen and (min-width:791px) and (max-width:812px){
+@media screen and (min-width:639px) and (max-width:825px){
     .mainPage{
+        height:170%;
         .content{
             top:50px;
             h1 {
@@ -710,12 +627,12 @@ html, body {
                 text-align: center;
                 font-size: 20px;
                 position: relative;
-                width: 100%;
+                width: 60%;
                 padding: 3px 0;
                 font-style: italic;
                 background-color:$title-color;
                 border-radius: 5px;
-                margin-right:15px;
+                margin:auto;
             }
             // Div Correspondant à l'objectif 
             .description-wrapper {
@@ -759,11 +676,11 @@ html, body {
 
                     p{
                         position: relative;
-                        font-size: 0.8em;
+                        font-size: 0.7em;
                         font-style: italic;
                         font-weight: 100;
                         opacity: 0.9;
-                        width: 750px;
+                        width: 580px;
                         margin: auto;
                         text-align:justify;
                         background-color:$title-color;
@@ -784,8 +701,9 @@ html, body {
     position: relative;
     display: table;
     width:100%;
-    height:90%;
-    padding-top:150px;
+    height:100%;
+    padding-top:100px;
+    padding-bottom:100px;
     box-shadow: inset 0px 11px 20px -15px $title-color, inset 0px -11px 20px -15px $title-color;
     @media screen and (min-width:1950px) {
         padding-top:250px;
@@ -820,15 +738,42 @@ html, body {
                     margin-bottom: 15px;
                     margin-top:15px;
     
-                        h3{
+                        .skills-logo{
+                            height:60px;
+                            margin-right:30px;
+                            position: relative;
+                            left:350px;
+                            opacity: 0;
+                        }
+                        .sqr {
+                            width:60px;
+                        }
+                        .rect {
+                            width:120px;
+                        }
+
+                        .smallrect{
+                            width:100px;
+                        }
+
+                        .bigrect{
+                            width:180px;
+                        }
+                        .verybigrect{
+                            height:40px;
+                            width:180px;
+                        }
+                        label{
                             display: inline-block;
-                            font-weight: 100;
-                            font-size: 1.3vw;
+                            font-weight: lighter;
+                            font-size: 80px;
+                            color:lightgrey
                         }
                     
                         .percent{
                             position: absolute;
                             right: 20px;
+                            padding-top:15px;
                             font-size: 1.1vw;
                             font-style: italic;
                             font-weight: bold;
@@ -839,7 +784,7 @@ html, body {
                     background: $progressbar-bg;
                     position: relative;
                     width: 100%;
-                    height: 10px;
+                    height: 15px;
                     border-radius: 100px;
     
                         .progressbar{
@@ -866,141 +811,407 @@ html, body {
                 letter-spacing: 1px;
             }
             
-            .grid-portfolio{
+            .grid-interests{
                 display: grid;
                 padding:15px 0;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 20px;
             }
+
     
-            .grid-portfolio > div{
+            .grid-interests > div{
                 text-align: center;
                 padding: 15px 0;
                 font-size: 30px;
     
-                .img-portfolio{
+                .img-interest{
                     display: inline-block;
                     margin: 0 auto;
                     border:2px solid $turquoise; 
                     border-radius: 50%;
+                    margin-bottom:25px;
                     -webkit-border-radius: 50%;
                     -moz-border-radius: 50%;
                     -ms-border-radius: 50%;
                     -o-border-radius: 50%;
-                    opacity: 0.2;
-    
+                    opacity: 0;
+                    margin-top:20px;
+                    transition: all 0.3s ease-in-out;
+                    transition-property: transform, box-shadow;
+
+                    &:hover{
+                        transform: scale(1.2);
+                        box-shadow: 0 2px 10px 0px $shadow-color;
+                    }
                 }
             }
-        }
-    }
-    
-    // MOBILE RESPONSIVE ADAPTATION : SKILLS-IT
-    @media screen and (max-width:820px){
-        .skills {
-            z-index: 95;
-            display: block;
-            width:100%;
-            height:60em;
-            margin: auto;
-            padding-top:10px;
-            .development-wrapper{
-                width:100%;
-                float:left;      
-                border:none;
-    
-                .development-title{
-                    font-size: 1.2em;
-                    text-align: center;
-                    color:$title-color;
+
+            .grid-portfolio{
+                display: grid;
+                padding:15px 0;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+                text-align:center;
+                grid-auto-columns: auto;
+
+                .div-portfolio{
+                    display:block;
+                    height:150%;
                     padding-top:50px;
-                    //margin-bottom: 50px;
-                    letter-spacing: 1px;
+                    opacity: 0.0;
+                    label{
+                        font-size:1.2em;
+                        font-weight:100;
+                        font-style: italic;
+                        color:$phone-top;
+                    }
+
+                    p{
+                        font-size:0.7em;
+                        text-align: justify;
+                        padding-left: 1.2vw;
+                        padding-right:1.2vw;
+                    }
+                    .img-portfolio{
+                        height:6vw;
+                        width: 11vw;
+                        margin-top:20px;
+                        border:1px solid $turquoise;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover{
+                            position: relative;
+                            height:7vw;
+                            width:12vw;
+                            box-shadow: 0 4px 12px 0px $shadow-color;
+                            border: 2px inset $lightBlue;
+                        }
+                    }
+                    
                 }
+            }
     
-                .skills-bar-container{
-                    position: relative;
-                    width: 95%;
-                    list-style-type:none;
-                    padding-left:25px;
-                
-                    li{
-                        width: 100%;
-                        margin-bottom: 20px;
-                        
-                        .progressbar-title{
-                        color: $title-color;
-                        margin-bottom: 5px;
-                        display:inline-flex;
-    
-                            h3{
-                                display: inline-block;
-                                font-weight: bold;
-                                font-size: 0.65em;
-                            }
-                        
-                            .percent{
-                                position: absolute;
-                                right: 20px;
-                                font-size: 0.6em;
-                                font-style: italic;
-                                font-weight: bold;
-                            }
+        }
+    }
+
+// RESPONSIVE MOBILE ADAPTATION : SKILLS IT
+@media screen and (max-width:430px){
+    .skills {
+        height:120em;
+        padding-top:10px;
+        padding-bottom: 0;
+        .development-wrapper{
+            width: 100vw;
+            height:100%;
+            border:none;
+            .development-title{
+                font-size: 1.5em;
+                padding-top:50px;
+            }
+
+            .skills-bar-container{
+                padding-left:25px;
+            
+                li{
+                    .progressbar-title{
+                    color: $title-color;
+                    margin-bottom: 5px;
+                    display:inline-flex;
+
+                        .skills-logo{
+                            height:25px;
+                            margin-right:10px;
+                            left:250px;
+                            opacity: 0;
+                        }
+                        .sqr {
+                            width:25px;
+                        }
+                        .rect {
+                            width:50px;
+                        }
+
+                        .smallrect{
+                            width:40px;
+                        }
+
+                        .bigrect{
+                            width:90px;
+                        }
+                        .verybigrect{
+                            height:20px;
+                            width:90px;
                         }
                         
-                        .bar-container{
-                        background: $progressbar-bg;
-                        position: relative;
-                        width: 100%;
-                        height: 10px;
-                        border-radius: 100px;
-    
-                            .progressbar{
-                                background:darkred;
-                                border-radius: 100px;
-                                position:absolute;
-                                width:0%;
-                                height: 100%;
-                            }
+                        .percent{
+                            font-size: 0.7em;
+                            padding-top:0;
+                            color: $experience-bg-color;
                         }
+                    }
+                    
+                    .bar-container{
+                        height: 12px;
                     }
                 }
             }
-            .portfolio-wrapper{
-                height:100%;
-                width:100%;
-                float:left;
-    
-                .development-title{
-                    font-size: 1.2em;
-                    text-align: center;
-                    color:$title-color;
-                    margin-top:50px;
-                    letter-spacing: 1px;
-                }
-                .grid-portfolio{
-                    text-align: center;
-                    vertical-align: middle;
-                    display: grid;
-                    padding:15px 0;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    grid-gap: 0;
-                }
-    
-                .grid-portfolio > div{
-                    text-align: center;
-                    padding: 5px 0;
-                    font-size: 30px;
-    
+        }
+        .portfolio-wrapper{
+            width:100vw;
+            .development-title{
+                font-size: 1.5em;
+                margin-top:50px;
+                margin-bottom:50px;
+            }
+            .grid-interests{
+                text-align: center;
+                vertical-align: middle;
+                grid-gap: 0;
+            }
+
+            .grid-interests > div{
+                padding: 5px 0;
+            }
+
+            .grid-portfolio{
+                display: block;
+                padding:0;
+                .div-portfolio{
+                    padding-top:0;
+                    label{
+                        position: relative;
+                        text-decoration: underline;
+                        bottom: 15px;
+                        font-style: normal;
+                    }
+
+                    p{
+                        padding-left: 1em;
+                        padding-right:1em;
+                        padding-bottom:5em;
+                    }
                     .img-portfolio{
-                        display: inline-block;
-                        margin: 0 auto;
-                        opacity: 0.2;
-    
+                        height: 10em;
+                        width: 16em;
+                        margin:auto;
+                    }
+                    .large{
+                        height:8em;
+                        width:16em;
                     }
                 }
             }
         }
     }
+}
+    
+// RESPONSIVE TABLET ADAPTATION : SKILLS IT
+@media screen and (min-width:431px) and (max-width:638px){
+    .skills {
+        height:130em;
+        padding-top:10px;
+        .development-wrapper{
+            width: 100%;
+            height:100%;
+            border:none;
+            .development-title{
+                font-size: 1.5em;
+                padding-top:50px;
+            }
+
+            .skills-bar-container{
+                padding-left:25px;
+            
+                li{
+                    .progressbar-title{
+                    color: $title-color;
+                    margin-bottom: 5px;
+                    display:inline-flex;
+
+                        .skills-logo{
+                            height:40px;
+                            margin-right:20px;
+                            left:250px;
+                            opacity: 0;
+                        }
+                        .sqr {
+                            width:40px;
+                        }
+                        .rect {
+                            width:80px;
+                        }
+
+                        .smallrect{
+                            width:70px;
+                        }
+
+                        .bigrect{
+                            width:1000px;
+                        }
+                        .verybigrect{
+                            height:30px;
+                            width:120px;
+                        }
+                        
+                        .percent{
+                            font-size: 0.8em;
+                            color: $experience-bg-color;
+                        }
+                    }
+                    
+                    .bar-container{
+                        height: 12px;
+                    }
+                }
+            }
+        }
+        .portfolio-wrapper{
+            width:100%;
+            .development-title{
+                font-size: 1.5em;
+                margin-top:50px;
+                margin-bottom:50px;
+            }
+            .grid-interests{
+                text-align: center;
+                vertical-align: middle;
+                grid-gap: 0;
+            }
+
+            .grid-interests > div{
+                padding: 5px 0;
+            }
+
+            .grid-portfolio{
+                display: block;
+                padding:0;
+                .div-portfolio{
+                    padding-top:0;
+                    label{
+                        text-decoration: underline;
+                    }
+
+                    p{
+                        padding-left: 10em;
+                        padding-right:10em;
+                        padding-bottom:5em;
+                    }
+                    .img-portfolio{
+                        height: 10em;
+                        width: 16em;
+                    }
+                    .large{
+                        width:20em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// RESPONSIVE HORIZONTALE IPHONE X ADAPTATION : SKILLS IT
+@media screen and (min-width:639px) and (max-width:825px){
+    .skills {
+        height:135em;
+        padding-top:10px;
+        .development-wrapper{
+            width: 100%;
+            height:100%;
+            border:none;
+            .development-title{
+                font-size: 1.5em;
+                padding-top:50px;
+            }
+
+            .skills-bar-container{
+                padding-left:25px;
+            
+                li{
+                    .progressbar-title{
+                    color: $title-color;
+                    margin-bottom: 5px;
+                    display:inline-flex;
+
+                        .skills-logo{
+                            height:50px;
+                            margin-right:20px;
+                            left:250px;
+                            opacity: 0;
+                        }
+                        .sqr {
+                            width:50px;
+                        }
+                        .rect {
+                            width:100px;
+                        }
+
+                        .smallrect{
+                            width:90px;
+                        }
+
+                        .bigrect{
+                            width:130px;
+                        }
+                        .verybigrect{
+                            height:30px;
+                            width:150px;
+                        }
+                        
+                        .percent{
+                            font-size: 0.8em;
+                            color: $experience-bg-color;
+                        }
+                    }
+                    
+                    .bar-container{
+                        height: 12px;
+                    }
+                }
+            }
+        }
+        .portfolio-wrapper{
+            width:100%;
+            .development-title{
+                font-size: 1.5em;
+                margin-top:50px;
+                margin-bottom:50px;
+            }
+            .grid-interests{
+                text-align: center;
+                vertical-align: middle;
+                grid-gap: 0;
+            }
+
+            .grid-interests > div{
+                padding: 5px 0;
+            }
+
+            .grid-portfolio{
+                display: block;
+                padding:0;
+                .div-portfolio{
+                    padding-top:0;
+                    label{
+                        text-decoration: underline;
+                    }
+
+                    p{
+                        padding-left: 10em;
+                        padding-right:10em;
+                        padding-bottom:5em;
+                    }
+                    .img-portfolio{
+                        height: 13em;
+                        width: 22em;
+                    }
+                    .large{
+                        width:24em;
+                    }
+                }
+            }
+        }
+    }
+}
 
 /*##### SECTION EXPERIENCE #####*/
 
@@ -1018,7 +1229,7 @@ html, body {
     text-align: center;
     
     h1{
-    font-size: 25px;
+    font-size: 30px;
     color: #fff;
     letter-spacing: 1px;
     }
@@ -1033,6 +1244,10 @@ html, body {
         margin-left: 20px;
         width: 5px;
         padding-bottom: 40px;
+
+        a{
+            text-decoration: none;
+        }
 
         &:last-child{
         padding-bottom: 8px;
@@ -1208,9 +1423,9 @@ background-color:$experience-content-bg-color;
 
                 }
             }
-            a.googlePlus{
+            a.github{
                 &:hover{
-                    color:$google-top;
+                    color:$github-top;
                     transform: rotateY(0deg);
                     text-shadow:
                     0px 0px 1px darken($dark, 5%);
@@ -1218,7 +1433,7 @@ background-color:$experience-content-bg-color;
             }
             a.email{
                 &:hover{
-                    color: $google-top;
+                    color: $email-top;
                     transform:rotateY(0deg);
                     text-shadow:
                     0px 0px 1px darken($dark, 5%); 
@@ -1261,7 +1476,7 @@ background-color:$experience-content-bg-color;
             position: relative;
             padding-top:2em;
             .contact-title{
-                font-size: 6vw;
+                font-size: 8vw;
                 text-align: center;
                 color:$title-color;
                 letter-spacing: 1px;
@@ -1286,8 +1501,8 @@ background-color:$experience-content-bg-color;
                             text-shadow:0;
                         }
                     }
-                    a.googlePlus{
-                        color:$google-top;
+                    a.github{
+                        color:$github-top;
                         &:hover{
                             transform: rotateY(0deg);
                             text-shadow:0;
@@ -1365,7 +1580,7 @@ background-color:$experience-content-bg-color;
                         }
                     }
                     a.googlePlus{
-                        color:$google-top;
+                        color:$github-top;
                         &:hover{
                             transform: rotateY(0deg);
                             text-shadow:0;

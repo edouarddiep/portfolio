@@ -268,7 +268,7 @@ html, body {
     position: relative;
     margin: auto;
     top: 100px;
-    text-shadow: -1.5px 0 #002440, 0 1.5px #002440, 1.5px 0 #002440, 0 -1.5px #002440; }
+    text-shadow: 2px 0 0 #002440, -2px 0 0 #002440, 0 2px 0 #002440, 0 -2px 0 #002440, 1px 1px #002440, -1px -1px 0 #002440, 1px -1px 0 #002440, -1px 1px 0 #002440; }
     @media screen and (min-width: 1440px) {
       .mainPage .content {
         top: 250px; } }
@@ -337,7 +337,7 @@ html, body {
             -webkit-filter: grayscale(0.2);
             filter: grayscale(0.2); }
         .mainPage .content .description-wrapper .objectif-wrapper p {
-          font-size: 1.6vw;
+          font-size: 1.4vw;
           font-style: italic;
           width: 60%;
           text-align: justify;
@@ -355,77 +355,78 @@ html, body {
       font-weight: 100; }
 
 @media screen and (max-width: 430px) {
-  .mainPage .content {
-    padding-top: 20px;
-    top: 75px; }
-    .mainPage .content h1 {
-      font-size: 30px;
-      position: relative;
-      padding: 2px 0; }
-    .mainPage .content .last-part-writer {
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      text-align: center;
-      font-size: 20px;
-      position: relative;
-      width: 100%;
-      padding: 3px 0;
-      font-style: italic;
-      background-color: #002440;
-      border-radius: 5px;
-      margin-right: 15px; }
-    .mainPage .content .description-wrapper {
-      margin: auto;
-      display: inline;
-      text-align: center;
-      top: 10%; }
-      .mainPage .content .description-wrapper .aboutText {
-        display: inline-block;
-        text-align: center; }
-        .mainPage .content .description-wrapper .aboutText p {
-          font-style: italic;
-          font-size: 0.8vw;
-          letter-spacing: 1px; }
-        .mainPage .content .description-wrapper .aboutText h1 {
-          position: relative;
-          font-size: 1.5vw;
-          font-style: normal; }
-      .mainPage .content .description-wrapper .objectif-wrapper {
-        margin: auto;
+  .mainPage {
+    height: 120%; }
+    .mainPage .content {
+      padding-top: 20px;
+      top: 75px; }
+      .mainPage .content h1 {
+        font-size: 30px;
         position: relative;
-        display: block;
+        padding: 2px 0; }
+      .mainPage .content .last-part-writer {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
         text-align: center;
-        padding-top: 40px;
-        opacity: 0; }
-        .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper {
-          height: 150px;
-          width: 150px;
-          margin-bottom: 10px; }
-          .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper .profil {
-            opacity: 1;
-            height: 315px;
-            width: 438px;
-            left: -148px;
-            top: -15px; }
-        .mainPage .content .description-wrapper .objectif-wrapper p {
-          position: relative;
-          font-size: 3.8vw;
-          font-style: italic;
-          font-weight: 100;
-          opacity: 0.9;
-          width: 350px;
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        padding: 3px 0;
+        font-style: italic;
+        background-color: #002440;
+        border-radius: 5px;
+        margin-right: 15px; }
+      .mainPage .content .description-wrapper {
+        margin: auto;
+        display: inline;
+        text-align: center;
+        top: 10%; }
+        .mainPage .content .description-wrapper .aboutText {
+          display: inline-block;
+          text-align: center; }
+          .mainPage .content .description-wrapper .aboutText p {
+            font-style: italic;
+            font-size: 0.8vw;
+            letter-spacing: 1px; }
+          .mainPage .content .description-wrapper .aboutText h1 {
+            position: relative;
+            font-size: 1.5vw;
+            font-style: normal; }
+        .mainPage .content .description-wrapper .objectif-wrapper {
           margin: auto;
-          text-align: justify;
-          background-color: #002440;
-          border-radius: 5px;
-          border: 1px solid #f8f8f8;
-          padding: 10px; } }
+          position: relative;
+          display: block;
+          text-align: center;
+          padding-top: 40px;
+          opacity: 0; }
+          .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper {
+            height: 150px;
+            width: 150px; }
+            .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper .profil {
+              opacity: 1;
+              height: 315px;
+              width: 438px;
+              left: -148px;
+              top: -15px; }
+          .mainPage .content .description-wrapper .objectif-wrapper p {
+            position: relative;
+            font-size: 3.7vw;
+            font-style: italic;
+            font-weight: 100;
+            opacity: 0.9;
+            width: 340px;
+            margin: auto;
+            text-align: justify;
+            background-color: #002440;
+            border-radius: 5px;
+            border: 1px solid #f8f8f8;
+            padding: 10px; } }
 
-@media screen and (min-width: 431px) and (max-width: 600px) {
+@media screen and (min-width: 431px) and (max-width: 638px) {
   .mainPage .content {
     padding-top: 20px;
     top: 75px; }
@@ -484,11 +485,11 @@ html, body {
             top: -20px; }
         .mainPage .content .description-wrapper .objectif-wrapper p {
           position: relative;
-          font-size: 3.5vw;
+          font-size: 3.2vw;
           font-style: italic;
           font-weight: 100;
           opacity: 0.9;
-          width: 480px;
+          width: 450px;
           margin: auto;
           text-align: justify;
           background-color: #002440;
@@ -496,153 +497,85 @@ html, body {
           border: 1px solid #f8f8f8;
           padding: 20px; } }
 
-@media screen and (min-width: 601px) and (max-width: 790px) {
-  .mainPage .content {
-    padding-top: 20px;
-    top: 75px; }
-    .mainPage .content h1 {
-      font-size: 30px;
-      position: relative;
-      padding: 2px 0; }
-    .mainPage .content .last-part-writer {
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      text-align: center;
-      font-size: 20px;
-      position: relative;
-      width: 100%;
-      padding: 3px 0;
-      font-style: italic;
-      background-color: #002440;
-      border-radius: 5px;
-      margin-right: 15px; }
-    .mainPage .content .description-wrapper {
-      margin: auto;
-      display: inline;
-      text-align: center;
-      top: 10%; }
-      .mainPage .content .description-wrapper .aboutText {
-        display: inline-block;
-        text-align: center; }
-        .mainPage .content .description-wrapper .aboutText p {
-          font-style: italic;
-          font-size: 0.8vw;
-          letter-spacing: 1px; }
-        .mainPage .content .description-wrapper .aboutText h1 {
-          position: relative;
-          font-size: 1.5vw;
-          font-style: normal; }
-      .mainPage .content .description-wrapper .objectif-wrapper {
-        margin: auto;
+@media screen and (min-width: 639px) and (max-width: 825px) {
+  .mainPage {
+    height: 170%; }
+    .mainPage .content {
+      top: 50px; }
+      .mainPage .content h1 {
+        font-size: 30px;
         position: relative;
-        display: block;
+        padding: 2px 0; }
+      .mainPage .content .last-part-writer {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
         text-align: center;
-        padding-top: 40px;
-        opacity: 0; }
-        .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper {
-          height: 150px;
-          width: 150px;
-          margin-bottom: 20px; }
-          .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper .profil {
-            opacity: 1;
-            height: 345px;
-            width: 475px;
-            left: -169px;
-            top: -20px; }
-        .mainPage .content .description-wrapper .objectif-wrapper p {
-          position: relative;
-          font-size: 3.5vw;
-          font-style: italic;
-          font-weight: 100;
-          opacity: 0.9;
-          width: 480px;
-          margin: auto;
-          text-align: justify;
-          background-color: #002440;
-          border-radius: 5px;
-          border: 1px solid #f8f8f8;
-          padding: 20px; } }
-
-@media screen and (min-width: 791px) and (max-width: 812px) {
-  .mainPage .content {
-    top: 50px; }
-    .mainPage .content h1 {
-      font-size: 30px;
-      position: relative;
-      padding: 2px 0; }
-    .mainPage .content .last-part-writer {
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      text-align: center;
-      font-size: 20px;
-      position: relative;
-      width: 100%;
-      padding: 3px 0;
-      font-style: italic;
-      background-color: #002440;
-      border-radius: 5px;
-      margin-right: 15px; }
-    .mainPage .content .description-wrapper {
-      margin: auto;
-      display: inline;
-      text-align: center;
-      top: 10%; }
-      .mainPage .content .description-wrapper .aboutText {
-        display: inline-block;
-        text-align: center; }
-        .mainPage .content .description-wrapper .aboutText p {
-          font-style: italic;
-          font-size: 0.8vw;
-          letter-spacing: 1px; }
-        .mainPage .content .description-wrapper .aboutText h1 {
-          position: relative;
-          font-size: 1.5vw;
-          font-style: normal; }
-      .mainPage .content .description-wrapper .objectif-wrapper {
-        margin: auto;
+        font-size: 20px;
         position: relative;
-        display: block;
+        width: 60%;
+        padding: 3px 0;
+        font-style: italic;
+        background-color: #002440;
+        border-radius: 5px;
+        margin: auto; }
+      .mainPage .content .description-wrapper {
+        margin: auto;
+        display: inline;
         text-align: center;
-        opacity: 0; }
-        .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper {
-          height: 150px;
-          width: 150px;
-          margin-bottom: 10px; }
-          .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper .profil {
-            opacity: 1;
-            height: 345px;
-            width: 480px;
-            left: -170px;
-            top: -20px; }
-        .mainPage .content .description-wrapper .objectif-wrapper p {
-          position: relative;
-          font-size: 0.8em;
-          font-style: italic;
-          font-weight: 100;
-          opacity: 0.9;
-          width: 750px;
+        top: 10%; }
+        .mainPage .content .description-wrapper .aboutText {
+          display: inline-block;
+          text-align: center; }
+          .mainPage .content .description-wrapper .aboutText p {
+            font-style: italic;
+            font-size: 0.8vw;
+            letter-spacing: 1px; }
+          .mainPage .content .description-wrapper .aboutText h1 {
+            position: relative;
+            font-size: 1.5vw;
+            font-style: normal; }
+        .mainPage .content .description-wrapper .objectif-wrapper {
           margin: auto;
-          text-align: justify;
-          background-color: #002440;
-          border-radius: 5px;
-          border: 1px solid #f8f8f8;
-          padding: 10px; } }
+          position: relative;
+          display: block;
+          text-align: center;
+          opacity: 0; }
+          .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper {
+            height: 150px;
+            width: 150px;
+            margin-bottom: 10px; }
+            .mainPage .content .description-wrapper .objectif-wrapper .profil-wrapper .profil {
+              opacity: 1;
+              height: 345px;
+              width: 480px;
+              left: -170px;
+              top: -20px; }
+          .mainPage .content .description-wrapper .objectif-wrapper p {
+            position: relative;
+            font-size: 0.7em;
+            font-style: italic;
+            font-weight: 100;
+            opacity: 0.9;
+            width: 580px;
+            margin: auto;
+            text-align: justify;
+            background-color: #002440;
+            border-radius: 5px;
+            border: 1px solid #f8f8f8;
+            padding: 10px; } }
 
 /*##### SECTION SKILLS IT #####*/
 .skills {
   position: relative;
   display: table;
   width: 100%;
-  height: 90%;
-  padding-top: 150px;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
   -webkit-box-shadow: inset 0px 11px 20px -15px #002440, inset 0px -11px 20px -15px #002440;
   box-shadow: inset 0px 11px 20px -15px #002440, inset 0px -11px 20px -15px #002440; }
   @media screen and (min-width: 1950px) {
@@ -670,13 +603,32 @@ html, body {
           color: #002440;
           margin-bottom: 15px;
           margin-top: 15px; }
-          .skills .development-wrapper .skills-bar-container li .progressbar-title h3 {
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .skills-logo {
+            height: 60px;
+            margin-right: 30px;
+            position: relative;
+            left: 350px;
+            opacity: 0; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .sqr {
+            width: 60px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .rect {
+            width: 120px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .smallrect {
+            width: 100px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .bigrect {
+            width: 180px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .verybigrect {
+            height: 40px;
+            width: 180px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title label {
             display: inline-block;
-            font-weight: 100;
-            font-size: 1.3vw; }
+            font-weight: lighter;
+            font-size: 80px;
+            color: lightgrey; }
           .skills .development-wrapper .skills-bar-container li .progressbar-title .percent {
             position: absolute;
             right: 20px;
+            padding-top: 15px;
             font-size: 1.1vw;
             font-style: italic;
             font-weight: bold; }
@@ -684,7 +636,7 @@ html, body {
           background: #ececec;
           position: relative;
           width: 100%;
-          height: 10px;
+          height: 15px;
           border-radius: 100px; }
           .skills .development-wrapper .skills-bar-container li .bar-container .progressbar {
             background: darkred;
@@ -701,109 +653,296 @@ html, body {
       text-align: center;
       color: #002440;
       letter-spacing: 1px; }
-    .skills .portfolio-wrapper .grid-portfolio {
+    .skills .portfolio-wrapper .grid-interests {
       display: -ms-grid;
       display: grid;
       padding: 15px 0;
       -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 20px; }
-    .skills .portfolio-wrapper .grid-portfolio > div {
+    .skills .portfolio-wrapper .grid-interests > div {
       text-align: center;
       padding: 15px 0;
       font-size: 30px; }
-      .skills .portfolio-wrapper .grid-portfolio > div .img-portfolio {
+      .skills .portfolio-wrapper .grid-interests > div .img-interest {
         display: inline-block;
         margin: 0 auto;
         border: 2px solid #80BCBB;
         border-radius: 50%;
+        margin-bottom: 25px;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
-        opacity: 0.2; }
+        opacity: 0;
+        margin-top: 20px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
+        transition-property: -webkit-transform, -webkit-box-shadow;
+        -o-transition-property: transform, box-shadow;
+        transition-property: transform, box-shadow;
+        transition-property: transform, box-shadow, -webkit-transform, -webkit-box-shadow; }
+        .skills .portfolio-wrapper .grid-interests > div .img-interest:hover {
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+          -webkit-box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.45);
+          box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.45); }
+    .skills .portfolio-wrapper .grid-portfolio {
+      display: -ms-grid;
+      display: grid;
+      padding: 15px 0;
+      -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+      text-align: center;
+      grid-auto-columns: auto; }
+      .skills .portfolio-wrapper .grid-portfolio .div-portfolio {
+        display: block;
+        height: 150%;
+        padding-top: 50px;
+        opacity: 0.0; }
+        .skills .portfolio-wrapper .grid-portfolio .div-portfolio label {
+          font-size: 1.2em;
+          font-weight: 100;
+          font-style: italic;
+          color: #3b5998; }
+        .skills .portfolio-wrapper .grid-portfolio .div-portfolio p {
+          font-size: 0.7em;
+          text-align: justify;
+          padding-left: 1.2vw;
+          padding-right: 1.2vw; }
+        .skills .portfolio-wrapper .grid-portfolio .div-portfolio .img-portfolio {
+          height: 6vw;
+          width: 11vw;
+          margin-top: 20px;
+          border: 1px solid #80BCBB;
+          -webkit-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio .img-portfolio:hover {
+            position: relative;
+            height: 7vw;
+            width: 12vw;
+            -webkit-box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.45);
+            border: 2px inset #83a1d8; }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 430px) {
   .skills {
-    z-index: 95;
-    display: block;
-    width: 100%;
-    height: 60em;
-    margin: auto;
+    height: 120em;
+    padding-top: 10px;
+    padding-bottom: 0; }
+    .skills .development-wrapper {
+      width: 100vw;
+      height: 100%;
+      border: none; }
+      .skills .development-wrapper .development-title {
+        font-size: 1.5em;
+        padding-top: 50px; }
+      .skills .development-wrapper .skills-bar-container {
+        padding-left: 25px; }
+        .skills .development-wrapper .skills-bar-container li .progressbar-title {
+          color: #002440;
+          margin-bottom: 5px;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .skills-logo {
+            height: 25px;
+            margin-right: 10px;
+            left: 250px;
+            opacity: 0; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .sqr {
+            width: 25px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .rect {
+            width: 50px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .smallrect {
+            width: 40px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .bigrect {
+            width: 90px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .verybigrect {
+            height: 20px;
+            width: 90px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .percent {
+            font-size: 0.7em;
+            padding-top: 0;
+            color: #002440; }
+        .skills .development-wrapper .skills-bar-container li .bar-container {
+          height: 12px; }
+    .skills .portfolio-wrapper {
+      width: 100vw; }
+      .skills .portfolio-wrapper .development-title {
+        font-size: 1.5em;
+        margin-top: 50px;
+        margin-bottom: 50px; }
+      .skills .portfolio-wrapper .grid-interests {
+        text-align: center;
+        vertical-align: middle;
+        grid-gap: 0; }
+      .skills .portfolio-wrapper .grid-interests > div {
+        padding: 5px 0; }
+      .skills .portfolio-wrapper .grid-portfolio {
+        display: block;
+        padding: 0; }
+        .skills .portfolio-wrapper .grid-portfolio .div-portfolio {
+          padding-top: 0; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio label {
+            position: relative;
+            text-decoration: underline;
+            bottom: 15px;
+            font-style: normal; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio p {
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-bottom: 5em; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio .img-portfolio {
+            height: 10em;
+            width: 16em;
+            margin: auto; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio .large {
+            height: 8em;
+            width: 16em; } }
+
+@media screen and (min-width: 431px) and (max-width: 638px) {
+  .skills {
+    height: 130em;
     padding-top: 10px; }
     .skills .development-wrapper {
       width: 100%;
-      float: left;
+      height: 100%;
       border: none; }
       .skills .development-wrapper .development-title {
-        font-size: 1.2em;
-        text-align: center;
-        color: #002440;
-        padding-top: 50px;
-        letter-spacing: 1px; }
+        font-size: 1.5em;
+        padding-top: 50px; }
       .skills .development-wrapper .skills-bar-container {
-        position: relative;
-        width: 95%;
-        list-style-type: none;
         padding-left: 25px; }
-        .skills .development-wrapper .skills-bar-container li {
-          width: 100%;
-          margin-bottom: 20px; }
-          .skills .development-wrapper .skills-bar-container li .progressbar-title {
-            color: #002440;
-            margin-bottom: 5px;
-            display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
-            display: inline-flex; }
-            .skills .development-wrapper .skills-bar-container li .progressbar-title h3 {
-              display: inline-block;
-              font-weight: bold;
-              font-size: 0.65em; }
-            .skills .development-wrapper .skills-bar-container li .progressbar-title .percent {
-              position: absolute;
-              right: 20px;
-              font-size: 0.6em;
-              font-style: italic;
-              font-weight: bold; }
-          .skills .development-wrapper .skills-bar-container li .bar-container {
-            background: #ececec;
-            position: relative;
-            width: 100%;
-            height: 10px;
-            border-radius: 100px; }
-            .skills .development-wrapper .skills-bar-container li .bar-container .progressbar {
-              background: darkred;
-              border-radius: 100px;
-              position: absolute;
-              width: 0%;
-              height: 100%; }
+        .skills .development-wrapper .skills-bar-container li .progressbar-title {
+          color: #002440;
+          margin-bottom: 5px;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .skills-logo {
+            height: 40px;
+            margin-right: 20px;
+            left: 250px;
+            opacity: 0; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .sqr {
+            width: 40px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .rect {
+            width: 80px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .smallrect {
+            width: 70px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .bigrect {
+            width: 1000px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .verybigrect {
+            height: 30px;
+            width: 120px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .percent {
+            font-size: 0.8em;
+            color: #002440; }
+        .skills .development-wrapper .skills-bar-container li .bar-container {
+          height: 12px; }
     .skills .portfolio-wrapper {
-      height: 100%;
-      width: 100%;
-      float: left; }
+      width: 100%; }
       .skills .portfolio-wrapper .development-title {
-        font-size: 1.2em;
-        text-align: center;
-        color: #002440;
+        font-size: 1.5em;
         margin-top: 50px;
-        letter-spacing: 1px; }
-      .skills .portfolio-wrapper .grid-portfolio {
+        margin-bottom: 50px; }
+      .skills .portfolio-wrapper .grid-interests {
         text-align: center;
         vertical-align: middle;
-        display: -ms-grid;
-        display: grid;
-        padding: 15px 0;
-        -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0; }
-      .skills .portfolio-wrapper .grid-portfolio > div {
+      .skills .portfolio-wrapper .grid-interests > div {
+        padding: 5px 0; }
+      .skills .portfolio-wrapper .grid-portfolio {
+        display: block;
+        padding: 0; }
+        .skills .portfolio-wrapper .grid-portfolio .div-portfolio {
+          padding-top: 0; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio label {
+            text-decoration: underline; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio p {
+            padding-left: 10em;
+            padding-right: 10em;
+            padding-bottom: 5em; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio .img-portfolio {
+            height: 10em;
+            width: 16em; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio .large {
+            width: 20em; } }
+
+@media screen and (min-width: 639px) and (max-width: 825px) {
+  .skills {
+    height: 135em;
+    padding-top: 10px; }
+    .skills .development-wrapper {
+      width: 100%;
+      height: 100%;
+      border: none; }
+      .skills .development-wrapper .development-title {
+        font-size: 1.5em;
+        padding-top: 50px; }
+      .skills .development-wrapper .skills-bar-container {
+        padding-left: 25px; }
+        .skills .development-wrapper .skills-bar-container li .progressbar-title {
+          color: #002440;
+          margin-bottom: 5px;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .skills-logo {
+            height: 50px;
+            margin-right: 20px;
+            left: 250px;
+            opacity: 0; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .sqr {
+            width: 50px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .rect {
+            width: 100px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .smallrect {
+            width: 90px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .bigrect {
+            width: 130px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .verybigrect {
+            height: 30px;
+            width: 150px; }
+          .skills .development-wrapper .skills-bar-container li .progressbar-title .percent {
+            font-size: 0.8em;
+            color: #002440; }
+        .skills .development-wrapper .skills-bar-container li .bar-container {
+          height: 12px; }
+    .skills .portfolio-wrapper {
+      width: 100%; }
+      .skills .portfolio-wrapper .development-title {
+        font-size: 1.5em;
+        margin-top: 50px;
+        margin-bottom: 50px; }
+      .skills .portfolio-wrapper .grid-interests {
         text-align: center;
-        padding: 5px 0;
-        font-size: 30px; }
-        .skills .portfolio-wrapper .grid-portfolio > div .img-portfolio {
-          display: inline-block;
-          margin: 0 auto;
-          opacity: 0.2; } }
+        vertical-align: middle;
+        grid-gap: 0; }
+      .skills .portfolio-wrapper .grid-interests > div {
+        padding: 5px 0; }
+      .skills .portfolio-wrapper .grid-portfolio {
+        display: block;
+        padding: 0; }
+        .skills .portfolio-wrapper .grid-portfolio .div-portfolio {
+          padding-top: 0; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio label {
+            text-decoration: underline; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio p {
+            padding-left: 10em;
+            padding-right: 10em;
+            padding-bottom: 5em; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio .img-portfolio {
+            height: 13em;
+            width: 22em; }
+          .skills .portfolio-wrapper .grid-portfolio .div-portfolio .large {
+            width: 24em; } }
 
 /*##### SECTION EXPERIENCE #####*/
 .experience {
@@ -818,7 +957,7 @@ html, body {
   .experience .content {
     text-align: center; }
     .experience .content h1 {
-      font-size: 25px;
+      font-size: 30px;
       color: #fff;
       letter-spacing: 1px; }
     .experience .content ul {
@@ -830,6 +969,8 @@ html, body {
         margin-left: 20px;
         width: 5px;
         padding-bottom: 40px; }
+        .experience .content ul li a {
+          text-decoration: none; }
         .experience .content ul li:last-child {
           padding-bottom: 8px; }
         .experience .content ul li:before {
@@ -957,8 +1098,8 @@ html, body {
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
           text-shadow: 0px 0px 1px #222222; }
-        .contact .content .socialIcons li a.googlePlus:hover {
-          color: #db4437;
+        .contact .content .socialIcons li a.github:hover {
+          color: #211F1F;
           -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
           text-shadow: 0px 0px 1px #222222; }
@@ -993,7 +1134,7 @@ html, body {
       position: relative;
       padding-top: 2em; }
       .contact .content .contact-title {
-        font-size: 6vw;
+        font-size: 8vw;
         text-align: center;
         color: #002440;
         letter-spacing: 1px; }
@@ -1018,9 +1159,9 @@ html, body {
               -webkit-transform: rotateY(0deg);
               transform: rotateY(0deg);
               text-shadow: 0; }
-          .contact .content .socialIcons li a.googlePlus {
-            color: #db4437; }
-            .contact .content .socialIcons li a.googlePlus:hover {
+          .contact .content .socialIcons li a.github {
+            color: #211F1F; }
+            .contact .content .socialIcons li a.github:hover {
               -webkit-transform: rotateY(0deg);
               transform: rotateY(0deg);
               text-shadow: 0; }
@@ -1084,7 +1225,7 @@ html, body {
               transform: rotateY(0deg);
               text-shadow: 0; }
           .contact .content .socialIcons li a.googlePlus {
-            color: #db4437; }
+            color: #211F1F; }
             .contact .content .socialIcons li a.googlePlus:hover {
               -webkit-transform: rotateY(0deg);
               transform: rotateY(0deg);
