@@ -25,7 +25,7 @@
             <nav class="navbar" id="navbar">
                 <img class="logo" src="./images/logo2.png" height="80px" width="80px">
                 <ul id="mainNav">
-                    <li><a class="active" href="#section-main" title="A propos de moi">A propos</a></li>
+                    <li><a class="active" id="about" href="#section-main" title="A propos de moi">A propos</a></li>
                     <li><a href="#section-skills" title="Compétences informatiques">Skills</a></li>
                     <li><a href="#section-experience" title="Formation et diplômes">Experience</a></li>
                     <li><a href="#section-contact" title="Réseaux sociaux">Contact</a></li>
@@ -45,7 +45,7 @@
                         </div>
                         <p>
                             "Etudiant en dernière année de bachelor HES-SO en filière Informatique de Gestion à la HEG-Genève. Jeune, ambitieux, dynamique, persévérant dans mon travail, autodidacte et inconditionnellement passionné par les nouvelles technologies informatiques depuis mon plus jeune âge,
-                            j'aimerais intégrer une équipe dans un domaine évolutif comme le développement web, serveur ou mobile afin de mettre en pratique mes connaissances scolaires fraichement acquises pour ainsi gagner davantage d'expérience pratique et professionnelle."
+                            j'aimerais intégrer une équipe dans un domaine évolutif comme le développement web, serveur ou mobile afin de mettre en pratique mes connaissances fraichement acquises durant mes hautes études pour ainsi gagner de l'expérience professionnelle."
                         </p>
                     </div>
                 </div>
@@ -155,21 +155,21 @@
                             <a title="FoodNextDoor" target="_blank" href="https://gitlab.com/HugoPF/front-bledisfood/tree/eddy/bledisfood">
                                 <img class="img-portfolio" src="./images/FoodNextDoor.png">
                             </a>
-                            <p class="descr">Responsive WebApp codée à l'aide du framework Angular 6 (FrontEnd) et DjangoREST (BackEnd) sur Visual Studio Code avec une BDD PostGreSQL dans le cadre d'un projet d'intégration professionnelle.</p>
+                            <p class="descr">Responsive WebApp codée à l'aide du framework Angular 6 (FrontEnd) et DjangoREST (BackEnd) sur Visual Studio Code avec une base de données PostGreSQL dans le cadre d'un projet d'intégration professionnelle.</p>
                         </div>
                         <div id="portfolio1" class="div-portfolio">
                             <label>Bibliothèque Vaadin</label><br/>
                             <a title="Bibliothèque Vaadin" target="_blank" href="https://github.com/edouarddiep/BibliothequeVaadin">
                                 <img class="img-portfolio large" src="./images/BibliothequeVaadin.png">
                             </a>
-                            <p class="descr">WebApp codée en Java à l'aide du web framework Vaadin 10 dans le cadre d'un cours option de dernière année (complémentaire au cours Java EE).</p>
+                            <p class="descr">WebApp codée en Java à l'aide du web framework Vaadin 10 dans le cadre d'un cours option de dernière année.</p>
                         </div>
                         <div id="portfolio2" class="div-portfolio">
                             <label>Global Class Booking</label><br/>
                             <a title="GlobalClassBooking" target="_blank" href="https://github.com/edouarddiep/GlobalClassBooking">
                                 <img class="img-portfolio" src="./images/FrmLstCoursAdminGUIModifyCours.png">
                             </a>
-                            <p class="descr">Application lourde codée en Java SE 1.8 et utilisant une BDD Oracle dans le cadre d'un projet d'étude intermédiaire.</p>
+                            <p class="descr">Application lourde codée en Java SE 1.8 et utilisant une base de données Oracle dans le cadre d'un projet d'étude intermédiaire.</p>
                         </div>
                     </div>
                 </div>
@@ -179,22 +179,25 @@
             <section class="experience" id="section-experience">
                 <div class="content">
                 <h1>Formations & diplômes</h1>
+                <div class="link-diplomes">
+                    <label>(cliquez sur les descriptifs pour voir les attestations)</label>
+                </div>
                 <ul>
                     <li>
                         <div class="experience-content hidden">
                             <h2>Bachelor HES - Informatique de Gestion<br/>(en cours)</h2>
                             <div class="experience-time">Sept. 2015 - Juin 2019 | HEG Genève</div>
-                            <p>Mise en pratique et perfectionnement des langages de programmation web (HTML, CSS, JS) et apprentissage des langages serveur (Java, PHP, Python).
-                                J'ai également été impliqué dans divers projets d'études usant de la méthodologie agile (SCRUM et DAD) ce qui m'a permis d'améliorer mes aptitudes en termes de gestion de projets individuels et de développement collaboratif (Git) 
+                            <p>Divers projets m'ont permis de mettre en pratique et perfectionner ma connaissance des langages de programmation web (HTML, CSS, JS) et l'apprentissage des langages serveur (Java, PHP, Python).
+                                J'ai également utilisé la méthodologie agile (SCRUM et DAD) ce qui m'a valu d'améliorer mes aptitudes en termes de gestion de projets individuels et de développement collaboratif (Git) 
                                 mais aussi l'administration de serveurs (WS 2016, Ubuntu 16.04), le montage et la configuration de réseaux télécomm. <br/>(cf : certification Cisco CCENT) ainsi que la gestion de bases de données relationnelles à travers divers SGBD (Oracle, MySQL, PostGreSQL)</p>
                         </div>
                     </li>
                     <li>
                         <a href="./images/diplomes/certificat_travail_hotel_calvy.png" target="_blank">
                             <div class="experience-content hidden">
-                                <h2>Stagiaire réceptionniste et service au bar</h2>
+                                <h2>Stagiaire réceptionniste et service au restaurant</h2>
                                 <div class="experience-time">Janv. 2015 - Juil. 2015 | Hôtel Calvy</div>
-                                <p>Accueil clients à la réception (check-in/check-out), service au bar, tenue de la caisse,
+                                <p>Accueil clients à la réception (check-in/check-out), service au restaurant, tenue de la caisse,
                                     prise des réservations par téléphone et e-mail, mise à jour des débiteurs et saisie des pièces comptables.
                                 </p>
                             </div>                       
@@ -205,8 +208,8 @@
                             <div class="experience-content hidden">
                             <h2>Brevet de sous-officier (Sergent) </h2>
                             <div class="experience-time">Juin 2014 - Nov. 2014 | Armée Suisse</div>
-                            <p>Ecole de recrue, école de sous-officier ainsi que paiement de galons effectués dans la caserne militaire de Bière, où j'ai pu acquérir une expérience
-                                dans le commandement de troupe en tant que chef de groupe et instructeur MG64 12.7mm.</p>
+                            <p>Ecole de recrue, école de sous-officier ainsi que paiement de galons effectués dans la caserne militaire de Bière, 
+                                m'ont donné le sens du commandement de troupe en tant que chef de groupe et instructeur MG64 12.7mm.</p>
                             </div>
                         </a>
                     </li>
@@ -215,8 +218,8 @@
                             <div class="experience-content hidden">
                                 <h2>Maturité Professionnelle Commerciale</h2>
                                 <div class="experience-time">Sept. 2013 - Juin 2014 | CEC Nicolas-Bouvier</div>
-                                <p>Obtention d'un niveau B2 en italien, des connaissances avancées en vocabulaire de l'anglais commercial ainsi
-                                    que de solides compétences vis-à-vis de la comptabilité analytique d'entreprise, du droit suisse et des mathématiques statistiques.
+                                <p>La maturité professionnelle a validé un niveau B2 en italien, amélioré mon vocabulaire de l'anglais commercial et
+                                    m'a offert de solides compétences de la comptabilité analytique d'entreprise, du droit suisse et des mathématiques statistiques.
                                 </p>
                             </div>
                         </a>
@@ -227,8 +230,8 @@
                                 <h2>Stage pratique de dernière année (CFC)</h2>
                                 <div class="experience-time">Août 2011 - Août 2012 | OLEXCO SA</div>
                                 <p>
-                                    Mise en pratique des connaissances scolaires acquises durant mon CFC. Réception et gestion du courrier, accueil des clients, réception des appels téléphoniques,
-                                    préparation des classeurs annuels et répertoires des nouveaux clients, création et mise à jour des fichiers clients, petites correspondances,
+                                    Mise en pratique des connaissances scolaires acquises durant mon CFC. Gestion du courrier, accueil des clients, réception des appels téléphoniques,
+                                    préparation des classeurs annuels et répertoires des nouveaux clients, création et mise à jour des fichiers clients, petite correspondance,
                                     saisie de pièces comptables, préparation des écritures de bouclement, tenue du reporting Excel, archivage et classement des dossiers, tâches admin. diverses.
                                 </p>
                             </div>
@@ -253,10 +256,10 @@
                 <div class="content">
                     <h2 class="contact-title">Contact</h2>
                     <ul class="socialIcons">
-                        <li><a title="Linkedin" target="_blank" href="https://www.linkedin.com/in/edouard-diep-545241108/" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a title="Github" target="_blank" href="https://github.com/edouarddiep" class="github"><i class="fa fa-github"></i></a></li>
-                        <li><a title="Email" target="_blank" href="mailto:edouard.diep@gmail.com" class="email"><i class="fa fa-envelope"></i></a></li>
-                        <li><a title="Téléphone" target="_blank" href="tel:+41796959500" class="phone"><i class="fa fa-phone"></i></a></li>
+                        <li class = "icon" id="icon0"><a title="Linkedin" target="_blank"  href="https://www.linkedin.com/in/edouard-diep-545241108/" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li class = "icon" id="icon1"><a title="Github" target="_blank" href="https://github.com/edouarddiep" class="github"><i class="fa fa-github"></i></a></li>
+                        <li class = "icon" id="icon2"><a title="Email" target="_blank" href="mailto:edouard.diep@gmail.com" class="email"><i class="fa fa-envelope"></i></a></li>
+                        <li class = "icon" id="icon3"><a title="Téléphone" target="_blank" href="tel:+41796959500" class="phone"><i class="fa fa-phone"></i></a></li>
                     </ul>
                 </div>
             </section>

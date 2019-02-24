@@ -329,6 +329,9 @@ html, body {
         background-attachment: local;
         background-position-x: 15%;
     }
+    @media screen and (min-width: 826px) and (max-width: 1280px){
+        height:180%;
+    }
     text-align: center;
     vertical-align: middle;
     display: inline-block;
@@ -784,11 +787,11 @@ html, body {
                     background: $progressbar-bg;
                     position: relative;
                     width: 100%;
-                    height: 15px;
+                    height: 8px;
                     border-radius: 100px;
     
                         .progressbar{
-                            background:darkred;
+                            background: black;
                             border-radius: 100px;
                             position:absolute;
                             width:0%;
@@ -951,7 +954,7 @@ html, body {
                     }
                     
                     .bar-container{
-                        height: 12px;
+                        height: 6px;
                     }
                 }
             }
@@ -977,7 +980,6 @@ html, body {
                 display: block;
                 padding:0;
                 .div-portfolio{
-                    transform:rotate(30deg);
                     padding-top:0;
                     label{
                         position: relative;
@@ -1047,7 +1049,7 @@ html, body {
                         }
 
                         .bigrect{
-                            width:1000px;
+                            width:100px;
                         }
                         .verybigrect{
                             height:30px;
@@ -1061,7 +1063,7 @@ html, body {
                     }
                     
                     .bar-container{
-                        height: 12px;
+                        height: 6px;
                     }
                 }
             }
@@ -1165,7 +1167,7 @@ html, body {
                     }
                     
                     .bar-container{
-                        height: 12px;
+                        height: 6px;
                     }
                 }
             }
@@ -1214,6 +1216,205 @@ html, body {
     }
 }
 
+@media screen and (min-width:826px) and (max-width:1280px){
+.skills{
+    position: relative;
+    display: table;
+    width:100%;
+    height:100%;
+    padding-top:100px;
+    padding-bottom:100px;
+    box-shadow: inset 0px 11px 20px -15px $title-color, inset 0px -11px 20px -15px $title-color;
+    @media screen and (min-width:1950px) {
+        padding-top:250px;
+    }
+    
+        .development-wrapper{
+            width:50%;
+            float:left;
+            border-right: 8px groove $lightBlue;
+    
+            .development-title{
+                font-size: 2em;
+                text-align: center;
+                color:$title-color;
+                margin-bottom: 50px;
+                letter-spacing: 1px;
+            }
+        
+    
+            .skills-bar-container{
+                position: relative;
+                width: 95%;
+                list-style-type:none;
+                padding-left:50px;
+            
+                li{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    
+                    .progressbar-title{
+                    color: $title-color;
+                    margin-bottom: 15px;
+                    margin-top:15px;
+    
+                        .skills-logo{
+                            height:30px;
+                            margin-right:20px;
+                            position: relative;
+                            left:350px;
+                            opacity: 0;
+                        }
+                        .sqr {
+                            width:30px;
+                        }
+                        .rect {
+                            width:70px;
+                        }
+
+                        .smallrect{
+                            width:50px;
+                        }
+
+                        .bigrect{
+                            width:90px;
+                        }
+                        .verybigrect{
+                            height:20px;
+                            width:90px;
+                        }
+                        label{
+                            display: inline-block;
+                            font-weight: lighter;
+                            font-size: 80px;
+                            color:lightgrey
+                        }
+                    
+                        .percent{
+                            position: absolute;
+                            right: 20px;
+                            padding-top:15px;
+                            font-size: 1.1vw;
+                            font-style: italic;
+                            font-weight: bold;
+                        }
+                    }
+                    
+                    .bar-container{
+                    background: $progressbar-bg;
+                    position: relative;
+                    width: 100%;
+                    height: 8px;
+                    border-radius: 100px;
+    
+                        .progressbar{
+                            background: black;
+                            border-radius: 100px;
+                            position:absolute;
+                            width:0%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .portfolio-wrapper{
+    
+            height:100%;
+            width:50%;
+            float:left;
+    
+            .development-title{
+                font-size: 2em;
+                text-align: center;
+                color:$title-color;
+                letter-spacing: 1px;
+            }
+            
+            .grid-interests{
+                display: grid;
+                padding:15px 0;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+            }
+
+    
+            .grid-interests > div{
+                text-align: center;
+                padding: 15px 0;
+                font-size: 30px;
+    
+                .img-interest{
+                    display: inline-block;
+                    margin: 0 auto;
+                    border:2px solid $turquoise; 
+                    border-radius: 50%;
+                    margin-bottom:25px;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    opacity: 0;
+                    margin-top:20px;
+                    transition: all 0.3s ease-in-out;
+                    transition-property: transform, box-shadow;
+
+                    &:hover{
+                        transform: scale(1.2);
+                        box-shadow: 0 2px 10px 0px $shadow-color;
+                    }
+                }
+            }
+
+            .grid-portfolio{
+                display: grid;
+                padding:15px 0;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+                text-align:center;
+                grid-auto-columns: auto;
+
+                .div-portfolio{
+                    display:block;
+                    height:150%;
+                    padding-top:50px;
+                    opacity: 0.0;
+                    label{
+                        font-size:1.2em;
+                        font-weight:100;
+                        font-style: italic;
+                        color:$phone-top;
+                    }
+
+                    p{
+                        font-size:0.7em;
+                        text-align: justify;
+                        padding-left: 1.2vw;
+                        padding-right:1.2vw;
+                    }
+                    .img-portfolio{
+                        height:6vw;
+                        width: 11vw;
+                        margin-top:20px;
+                        border:1px solid $turquoise;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover{
+                            position: relative;
+                            height:7vw;
+                            width:12vw;
+                            box-shadow: 0 4px 12px 0px $shadow-color;
+                            border: 2px inset $lightBlue;
+                        }
+                    }
+                    
+                }
+            }
+    
+        }
+    }
+}
+
 /*##### SECTION EXPERIENCE #####*/
 
 .experience{
@@ -1226,97 +1427,111 @@ html, body {
         padding-top:250px;
     }
     
-.content{
-    text-align: center;
-    
-    h1{
-    font-size: 30px;
-    color: #fff;
-    letter-spacing: 1px;
-    }
-    
-    ul{
-    padding: 50px 0;
-    list-style-type: none;
-
-    li{
-        background: $experience-content-bg-color;
-        position: relative;
-        margin-left: 20px;
-        width: 5px;
-        padding-bottom: 40px;
-
-        a{
-            text-decoration: none;
+    .content{
+        text-align: center;
+        
+        h1{
+        font-size: 30px;
+        color: #fff;
+        letter-spacing: 1px;
         }
+        
+        ul{
+        padding: 50px 0;
+        list-style-type: none;
 
-        &:last-child{
-        padding-bottom: 8px;
-        }
-
-        &:before{
-        content: '';
-        background: $experience-bg-color;
-        position: absolute;
-        left: 50%;
-        top: 0;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        width: 20px;
-        height: 20px;
-        border: 4px solid $experience-content-bg-color;
-        }
-
-        .hidden {
-        opacity: 0;
-        margin-left: 0;
-        }
-
-        .experience-content{
-            background: $experience-content-bg-color; 
+        li{
+            background: $experience-content-bg-color;
             position: relative;
-            top: 11px;
-            left: 48px;
-            width: calc(100vw - 100px);
-            padding: 20px;
-            -webkit-border-radius: 0 5px 5px;
-            -moz-border-radius: 0 5px 5px;
-            border-radius: 0 5px 5px;
+            margin-left: 20px;
+            width: 5px;
+            padding-bottom: 40px;
 
-            h2{
-                text-align: center;
-                font-size: 1.3em;
-                color: $title-color;
+            a{
+                text-decoration: none;
+            }
+
+            &:last-child{
+            padding-bottom: 8px;
+            }
+
+            &:before{
+            content: '';
+            background: $experience-bg-color;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border: 4px solid $experience-content-bg-color;
+            }
+
+            .hidden {
+            opacity: 0;
+            margin-left: 0;
+            transition: transform 0.3s ease-in-out;
+                &:hover{
+                    transform:scale(1.005);
+                    
+                }
+            }
+
+            .experience-content{
+                background: $experience-content-bg-color; 
+                position: relative;
+                top: 11px;
+                left: 48px;
+                width: calc(100vw - 100px);
+                padding: 20px;
+                -webkit-border-radius: 0 5px 5px;
+                -moz-border-radius: 0 5px 5px;
+                border-radius: 0 5px 5px;
+
+                h2{
+                    text-align: center;
+                    font-size: 1.3em;
+                    color: $title-color;
+                    padding-bottom: 10px;
+                }
+                p{
+                    text-align: justify;
+                }
+
+            .experience-time{
+                color: #777;
+                font-size: 0.8em;
                 padding-bottom: 10px;
             }
+
             p{
-                text-align: justify;
+                color: #1a1a1a;
+                font-size: .95em;
             }
 
-        .experience-time{
-            color: #777;
+            &:before{
+                content: '';
+                background: $experience-content-bg-color;
+                position: absolute;
+                top: 0;
+                left: -35px;
+                width: 35px;
+                height: 5px;
+            }
+            }
+        }
+        }
+    }
+    .link-diplomes{
+        color:$email-top;
+        cursor:pointer;
+        text-align: center;
+        @media screen and (max-width:812px) {
             font-size: 0.8em;
-            padding-bottom: 10px;
         }
 
-        p{
-            color: #1a1a1a;
-            font-size: .95em;
-        }
-
-        &:before{
-            content: '';
-            background: $experience-content-bg-color;
-            position: absolute;
-            top: 0;
-            left: -35px;
-            width: 35px;
-            height: 5px;
-        }
-        }
     }
-    }
-}
 }
 
 // RESPONSIVE PC ADAPTATION EXPERIENCE-SECTION
@@ -1404,6 +1619,9 @@ background-color:$experience-content-bg-color;
             display: inline-block;
             margin: auto 4vw;
             font-size: 4vw;
+            opacity: 0;
+            margin-top:-50px;
+            
             a{
                 text-align:center;
                 display: inline-block;
@@ -1510,7 +1728,7 @@ background-color:$experience-content-bg-color;
                         }
                     }
                     a.email{
-                        color: $lightBlue;
+                        color: $email-top;
                         &:hover{
                             transform:rotateY(0deg);
                             text-shadow:0;
@@ -1588,7 +1806,7 @@ background-color:$experience-content-bg-color;
                         }
                     }
                     a.email{
-                        color: $lightBlue;
+                        color: $email-top;
                         &:hover{
                             transform:rotateY(0deg);
                             text-shadow:0;

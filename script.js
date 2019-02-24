@@ -14,8 +14,10 @@ $(document).ready(function(){
     var d = new Date();
     var n = d.getHours();
 
+
     // action when refreshing html page
-$(this).scrollTop(0);
+    $(this).scrollTop(0);
+
 
 // typing animation
 (function($) {
@@ -260,10 +262,25 @@ setTimeout(function(){
                         if(bottom_of_window > bottom_of_object){
                             $(this).animate({
                                 'opacity':'1',
-                                'transform':'rotate(0deg)'
                             },1000);
                         }
                     }
+                }
+            }
+        });
+        // ANIMATION LOGOS CONTACT
+        $('.socialIcons .icon').each(function(){
+            console.log("OK ANIMATION");
+            var bottom_of_object = $(this).offset().top - $(this).outerHeight();
+            if(bottom_of_window > bottom_of_object){
+                for(let i=0;i<=3;i++){
+                    setTimeout(function(){
+                        $('#icon'+i).delay(1000).animate({
+                            'opacity':'1',
+                            'zoom': '1.1',
+                            'margin-top':'0'
+                        },1000);         
+                    }, i*500);
                 }
             }
         });
