@@ -257,13 +257,10 @@ setTimeout(function(){
                             },1000);
                         }, i*80);
                     } else {
-                        console.log("bottom of object : "+bottom_of_object);
-                        console.log("bottom of window : "+bottom_of_window);
                         if(bottom_of_window > bottom_of_object){
                             $(this).animate({
                                 'opacity':'1',
-                                'zoom': '1.1',
-                                '-moz-transform':'scale(1.1)'
+                                'transform':'rotate(0deg)'
                             },1000);
                         }
                     }

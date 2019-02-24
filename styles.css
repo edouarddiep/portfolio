@@ -788,6 +788,9 @@ html, body {
         display: block;
         padding: 0; }
         .skills .portfolio-wrapper .grid-portfolio .div-portfolio {
+          -webkit-transform: rotate(30deg);
+          -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
           padding-top: 0; }
           .skills .portfolio-wrapper .grid-portfolio .div-portfolio label {
             position: relative;
