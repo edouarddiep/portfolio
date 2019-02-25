@@ -273,11 +273,10 @@ setTimeout(function(){
             console.log("OK ANIMATION");
             var bottom_of_object = $(this).offset().top - $(this).outerHeight();
             if(bottom_of_window > bottom_of_object){
-                for(let i=0;i<=3;i++){
+                for(let i=0;i<=4;i++){
                     setTimeout(function(){
-                        $('#icon'+i).delay(1000).animate({
+                        $('#icon'+i).delay(300).animate({
                             'opacity':'1',
-                            'zoom': '1.1',
                             'margin-top':'0'
                         },1000);         
                     }, i*500);
