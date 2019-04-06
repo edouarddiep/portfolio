@@ -119,7 +119,13 @@ setTimeout(function(){
     // Bind to scroll
 
     $('body').scroll(function(){
-        var bottom_of_window = $(this).scrollTop() + $(this).outerHeight()/2.5;
+        var bottom_of_window;
+
+        if(width < 1024){
+            bottom_of_window = $(this).scrollTop() + $(this).outerHeight()/2.5;
+        } else {
+            bottom_of_window = $(this).scrollTop() - $(this).outerHeight()*0.5;
+        }
 
         // SECTION EXPERIENCE
 
@@ -129,27 +135,28 @@ setTimeout(function(){
 
             /* If the object is completely visible in the window, fadeIn it */
         
-        if( bottom_of_window > bottom_of_object){
-            $(this).animate({
-            'opacity':'1',
-            'margin-left': '0',
-            },1000);
-        }
+            console.log("BOTTOM OF WINDOW ="+bottom_of_window);
+            console.log("BOTTOM OF OBJECT ="+bottom_of_object);
+            if(bottom_of_window > bottom_of_object){
+                $(this).animate({
+                'opacity':'1',
+                'margin': '0',
+                },1000);
+            }
 
-        // Get container scroll position
-        var fromTop = $(this).scrollTop()+topMenuHeight;
+            // Get container scroll position
+            var fromTop = $(this).scrollTop()+topMenuHeight;
 
-        // Get id of current scroll item
-        var cur = scrollItems.map(function(){
-        if ($(this).offset().top < fromTop)
-            return this;
+            // Get id of current scroll item
+            var cur = scrollItems.map(function(){
+            if ($(this).offset().top < fromTop)
+                return this;
         });
         // Get the id of the current element
         cur = cur[cur.length-1];
         var id = cur && cur.length ? cur[0].id : "";
         
         if (lastId !== id) {
-            console.log(id);
             lastId = id;
             // Set/remove active class
             menuItems
@@ -178,7 +185,7 @@ setTimeout(function(){
                 // ANIMATION LOGOS IT & PROGRESS BARS 
                 function frame() {
                     if(width > 10){
-                        for(let i=0;i<=17;i++){
+                        for(let i=0;i<=20;i++){
                             setTimeout(function() { 
                                 $('#skill'+i).animate({
                                     'opacity':'1',
@@ -238,7 +245,7 @@ setTimeout(function(){
         $('.grid-portfolio .div-portfolio').each(function(){
             var bottom_of_object = $(this).offset().top - $(this).outerHeight();
             if(bottom_of_window > middle_dev_scroll){
-                for(let i=0;i<3;i++){
+                for(let i=0;i<4;i++){
                     if(width > 2200){
                         setTimeout(function(){
                             $('#portfolio'+i).delay(1000).animate({
@@ -270,7 +277,6 @@ setTimeout(function(){
         });
         // ANIMATION LOGOS CONTACT
         $('.socialIcons .icon').each(function(){
-            console.log("OK ANIMATION");
             var bottom_of_object = $(this).offset().top - $(this).outerHeight();
             if(bottom_of_window > bottom_of_object){
                 for(let i=0;i<=4;i++){
