@@ -18,7 +18,6 @@ $(document).ready(function(){
     // action when refreshing html page
     $(this).scrollTop(0);
 
-
 // typing animation
 (function($) {
 $.fn.delay(1000).writeText = function(content) {

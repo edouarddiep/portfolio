@@ -1,0 +1,275 @@
+<!--
+    * 
+    * HTML Portfolio
+    *
+    * @author : Edouard Diep
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Portfolio</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width">
+            <link rel="icon" href="./images/logo2.png">
+            <link rel="stylesheet" type="text/css" href="./styles.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/wow.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+    </head>
+    <body>
+        <script src="./script.js"></script>
+        <!-- BARRE NAVIGATION -->
+        <section class="section-navbar">
+            <nav class="navbar" id="navbar">
+                <img class="logo" src="./images/logo2.png" height="80px" width="80px">
+                <ul id="mainNav">
+                    <li><a class="active" id="about" href="#section-main" title="A propos de moi">A propos</a></li>
+                    <li><a href="#section-skills" title="Compétences informatiques">Skills</a></li>
+                    <li><a href="#section-experience" title="Formation et diplômes">Experience</a></li>
+                    <li><a href="#section-contact" title="Réseaux sociaux">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!-- SECTION ACCUEIL -->
+        <section class="mainPage" id="section-main">
+            <div class="content">
+                <h1 id="first-part-writer" class="welcome-text"></h1>
+                <h1 id="sec-part-writer" class="welcome-text"></h1>
+                <p id="last-part-writer" class="last-part-writer" class="welcome-text"></p>
+                <div class="description-wrapper" id="descr">
+                    <div class="objectif-wrapper" id="objectif" title="Objectif">
+                        <div class="profil-wrapper">
+                            <img class="profil" src="./images/profil2_png.png">
+                        </div>
+                        <p>
+                            "Etudiant en dernière année de bachelor HES-SO en filière Informatique de Gestion à la HEG-Genève. Jeune, ambitieux, dynamique, persévérant dans mon travail, autodidacte et inconditionnellement passionné par les nouvelles technologies informatiques depuis mon plus jeune âge,
+                            j'aimerais intégrer une équipe dans un domaine évolutif comme le développement web, serveur ou mobile afin de mettre en pratique mes connaissances fraichement acquises durant mes hautes études pour ainsi gagner de l'expérience professionnelle."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION SKILLS -->
+        <section class="skills" id="section-skills">
+            <div class="content">
+                <div class="development-wrapper">
+                    <h2 class="development-title">Compétences informatiques</h2>
+                    <ul class="skills-bar-container">
+                        <li>
+                            <div class="progressbar-title">
+                            <img src="images/logo skills/html5_logo.png" class="skills-logo smallsqr" id="skill0" title="HTML 5">
+                            <span class="percent" id="html-pourcent"></span>
+                            </div>
+                            <div class="bar-container" data-percent="100">
+                            <span class="progressbar" id="progress-html"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progressbar-title">
+                            <img src="images/logo skills/CSS3_logo.png" class="skills-logo smallsqr" id="skill2" title="CSS 3">
+                            <img src="images/logo skills/sass_logo.png" class="skills-logo rect"id="skill4" title="SASS / SCSS">
+                            <span class="percent" id="css-pourcent"></span>
+                            </div>
+                            <div class="bar-container" data-percent="95">
+                            <span class="progressbar" id="progress-css"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progressbar-title">
+                            <img src="images/logo skills/javascript_logo.png" class="skills-logo smallrect" id="skill6" title="Javascript">
+                            <img src="images/logo skills/jquery_logo.png" class="skills-logo sqr" id="skill8" title="JQuery">
+                            <img src="images/logo skills/angular_logo.png" class="skills-logo sqr" id="skill10" title="Angular 6">
+                            <img src="images/logo skills/typescript_logo.png" class="skills-logo verybigrect" id="skill12" title="TypeScript">
+
+                            <span class="percent" id="javascript-pourcent"></span>
+                            </div>
+                            <div class="bar-container" data-percent="90">
+                            <span class="progressbar" id="progress-javascript"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progressbar-title">
+                            <img src="images/logo skills/python_logo.png" class="skills-logo verybigrect" id="skill14" title="Python 3.7">
+                            <img src="images/logo skills/php_logo.png" class="skills-logo smallrect" id="skill16" title="PHP">
+                            <img src="images/logo skills/ajax_logo.png" class="skills-logo smallrect" id="skill18" title="AJAX">
+                            <span class="percent" id="angular-pourcent"></span>
+                            </div>
+                            <div class="bar-container" data-percent="80">
+                            <span class="progressbar" id="progress-python"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progressbar-title">
+                            <img src="images/logo skills/java_logo.png" class="skills-logo smallrect" id="skill20" title="Java SE">
+                            <img src="images/logo skills/java_ee_logo.png" class="skills-logo sqr" id="skill19" title="Java EE"> 
+                            <img src="images/logo skills/vaadin_logo.png" class="skills-logo verybigrect" id="skill17" title="Vaadin 10">
+                            <img src="images/logo skills/restapi_logo.png" class="skills-logo rect" id="skill15" title="REST API">
+                            <span class="percent" id="php-pourcent"></span>
+                            </div>
+                            <div class="bar-container" data-percent="90">
+                            <span class="progressbar" id="progress-java"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progressbar-title">
+                            <img src="images/logo skills/oracle_logo.png" class="skills-logo verybigrect" id="skill13" title="Oracle 12">
+                            <img src="images/logo skills/mysql_logo.png" class="skills-logo smallrect" id="skill11" title="MySQL">
+                            <img src="images/logo skills/postgresql_logo.png" class="skills-logo sqr" id="skill7" title="PostGreSQL">
+                            <img src="images/logo skills/pl-sql_logo.png" class="skills-logo sqr" id="skill9" title="PL/SQL">
+                            <span class="percent" id="php-pourcent"></span>
+                            </div>
+                            <div class="bar-container" data-percent="85">
+                            <span class="progressbar" id="progress-sql"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progressbar-title">
+                            <img src="images/logo skills/ws2016_logo.png" class="skills-logo smallsqr" id="skill5" title="Windows Server 2016">
+                            <img src="images/logo skills/ubuntu_logo.png" class="skills-logo verybigrect" id="skill3" title="Ubuntu Server 18.04">
+                            <span class="percent" id="angular-pourcent"></span>
+                            </div>
+                            <div class="bar-container" data-percent="75">
+                            <span class="progressbar" id="progress-wslinux"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progressbar-title">
+                            <img src="images/logo skills/cisco_logo.png" class="skills-logo smallrect" id="skill1" title="Cisco Enterprise">
+                            <span class="percent" id="angular-pourcent"></span>
+                            </div>
+                            <div class="bar-container" data-percent="90">
+                            <span class="progressbar" id="progress-cisco"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="portfolio-wrapper">
+                    <h2 class="development-title">Centres d'intérêts</h2>
+                    <div class="grid-interests">
+                        <div><a title="CrossFit coaching level 1 certificate" target="_blank" href="http://library.crossfit.com/free/pdf/CFJ_English_Level1_TrainingGuide.pdf"><img class="img-interest" id="interest2" src="./images/CrossFit.png" height="60vw" width="60vw"></a></div>
+                        <div><a title="Sony Vegas Pro 15 - Logiciel de montage vidéo" target="_blank" href="https://images-na.ssl-images-amazon.com/images/I/E1lllY2i6QS.pdf"><img class="img-interest" id="interest1" src="./images/Vegas_Pro_15.0.png" height="60vw" width="60vw"></a></div>
+                        <div><a title="Spartan Race - World's Best Obstacle Race" target="_blank" href="https://assets.ctfassets.net/1bk7n9wtl2gh/35AO2AcN2oS8WaQmyQUMUG/95268a64d709c09628ce133215f28583/Spartan_Race_Training_Guide_Final.pdf" ><img class="img-interest" id="interest0" src="./images/Spartan race.jpg" height="60vw" width="60vw"></a></div>
+                    </div>
+                    <h2 class="development-title">Quelques projets</h2>
+                    <div class="grid-portfolio">
+                        <div id="portfolio0" class="div-portfolio">
+                            <label>Food Next Door</label><br/>
+                            <a title="FoodNextDoor" target="_blank" href="https://gitlab.com/HugoPF/front-bledisfood/tree/eddy/bledisfood">
+                                <img class="img-portfolio" src="./images/FoodNextDoor.png">
+                            </a>
+                            <p class="descr">Responsive WebApp codée à l'aide du framework Angular 7 (FrontEnd) et DjangoREST (BackEnd) sur Visual Studio Code avec une base de données PostGreSQL dans le cadre d'un projet collaboratif.</p>
+                        </div>
+                        <div id="portfolio1" class="div-portfolio">
+                            <label>Vaudvin</label><br/>
+                            <a title="Vaudvin" target="_blank" href="https://github.com/edouarddiep/VaudVin-Front">
+                                <img class="img-portfolio vertical" src="./images/vaudvin.png">
+                            </a>
+                            <p class="descr">Application mobile hybride codée avec le framework Ionic 4 (FrontEnd) dans le cadre de mon travail de bachelor.</p>
+                        </div>
+                        <div id="portfolio2" class="div-portfolio">
+                            <label>Global Class Booking</label><br/>
+                            <a title="GlobalClassBooking" target="_blank" href="https://github.com/edouarddiep/GlobalClassBooking">
+                                <img class="img-portfolio" src="./images/FrmLstCoursAdminGUIModifyCours.png">
+                            </a>
+                            <p class="descr">Application lourde codée en Java SE 1.8 et utilisant une base de données Oracle dans le cadre d'un projet d'étude intermédiaire.</p>
+                        </div>
+ 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION EXPERIENCE-->
+            <section class="experience" id="section-experience">
+                <div class="content">
+                <h1>Formations & diplômes</h1>
+                <div class="link-diplomes">
+                    <label>(cliquez sur les descriptifs pour voir les attestations)</label>
+                </div>
+                <ul>
+                    <li>
+                        <div class="experience-content hidden">
+                            <h2>Bachelor HES - Informatique de Gestion<br/>(en cours)</h2>
+                            <div class="experience-time">Sept. 2015 - Juin 2019 | HEG Genève</div>
+                            <p>Divers projets m'ont permis de mettre en pratique et perfectionner ma connaissance des langages de programmation web (HTML, CSS, JS) et l'apprentissage des langages serveur (Java, PHP, Python).
+                                J'ai également utilisé la méthodologie agile (SCRUM et DAD) ce qui m'a valu d'améliorer mes aptitudes en termes de gestion de projets individuels et de développement collaboratif (Git) 
+                                mais aussi l'administration de serveurs (WS 2016, Ubuntu 16.04), le montage et la configuration de réseaux télécomm. <br/>(cf : certification Cisco CCENT) ainsi que la gestion de bases de données relationnelles à travers divers SGBD (Oracle, MySQL, PostGreSQL)</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./images/diplomes/certificat_travail_hotel_calvy.png" target="_blank">
+                            <div class="experience-content hidden">
+                                <h2>Stagiaire réceptionniste et service au restaurant</h2>
+                                <div class="experience-time">Janv. 2015 - Juil. 2015 | Hôtel Calvy</div>
+                                <p>Accueil clients à la réception (check-in/check-out), service au restaurant, tenue de la caisse,
+                                    prise des réservations par téléphone et e-mail, mise à jour des débiteurs et saisie des pièces comptables.
+                                </p>
+                            </div>                       
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./images/diplomes/brevet_promotion.png" target="_blank">
+                            <div class="experience-content hidden">
+                            <h2>Brevet de sous-officier (Sergent) </h2>
+                            <div class="experience-time">Juin 2014 - Nov. 2014 | Armée Suisse</div>
+                            <p>Ecole de recrue, école de sous-officier ainsi que paiement de galons effectués dans la caserne militaire de Bière, 
+                                m'ont donné le sens du commandement de troupe en tant que chef de groupe et instructeur MG64 12.7mm.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./images/diplomes/maturite_professionnelle.png" target="_blank">
+                            <div class="experience-content hidden">
+                                <h2>Maturité Professionnelle Commerciale</h2>
+                                <div class="experience-time">Sept. 2013 - Juin 2014 | CEC Nicolas-Bouvier</div>
+                                <p>La maturité professionnelle a validé un niveau B2 en italien, amélioré mon vocabulaire de l'anglais commercial et
+                                    m'a offert de solides compétences de la comptabilité analytique d'entreprise, du droit suisse et des mathématiques statistiques.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./images/diplomes/olexco_sa.png" target="_blank">
+                            <div class="experience-content hidden">
+                                <h2>Stage pratique de dernière année (CFC)</h2>
+                                <div class="experience-time">Août 2011 - Août 2012 | OLEXCO SA</div>
+                                <p>
+                                    Mise en pratique des connaissances scolaires acquises durant mon CFC. Gestion du courrier, accueil des clients, réception des appels téléphoniques,
+                                    préparation des classeurs annuels et répertoires des nouveaux clients, création et mise à jour des fichiers clients, petite correspondance,
+                                    saisie de pièces comptables, préparation des écritures de bouclement, tenue du reporting Excel, archivage et classement des dossiers, tâches admin. diverses.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./images/diplomes/cfc.png" target="_blank">
+                            <div class="experience-content hidden">
+                                <h2>CFC d'Employé de Commerce - Profil E</h2>
+                                <div class="experience-time">Sept. 2009 - Juin 2012 | Ecole Schulz</div>
+                                <p>Etude de la comptabilité générale d'entreprise et validation d'un niveau B2 en anglais ainsi qu'un B1 en italien.
+                                    Notions de bases en bureautique, dactylographie et pratique régulière avec les outils Microsoft Office (Word, Excel, PowerPoint & Outlook).    
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            </section>
+            <!-- SECTION CONTACT -->
+            <section class="contact" id="section-contact" >
+                <div class="content">
+                    <h2 class="contact-title">Contact</h2>
+                    <ul class="socialIcons">
+                        <li class = "icon" id="icon1"><a title="Linkedin" target="_blank"  href="https://www.linkedin.com/in/edouard-diep-545241108/" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li class = "icon" id="icon2"><a title="Github" target="_blank" href="https://github.com/edouarddiep" class="github"><i class="fa fa-github"></i></a></li>
+                        <li class = "icon" id="icon3"><a title="Email" target="_blank" href="mailto:edouard.diep@gmail.com" class="email"><i class="fa fa-envelope"></i></a></li>
+                        <li class = "icon" id="icon4"><a title="Téléphone" target="_blank" href="tel:+41796959500" class="phone"><i class="fa fa-phone"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="signature">
+                <p>© E. Diep</p>
+            </div>
+    </body>
+</html>

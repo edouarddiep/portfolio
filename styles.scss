@@ -725,7 +725,6 @@ html, body {
                 letter-spacing: 1px;
             }
         
-    
             .skills-bar-container{
                 position: relative;
                 width: 95%;
@@ -775,7 +774,7 @@ html, body {
                     
                         .percent{
                             position: absolute;
-                            right: 20px;
+                            right: 2px;
                             padding-top:15px;
                             font-size: 1.1vw;
                             font-style: italic;
@@ -872,6 +871,8 @@ html, body {
                     p{
                         font-size:0.7em;
                         text-align: justify;
+                        text-justify: distribute;
+                        text-align-last: left;
                         padding-left: 1.2vw;
                         padding-right:1.2vw;
                     }
@@ -904,7 +905,6 @@ html, body {
                     }                    
                 }
             }
-    
         }
     }
 
@@ -1308,7 +1308,7 @@ html, body {
                     
                         .percent{
                             position: absolute;
-                            right: 20px;
+                            right: 2px;
                             padding-top:15px;
                             font-size: 1.1vw;
                             font-style: italic;
@@ -1405,6 +1405,8 @@ html, body {
                     p{
                         font-size:0.7em;
                         text-align: justify;
+                        text-justify: distribute;
+                        text-align-last: left;
                         padding-left: 1.2vw;
                         padding-right:1.2vw;
                     }
@@ -1427,6 +1429,12 @@ html, body {
                         height:12vw;
                         width:6vw;
                         border:none;
+                        &:hover{
+                            height:14vw;
+                            width:7vw;
+                            box-shadow: none;
+                            border: none;
+                        }
                     }
                 }
             }
@@ -1489,12 +1497,8 @@ html, body {
             }
 
             .hidden {
-            opacity: 0;
-            margin-left: 0;
-            transition: border 0.3s ease-in-out;
-                &:hover{
-                    border: 3px outset red;
-                }
+                opacity: 0;
+                margin-left: 0;
             }
 
             .experience-content{
@@ -1516,6 +1520,18 @@ html, body {
                 }
                 p{
                     text-align: justify;
+                    text-justify: distribute;
+                    text-align-last: left;
+                    word-break: keep-all;
+                }
+
+                .experience-link{
+                    position: relative;
+                    font-style: italic;
+                    text-decoration: none;
+                    border:none;
+                    color:#3b5998;
+                    margin-top:20px;
                 }
 
             .experience-time{
@@ -1529,6 +1545,8 @@ html, body {
                 font-size: .95em;
             }
 
+
+
             &:before{
                 content: '';
                 background: $experience-content-bg-color;
@@ -1541,15 +1559,6 @@ html, body {
             }
         }
         }
-    }
-    .link-diplomes{
-        color:cyan;
-        cursor:pointer;
-        text-align: center;
-        @media screen and (max-width:812px) {
-            font-size: 1.3em;
-        }
-
     }
 }
 
@@ -1725,7 +1734,7 @@ background-color:$experience-content-bg-color;
                 position: relative;
                 li{
                     display: inline-block;
-                    font-size: 8vw;
+                    font-size: 11vw;
                     a{
                         display: inline-block;
                         transition: all 500ms ease;
