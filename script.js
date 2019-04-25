@@ -184,7 +184,7 @@ setTimeout(function(){
                 // ANIMATION LOGOS IT & PROGRESS BARS 
                 function frame() {
                     if(width > 10){
-                        for(let i=0;i<=20;i++){
+                        for(let i=0;i<=23;i++){
                             setTimeout(function() { 
                                 $('#skill'+i).animate({
                                     'opacity':'1',
